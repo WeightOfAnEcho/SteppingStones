@@ -5,69 +5,36 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour {
 
-    public Camera IsoCam;
-    public NavMeshAgent Agent;
-    Animator AdirAnim;
-    public float AdirVelocity;
-    private Rigidbody Rb;
-    //private bool Walking= false;
-
-
+    public Camera IsoCam; //Main camera reference for RayCasting
+    public NavMeshAgent Agent; //Reference for the Agent (player)
+    Animator AdirAnim; // Reference for the Player animator attached
 
     void Start()
     {
-        AdirAnim = GetComponent<Animator>();
+        AdirAnim = GetComponent<Animator>(); // Fetch Animator component attached
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) // When the left mouse button is pressed
         {
-            Ray ray = IsoCam.ScreenPointToRay(Input.mousePosition);
+            Ray ray = IsoCam.ScreenPointToRay(Input.mousePosition); // Fire a ray from the main camera to the click position
             RaycastHit hit;
-            float velocity = Agent.velocity.magnitude;
 
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit)) // if the hit coordiantes are on a valid location on the Nav Mesh
             {
-                //Move the Player
-
+                //Move the Player and start the walking animation
                 Agent.SetDestination(hit.point);
-
-                
-                if (velocity != 0)
-                {
-                    Debug.Log("Moving");
-                    AdirAnim.SetBool("Walking", true);
-                }
-                else
-                {
-                    AdirAnim.SetBool("Walking", false);
-                }
+                Debug.Log("Moving");
+                AdirAnim.SetBool("Walking", true);
 
 
-                //Walking = true;
-                //Animate();
+                // now need a function or method that notes the Agent is no longer moving to destination or has reached its destination and therefore no longer walking
             }
         }
 
     }
-
-    //void Animate()
-    //{
-    //    if (Walking == true )
-    //    {
-    //        Debug.Log("Moving");
-    //        AdirAnim.SetBool("Walking", true);
-    //    }
-
-    //    if (Walking == false)
-    //    {
-    //        AdirAnim.SetBool("Walking", false);
-    //    }
-
-    //}
 }
 
