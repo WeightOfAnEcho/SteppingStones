@@ -27,12 +27,16 @@ public class PlayerController : MonoBehaviour {
             {
                 //Move the Player and start the walking animation
                 Agent.SetDestination(hit.point);
-                Debug.Log("Moving");
-                AdirAnim.SetBool("Walking", true);
-
-
-                // now need a function or method that notes the Agent is no longer moving to destination or has reached its destination and therefore no longer walking
             }
+        }
+
+        if (Agent.remainingDistance > Agent.stoppingDistance)
+        {
+            AdirAnim.SetBool("Walking", true);
+        }
+        else
+        {
+            AdirAnim.SetBool("Walking", false);
         }
 
     }
