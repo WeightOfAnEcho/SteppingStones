@@ -59,11 +59,11 @@ Material:
         m_Scale: {x: 10, y: 10}
         m_Offset: {x: 2.6059935, y: -2.6059935}
     - _RefractTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 10, y: 10}
+        m_Texture: {fileID: 2800000, guid: 3d9d21b60c102034593c63e2a000dc25, type: 3}
+        m_Scale: {x: 8.03, y: 10}
         m_Offset: {x: 0, y: 0}
     - _WaveMap:
-        m_Texture: {fileID: 2800000, guid: 04d812e31fa0da44a9dd860d4bbd816c, type: 3}
+        m_Texture: {fileID: 2800000, guid: badd775b59d4f304799f0b637e8882dd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0.81952363, y: -0.81952363}
     - _Waves:
