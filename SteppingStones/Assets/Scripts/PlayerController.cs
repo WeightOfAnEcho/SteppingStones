@@ -28,17 +28,29 @@ public class PlayerController : MonoBehaviour {
             if (Physics.Raycast(ray, out hit)) // if the hit coordiantes are on a valid location on the Nav Mesh
             {
                 //if the raycast hits the Staff game object
-                if (hit.collider.gameObject.name == "Staff")
+                if (hit.collider.gameObject.tag == "Staff")
                 {
-                    Debug.Log("picking up Staff");
-                    //Move the Player and start the walking animation
-                    Agent.SetDestination(hit.point);
+                    print("HIT Staff");
                     AttachedStaff.SetActive(true);
                     Staff.SetActive(false);
                 }
 
+                if (hit.collider.gameObject.tag == "Rock")
+                {
+                    if (AttachedStaff.activeInHierarchy)
+                    {
+                        hit.transform.SendMessage("HitByRay");
+                        print("HIT Rock");
+                    }
+
+                }
+
+                else if (hit.collider.gameObject.tag != "Staff")
+                {
                     //Move the Player and start the walking animation
                     Agent.SetDestination(hit.point);
+                }
+
             }
         }
 
@@ -52,5 +64,8 @@ public class PlayerController : MonoBehaviour {
         }
 
     }
+
+
+
 }
 
