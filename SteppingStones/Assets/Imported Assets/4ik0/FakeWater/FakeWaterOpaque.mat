@@ -70,7 +70,7 @@ Material:
     - _OcclusionStrength: 1
     - _Opacity: 0.846
     - _Parallax: 0.02
-    - _Power: 0
+    - _Power: 0.088
     - _Speed: 15.91
     - _SpeedX: 2
     - _SpeedY: 1
