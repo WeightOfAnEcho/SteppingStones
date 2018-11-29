@@ -257,6 +257,48 @@ ModelImporter:
     4300078: Sand_Side_43
     4300080: Sand_Side_Transition_To_Gentle_0
     4300082: Sand_Side_Transition_To_Gentle_1
+    6400000: detail_flagPoint%_84
+    6400002: detail_flagPoint%_85
+    6400004: Prop_Docks_Straight_11
+    6400006: Sand_Flat_10
+    6400008: Sand_Flat_12
+    6400010: Sand_Flat_13
+    6400012: Sand_Flat_14
+    6400014: Sand_Flat_18
+    6400016: Sand_Flat_2
+    6400018: Sand_Flat_3
+    6400020: Sand_Flat_31
+    6400022: Sand_Flat_32
+    6400024: Sand_Flat_4
+    6400026: Sand_Flat_46
+    6400028: Sand_Flat_47
+    6400030: Sand_Flat_48
+    6400032: Sand_Flat_49
+    6400034: Sand_Flat_5
+    6400036: Sand_Flat_50
+    6400038: Sand_Flat_7
+    6400040: Sand_Flat_70
+    6400042: Sand_Flat_71
+    6400044: Sand_Flat_72
+    6400046: Sand_Flat_73
+    6400048: Sand_Flat_74
+    6400050: Sand_Flat_75
+    6400052: Sand_Flat_76
+    6400054: Sand_Flat_8
+    6400056: Sand_Side_25
+    6400058: Sand_Side_26
+    6400060: Sand_Side_27
+    6400062: Sand_Side_28
+    6400064: Sand_Side_29
+    6400066: Sand_Side_30
+    6400068: Sand_Side_38
+    6400070: Sand_Side_39
+    6400072: Sand_Side_40
+    6400074: Sand_Side_41
+    6400076: Sand_Side_42
+    6400078: Sand_Side_43
+    6400080: Sand_Side_Transition_To_Gentle_0
+    6400082: Sand_Side_Transition_To_Gentle_1
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -290,7 +332,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
