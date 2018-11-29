@@ -12,7 +12,7 @@ Material:
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -70,10 +70,10 @@ Material:
     - _OcclusionStrength: 1
     - _Opacity: 1
     - _Parallax: 0.02
-    - _Power: 0.08
+    - _Power: 0.09
     - _Speed: 15.91
-    - _SpeedX: -0.76
-    - _SpeedY: 2
+    - _SpeedX: 0.38
+    - _SpeedY: 1.36
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1

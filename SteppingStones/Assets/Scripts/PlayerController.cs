@@ -34,14 +34,14 @@ public class PlayerController : MonoBehaviour
                     Staff.SetActive(false);
                 }
 
-                if (hit.collider.gameObject.tag == "Rock")
-                {
-                    if (AttachedStaff.activeInHierarchy)
-                    {
-                        hit.transform.SendMessage("HitByRay");
-                        print("HIT Rock");
-                    }
-                }
+                //if (hit.collider.gameObject.tag == "Rock")
+                //{
+                //    if (AttachedStaff.activeInHierarchy)
+                //    {
+                //        hit.transform.SendMessage("HitByRay");
+                //        print("HIT Rock");
+                //    }
+                //}
 
                 else if (hit.collider.gameObject.tag != "Staff")
                 {
