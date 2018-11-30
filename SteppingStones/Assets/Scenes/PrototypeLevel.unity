@@ -988,23 +988,7 @@ Prefab:
       propertyPath: IsoCam
       value: 
       objectReference: {fileID: 534669904}
-    - target: {fileID: 54644150696612116, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 124
-      objectReference: {fileID: 0}
-    - target: {fileID: 54644150696612116, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709,
-        type: 2}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 64741502354206026, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709,
-        type: 2}
-      propertyPath: m_Convex
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 54644150696612116, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1196909537
@@ -1361,6 +1345,12 @@ Prefab:
       propertyPath: ClickEffect
       value: 
       objectReference: {fileID: 1546872693314142, guid: 4ce9b0bc055ea0545b0866b1d2efdc23,
+        type: 2}
+    - target: {fileID: 114585898294651120, guid: 5425203ece81c934dbb2ed7d28b3c657,
+        type: 2}
+      propertyPath: Stone
+      value: 
+      objectReference: {fileID: 1812682238821020, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5425203ece81c934dbb2ed7d28b3c657, type: 2}
