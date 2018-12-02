@@ -1251,6 +1251,16 @@ Prefab:
       propertyPath: m_TagString
       value: Stone3
       objectReference: {fileID: 0}
+    - target: {fileID: 114482111253667836, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709,
+        type: 2}
+      propertyPath: m_OverrideArea
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482111253667836, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709,
+        type: 2}
+      propertyPath: m_Area
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709, type: 2}
@@ -1587,6 +1597,16 @@ Prefab:
       propertyPath: m_Name
       value: BT_Stone1
       objectReference: {fileID: 0}
+    - target: {fileID: 114482111253667836, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709,
+        type: 2}
+      propertyPath: m_OverrideArea
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482111253667836, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709,
+        type: 2}
+      propertyPath: m_Area
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709, type: 2}
   m_IsPrefabAsset: 0
@@ -1832,7 +1852,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.57
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3054,6 +3074,16 @@ Prefab:
     - target: {fileID: 1812682238821020, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709, type: 2}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482111253667836, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709,
+        type: 2}
+      propertyPath: m_OverrideArea
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482111253667836, guid: 4ec933cf2b92dc84abfc7d8a3bd4c709,
+        type: 2}
+      propertyPath: m_Area
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
