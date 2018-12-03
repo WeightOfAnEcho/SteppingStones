@@ -11,10 +11,10 @@ NavMeshProjectSettings:
     cost: 1
   - name: Jump
     cost: 2
-  - name: 
+  - name: TriggeredWalkable
     cost: 1
-  - name: 
-    cost: 1
+  - name: LowPreference
+    cost: 2
   - name: 
     cost: 1
   - name: 

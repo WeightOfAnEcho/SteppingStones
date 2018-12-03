@@ -1,21 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
-public class BT_Player_Controller : MonoBehaviour
-{
+public class BT_Alternate_Player : MonoBehaviour {
 
-    //RAYCASTING/ CLICK TO MOVE REFERENCES ----------------------------------------------------------------------------------------
-    public Camera IsoCam; //Main camera reference for RayCasting
-    private NavMeshAgent Agent; //Reference for the Agent (player)
+    [SerializeField] private float moveSpeed = 4f;
+    Vector3 forward, right;
+    public Camera IsoCam;
+    private CharacterController cc;
+    private Animator AdyrAnim;
 
-    //PLAYER ANIMATION ------------------------------------------------------------------------------------------------------------
-    Animator AdirAnim; // Reference for the Player animator attached
-
-
-    //SPAWNING AND DE-SPAWNING GAME OBJECTS ----------------------------------------------------------------------------------------
     public GameObject Staff; // reference for staff gameobject in scene (for picking up)
     public GameObject AttachedStaff; //reference for attached staff (when picked up)
     public GameObject Stone1;
@@ -35,17 +30,32 @@ public class BT_Player_Controller : MonoBehaviour
     public Animator LevelLoader;
     private int levelToLoad;
 
-    void Start()
+    // Use this for initialization
+    void Start ()
     {
-        
-        AdirAnim = GetComponent<Animator>(); // Fetch Animator component attached
-        Agent = GetComponent<NavMeshAgent>(); // Fetch the Agent Properties
-        StartCoroutine("Tutorial1");
+        cc = GetComponent<CharacterController>();
+        AdyrAnim = GetComponent < Animator > ();
+
+        forward = IsoCam.transform.forward; // set forward vector to equal camera's forward vector
+        forward.y = 0; //ensure our y value always set to 0
+        forward = Vector3.Normalize(forward); //making sure the vector is set to 1 for motion
+        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
+
+        AdyrAnim.SetBool("Walking", false);
+
+        if (Input.anyKey) // although any key declared, only WASD assigned the values necessary
+        {
+            Move(); // move the player
+        }
+
         if (Input.GetMouseButtonDown(0)) // When the left mouse button is pressed
         {
             Ray ray = IsoCam.ScreenPointToRay(Input.mousePosition); // Fire a ray from the main camera to the click position
@@ -67,32 +77,8 @@ public class BT_Player_Controller : MonoBehaviour
                     StartCoroutine("Tutorial2");
                 }
 
-                NavMeshHit navmeshHit; // provide reference for a raycast hit on the navmesh
-                int walkableMask = 1 << NavMesh.GetAreaFromName("Walkable"); // check if the nav mesh hit location was on a walkable layer/area
-                int triggeredWalkMask = 2 << NavMesh.GetAreaFromName("TriggeredWalkable");
 
-                if (NavMesh.SamplePosition(hit.point, out navmeshHit, 5.5f, walkableMask)) //if the ray position returns a walkable sample position                   
-                {
-                    print(hit.collider.gameObject.name + ", " + navmeshHit.mask);
 
-                    NavMeshPath path = new NavMeshPath(); // create a reference for a nav mesh path
-                    Agent.CalculatePath(navmeshHit.position, path); //The agent calculates a path to the hit location on nav mesh
-                    Instantiate(ClickEffect, hit.point, Quaternion.LookRotation(hit.normal));//spawn the click effect at the hit location
-
-                    if (path.status == NavMeshPathStatus.PathPartial) // if the agent calculates an impartial path
-                    {
-                        print("no path");
-                    }
-
-                    else if (path.status == NavMeshPathStatus.PathComplete) // if the agent calculates a full path to destination point
-                    {
-                        print("has path");
-
-                        // Add an exclude from path layer.
-                         
-                        Agent.SetDestination(navmeshHit.position); // set the hit location on the nav mesh to the target destination for the agent
-                    }
-                }
                 if (hit.collider.gameObject.tag == "Stone1") //if the raycast hits the Stone 1 game object
                 {
 
@@ -128,31 +114,36 @@ public class BT_Player_Controller : MonoBehaviour
 
 
                 }
-
             }
-        }
-
-        // ANIMATION CONTROLLING BASED ON DISTANCE FROM TARGET DESTINATION -----------------------------------------------------------------------------
-
-        if (Agent.remainingDistance > Agent.stoppingDistance) // If remaining distance on path is greater than stopping distance
-        {
-            AdirAnim.SetBool("Walking", true); // play walking animation
-        }
-
-        else
-        {
-            AdirAnim.SetBool("Walking", false); //stop playing walking animation
         }
     }
 
-   void OnCollisionEnter(Collision hit)
+    void Move()
+    {
+        //Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")); // new direction equals values specified in input manager
+        //THIS CODE EXISTS TO ENABLE MOBILE INPUT COMMANDS
+
+
+        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
+        Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
+
+        Vector3 heading = Vector3.Normalize(rightMovement + upMovement); //combines and normalises above movment to allow player to have a heading during movement
+
+        GetComponent<CharacterController>().SimpleMove(heading * moveSpeed);
+
+        transform.forward = heading; // sets the rotation of the player to be where the input Vector3 dictates
+
+        AdyrAnim.SetBool("Walking", true);
+    }
+
+    void OnCollisionEnter(Collision hit)
     {
         if (hit.transform.gameObject.name == "Cylinder")
         {
             LostSoul.SetActive(false);
             LoadScene(0);
         }
-        
+
     }
 
     public void LoadScene(int levelIndex)
@@ -171,7 +162,7 @@ public class BT_Player_Controller : MonoBehaviour
 
     IEnumerator Tutorial1()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(5);
         TutorialGuide1.SetActive(true);
     }
 
@@ -181,5 +172,5 @@ public class BT_Player_Controller : MonoBehaviour
         TutorialGuide2.SetActive(true);
         TutorialAnim.SetTrigger("Tutorial2");
     }
-}
 
+}
