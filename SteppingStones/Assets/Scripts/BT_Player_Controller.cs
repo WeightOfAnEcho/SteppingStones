@@ -21,7 +21,6 @@ public class BT_Player_Controller : MonoBehaviour
     public GameObject Stone1;
     public GameObject Stone2;
     public GameObject Stone3;
-    public GameObject Stone4;
     public GameObject Gate1;
     public GameObject Gate2;
     public GameObject LostSoul;
@@ -34,6 +33,7 @@ public class BT_Player_Controller : MonoBehaviour
     public Animator TutorialAnim;
     public Animator LevelLoader;
     private int levelToLoad;
+
 
     void Start()
     {
@@ -79,9 +79,10 @@ public class BT_Player_Controller : MonoBehaviour
                     Agent.CalculatePath(navmeshHit.position, path); //The agent calculates a path to the hit location on nav mesh
                     Instantiate(ClickEffect, hit.point, Quaternion.LookRotation(hit.normal));//spawn the click effect at the hit location
 
-                    if (path.status == NavMeshPathStatus.PathPartial) // if the agent calculates an impartial path
+                    if (path.status != NavMeshPathStatus.PathComplete) // if the agent calculates an impartial path
                     {
                         print("no path");
+
                     }
 
                     else if (path.status == NavMeshPathStatus.PathComplete) // if the agent calculates a full path to destination point
@@ -93,6 +94,7 @@ public class BT_Player_Controller : MonoBehaviour
                         Agent.SetDestination(navmeshHit.position); // set the hit location on the nav mesh to the target destination for the agent
                     }
                 }
+
                 if (hit.collider.gameObject.tag == "Stone1") //if the raycast hits the Stone 1 game object
                 {
 
@@ -100,6 +102,7 @@ public class BT_Player_Controller : MonoBehaviour
                     Stone2.SetActive(true);
                     Water1.SetActive(false);
                     TutorialGuide2.SetActive(false);
+
                 }
 
                 if (hit.collider.gameObject.tag == "Stone2") //if the raycast hits the Stone 2 game object
@@ -115,19 +118,12 @@ public class BT_Player_Controller : MonoBehaviour
                 {
 
                     Stone3.SetActive(false);
-                    Stone4.SetActive(true);
+                    Stone1.SetActive(true);
                     Water2.SetActive(true);
 
                 }
 
-                if (hit.collider.gameObject.tag == "Stone4") //if the raycast hits the Stone 4 game object
-                {
 
-                    Stone1.SetActive(true);
-                    Stone4.SetActive(false);
-
-
-                }
 
             }
         }
