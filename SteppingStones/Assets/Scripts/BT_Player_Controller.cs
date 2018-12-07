@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BT_Player_Controller : MonoBehaviour
 {
@@ -18,21 +19,25 @@ public class BT_Player_Controller : MonoBehaviour
     //SPAWNING AND DE-SPAWNING GAME OBJECTS ----------------------------------------------------------------------------------------
     public GameObject Staff; // reference for staff gameobject in scene (for picking up)
     public GameObject AttachedStaff; //reference for attached staff (when picked up)
-    public GameObject Stone1;
-    public GameObject Stone2;
-    public GameObject Stone3;
+
+    public GameObject DragStone;
+
     public GameObject Gate1;
     public GameObject Gate2;
     public GameObject LostSoul;
     public GameObject ClickEffect; // reference for the effect when the ray cast lands a succesful hit on NavMesh
     public GameObject Water1;
     public GameObject Water2;
-    public GameObject TutorialGuide1;
-    public GameObject TutorialGuide2;
 
-    public Animator TutorialAnim;
+    public Text Tutorialtext1;
+    public Text Tutorialtext2;
+
     public Animator LevelLoader;
     private int levelToLoad;
+
+    bool hadTutorial1 = false;
+    bool hadTutorial2 = false;
+    bool hasStaff = false;
 
 
     void Start()
@@ -40,7 +45,7 @@ public class BT_Player_Controller : MonoBehaviour
         
         AdirAnim = GetComponent<Animator>(); // Fetch Animator component attached
         Agent = GetComponent<NavMeshAgent>(); // Fetch the Agent Properties
-        //StartCoroutine("Tutorial1");
+        StartCoroutine(FadeTextToFullAlpha(1f, Tutorialtext1));
     }
 
     // Update is called once per frame
@@ -58,10 +63,9 @@ public class BT_Player_Controller : MonoBehaviour
                 if (hit.collider.gameObject.tag == "Staff") //if the raycast hits the Staff tagged game object
                 {
                     print("HIT Staff");
-
+                    Instantiate(ClickEffect, hit.point, Quaternion.LookRotation(hit.normal));
                     Agent.SetDestination(hit.point);
-
-                    //StartCoroutine("Tutorial2");
+                   
                 }
 
 
@@ -85,10 +89,19 @@ public class BT_Player_Controller : MonoBehaviour
                     else if (path.status == NavMeshPathStatus.PathComplete) // if the agent calculates a full path to destination point
                     {
                         print("has path");
-
-                        // Add an exclude from path layer.
-                         
                         Agent.SetDestination(navmeshHit.position); // set the hit location on the nav mesh to the target destination for the agent
+
+                        if (hadTutorial1 == false)
+                        {
+                            StartCoroutine(FadeTextToZeroAlpha(1f, Tutorialtext1));
+                            hadTutorial1 = true;
+                        }
+
+                        if (hadTutorial1 == true && hadTutorial2 == false)
+                        {
+                            StartCoroutine(FadeTextToFullAlpha(1f, Tutorialtext2));
+                            hadTutorial2 = true;
+                        }
                     }
                 }
 
@@ -113,6 +126,7 @@ public class BT_Player_Controller : MonoBehaviour
         if (hit.transform.gameObject.name == "Cylinder")
         {
             LostSoul.SetActive(false);
+            AdirAnim.SetBool("Walking", false); //stop playing walking animation
             LoadScene(0);
         }
 
@@ -122,7 +136,9 @@ public class BT_Player_Controller : MonoBehaviour
             Staff.SetActive(false); // set the staff in the scene to false (fake picking up)
             Gate1.SetActive(false); //set the drawn gate to false
             Gate2.SetActive(true); // set the lowered gate to true
-            Stone1.GetComponent<BT_Drag>().MakeClickable();
+            StartCoroutine(FadeTextToZeroAlpha(1f, Tutorialtext2));
+            DragStone.GetComponent<MoveAlongSpline>().MakeClickable();
+            DragStone.GetComponent<MoveAlongSpline>().RunTutorial3();
         }
         
     }
@@ -141,17 +157,24 @@ public class BT_Player_Controller : MonoBehaviour
         SceneManager.LoadScene(levelToLoad);
     }
 
-    IEnumerator Tutorial1()
+    public IEnumerator FadeTextToFullAlpha(float t, Text i)
     {
-        yield return new WaitForSeconds(1);
-        TutorialGuide1.SetActive(true);
+        i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
+        while (i.color.a < 1.0f)
+        {
+            i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a + (Time.deltaTime / t));
+            yield return null;
+        }
     }
 
-    IEnumerator Tutorial2()
+    public IEnumerator FadeTextToZeroAlpha(float t, Text i)
     {
-        yield return new WaitForSeconds(5);
-        TutorialGuide2.SetActive(true);
-        TutorialAnim.SetTrigger("Tutorial2");
+        i.color = new Color(i.color.r, i.color.g, i.color.b, 1);
+        while (i.color.a > 0.0f)
+        {
+            i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
+            yield return null;
+        }
     }
 }
 
