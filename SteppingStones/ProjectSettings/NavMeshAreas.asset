@@ -14,7 +14,7 @@ NavMeshProjectSettings:
   - name: TriggeredWalkable
     cost: 1
   - name: LowPreference
-    cost: 2
+    cost: 100
   - name: 
     cost: 1
   - name: 

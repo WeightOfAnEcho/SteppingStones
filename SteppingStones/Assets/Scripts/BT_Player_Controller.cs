@@ -40,7 +40,7 @@ public class BT_Player_Controller : MonoBehaviour
         
         AdirAnim = GetComponent<Animator>(); // Fetch Animator component attached
         Agent = GetComponent<NavMeshAgent>(); // Fetch the Agent Properties
-        StartCoroutine("Tutorial1");
+        //StartCoroutine("Tutorial1");
     }
 
     // Update is called once per frame
@@ -54,22 +54,19 @@ public class BT_Player_Controller : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 500)) // if the hit coordiantes are on a valid collider within 500 units
             {
 
+
                 if (hit.collider.gameObject.tag == "Staff") //if the raycast hits the Staff tagged game object
                 {
                     print("HIT Staff");
 
-                    TutorialGuide1.SetActive(false);
-                    AttachedStaff.SetActive(true); // set the attached staff to active
-                    Staff.SetActive(false); // set the staff in the scene to false (fake picking up)
-                    Gate1.SetActive(false); //set the drawn gate to false
-                    Gate2.SetActive(true); // set the lowered gate to true
-                    Stone1.GetComponent<BT_Drag>().MakeClickable();
-                    StartCoroutine("Tutorial2");
+                    Agent.SetDestination(hit.point);
+
+                    //StartCoroutine("Tutorial2");
                 }
+
 
                 NavMeshHit navmeshHit; // provide reference for a raycast hit on the navmesh
                 int walkableMask = 1 << NavMesh.GetAreaFromName("Walkable"); // check if the nav mesh hit location was on a walkable layer/area
-                int triggeredWalkMask = 2 << NavMesh.GetAreaFromName("TriggeredWalkable");
 
                 if (NavMesh.SamplePosition(hit.point, out navmeshHit, 5.5f, walkableMask)) //if the ray position returns a walkable sample position                   
                 {
@@ -95,36 +92,6 @@ public class BT_Player_Controller : MonoBehaviour
                     }
                 }
 
-                if (hit.collider.gameObject.tag == "Stone1") //if the raycast hits the Stone 1 game object
-                {
-
-                    Stone1.SetActive(false);
-                    Stone2.SetActive(true);
-                    Water1.SetActive(false);
-                    TutorialGuide2.SetActive(false);
-
-                }
-
-                if (hit.collider.gameObject.tag == "Stone2") //if the raycast hits the Stone 2 game object
-                {
-
-                    Stone2.SetActive(false);
-                    Stone3.SetActive(true);
-                    Water1.SetActive(true);
-                    Water2.SetActive(false);
-
-                }
-                if (hit.collider.gameObject.tag == "Stone3") //if the raycast hits the Stone 3 game object
-                {
-
-                    Stone3.SetActive(false);
-                    Stone1.SetActive(true);
-                    Water2.SetActive(true);
-
-                }
-
-
-
             }
         }
 
@@ -147,6 +114,15 @@ public class BT_Player_Controller : MonoBehaviour
         {
             LostSoul.SetActive(false);
             LoadScene(0);
+        }
+
+        if (hit.transform.gameObject.name == "pickup_Staff")
+        {
+            AttachedStaff.SetActive(true); // set the attached staff to active
+            Staff.SetActive(false); // set the staff in the scene to false (fake picking up)
+            Gate1.SetActive(false); //set the drawn gate to false
+            Gate2.SetActive(true); // set the lowered gate to true
+            Stone1.GetComponent<BT_Drag>().MakeClickable();
         }
         
     }

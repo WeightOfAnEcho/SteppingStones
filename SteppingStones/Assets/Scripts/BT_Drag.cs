@@ -7,20 +7,30 @@ using UnityEngine.UI;
 public class BT_Drag : MonoBehaviour
 {
     public Camera IsoCam;
-    Vector3 mousepos;
-    Vector3 clickedPos;
-    Vector3 offSet;
+
+    public Transform pointA, pointB;
+
+    private Renderer rend;
+    private Color mouseOverColor = Color.blue;
+    private Color originalColor = Color.white;
+    private bool clickable = false;
+    private bool dragging = false;
+
+    public float slideSpeed;
 
 
 
     void Start()
     {
-        //gameObject.layer = 2;
+        rend = GetComponent<Renderer>();
     }
 
     void Update()
     {
-
+        if (dragging)
+        {
+           
+        }
     }
 
     public void MakeClickable()
@@ -28,24 +38,33 @@ public class BT_Drag : MonoBehaviour
         print("changing layer");
         gameObject.layer = LayerMask.NameToLayer("Default");
         print("new layer");
+        clickable = true;
     }
 
-
-    public void OnMouseDrag()
+    void OnMouseEnter()
     {
 
-        Vector3 point = IsoCam.ScreenToWorldPoint(Input.mousePosition);
-        point.x = Mathf.Clamp(point.x,);
-        point.y = transform.position.y;
-        point.z = transform.position.z;
-        transform.position = point;
-
-        float distance_to_screen = IsoCam.WorldToScreenPoint(gameObject.transform.position).z;
-        Vector3 pos_move = IsoCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen));
-        transform.position = new Vector3(pos_move.x, transform.position.y, pos_move.z);
-
+       rend.material.color = mouseOverColor;
+        
     }
 
+    void OnMouseExit()
+    {
+
+     rend.material.color = originalColor;
+        
+    }
+
+    void OnMouseDown()
+    {
+        dragging = true;
+    }
+
+
+    void OnMouseUp()
+    {
+        dragging = false;
+    }
 
 }
 
