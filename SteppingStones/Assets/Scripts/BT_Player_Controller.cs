@@ -93,8 +93,10 @@ public class BT_Player_Controller : MonoBehaviour
 
                         if (hadTutorial1 == false)
                         {
-                            StartCoroutine(FadeTextToZeroAlpha(1f, Tutorialtext1));
                             hadTutorial1 = true;
+                            StartCoroutine(FadeTextToZeroAlpha(1f, Tutorialtext1));
+                            Staff.GetComponent<BT_Make_Clickable>().MakeClickable();
+                            
                         }
 
                         if (hadTutorial1 == true && hadTutorial2 == false)
@@ -102,6 +104,7 @@ public class BT_Player_Controller : MonoBehaviour
                             StartCoroutine(FadeTextToFullAlpha(1f, Tutorialtext2));
                             hadTutorial2 = true;
                         }
+
                     }
                 }
 
@@ -132,6 +135,13 @@ public class BT_Player_Controller : MonoBehaviour
 
         if (hit.transform.gameObject.name == "pickup_Staff")
         {
+
+            if (hadTutorial1 == false && hadTutorial2 == false)
+            {
+                hadTutorial1 = true;
+                StartCoroutine(FadeTextToZeroAlpha(1f, Tutorialtext1));
+                Staff.GetComponent<BT_Make_Clickable>().MakeClickable();
+            }
             AttachedStaff.SetActive(true); // set the attached staff to active
             Staff.SetActive(false); // set the staff in the scene to false (fake picking up)
             Gate1.SetActive(false); //set the drawn gate to false

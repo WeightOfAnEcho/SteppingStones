@@ -7,7 +7,7 @@ public class BT_Destory_After : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        Destroy(gameObject, 2.5f);
+        Destroy(gameObject, 0.5f);
 
     }
 	
