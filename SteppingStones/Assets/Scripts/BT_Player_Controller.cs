@@ -37,7 +37,9 @@ public class BT_Player_Controller : MonoBehaviour
 
     bool hadTutorial1 = false;
     bool hadTutorial2 = false;
-    bool hasStaff = false;
+    //bool hasStaff = false;
+
+    private bool cooldown = false;
 
 
     void Start()
@@ -51,8 +53,11 @@ public class BT_Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // When the left mouse button is pressed
+        if (Input.GetMouseButtonDown(0) && cooldown == false) // When the left mouse button is pressed
         {
+            Invoke("ResetCooldown", 2f);
+            cooldown = true;
+
             Ray ray = IsoCam.ScreenPointToRay(Input.mousePosition); // Fire a ray from the main camera to the click position
             RaycastHit hit; //store the resulting hit
 
@@ -65,7 +70,14 @@ public class BT_Player_Controller : MonoBehaviour
                     print("HIT Staff");
                     Instantiate(ClickEffect, hit.point, Quaternion.LookRotation(hit.normal));
                     Agent.SetDestination(hit.point);
-                   
+
+                    if (hadTutorial1 == false && hadTutorial2 == false)
+                    {
+                        hadTutorial1 = true;
+                        StartCoroutine(FadeTextToZeroAlpha(1f, Tutorialtext1));
+                        Staff.GetComponent<BT_Make_Clickable>().MakeClickable();
+                    }
+
                 }
 
 
@@ -128,6 +140,7 @@ public class BT_Player_Controller : MonoBehaviour
     {
         if (hit.transform.gameObject.name == "Cylinder")
         {
+            print("collision with soul");
             LostSoul.SetActive(false);
             AdirAnim.SetBool("Walking", false); //stop playing walking animation
             LoadScene(0);
@@ -136,12 +149,7 @@ public class BT_Player_Controller : MonoBehaviour
         if (hit.transform.gameObject.name == "pickup_Staff")
         {
 
-            if (hadTutorial1 == false && hadTutorial2 == false)
-            {
-                hadTutorial1 = true;
-                StartCoroutine(FadeTextToZeroAlpha(1f, Tutorialtext1));
-                Staff.GetComponent<BT_Make_Clickable>().MakeClickable();
-            }
+            print("collision with staff");
             AttachedStaff.SetActive(true); // set the attached staff to active
             Staff.SetActive(false); // set the staff in the scene to false (fake picking up)
             Gate1.SetActive(false); //set the drawn gate to false
@@ -185,6 +193,11 @@ public class BT_Player_Controller : MonoBehaviour
             i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
             yield return null;
         }
+    }
+
+    void ResetCooldown()
+    {
+        cooldown = false;
     }
 }
 
