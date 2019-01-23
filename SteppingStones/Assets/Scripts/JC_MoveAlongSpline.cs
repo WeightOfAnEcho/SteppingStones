@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class MoveAlongSpline : MonoBehaviour
+public class JC_MoveAlongSpline : MonoBehaviour
 {
     
     public GameObject[] myWayPoints = new GameObject[2];

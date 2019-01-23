@@ -1631,15 +1631,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 440218282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b709f22c3b1f33a40bb6eb133bd75cf5, type: 3}
+  m_Script: {fileID: 11500000, guid: c83387b42e4140a40b445dc7d4f40387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myWayPoints:
-  - {fileID: 1253911456}
-  - {fileID: 1174425072}
   cam: {fileID: 21424372}
-  Water1: {fileID: 1631046366}
-  Water2: {fileID: 728040343}
+  Water1: {fileID: 1515731454}
+  Water2: {fileID: 412388463}
   Tutorialtext3: {fileID: 917193939}
 --- !u!65 &440218284
 BoxCollider:
@@ -1653,6 +1650,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18.3107, y: 25.459953, z: 8.562954}
   m_Center: {x: -0.2107607, y: 12.729977, z: 1.5075011}
+--- !u!95 &440218285
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 440218282}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3aa8aadc623fb049a78356401d64b86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!208 &440218288
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -4132,7 +4147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: af360eecb5f615b45a547ef58112387a, type: 3}
       propertyPath: m_Layer
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6400000, guid: af360eecb5f615b45a547ef58112387a, type: 3}
