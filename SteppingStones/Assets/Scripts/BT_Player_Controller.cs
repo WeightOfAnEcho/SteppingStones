@@ -155,8 +155,8 @@ public class BT_Player_Controller : MonoBehaviour
             Gate1.SetActive(false); //set the drawn gate to false
             Gate2.SetActive(true); // set the lowered gate to true
             StartCoroutine(FadeTextToZeroAlpha(1f, Tutorialtext2));
-            DragStone.GetComponent<BT_RockMover>().MakeClickable();
-            DragStone.GetComponent<BT_RockMover>().RunTutorial3();
+            DragStone.GetComponent<JC_MoveAlongSpline>().MakeClickable();
+            DragStone.GetComponent<JC_MoveAlongSpline>().RunTutorial3();
         }
         
     }
