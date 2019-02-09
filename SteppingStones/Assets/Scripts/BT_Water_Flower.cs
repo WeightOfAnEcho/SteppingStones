@@ -53,5 +53,31 @@ public class BT_Water_Flower : MonoBehaviour
             Instantiate(waterBlock, end, Quaternion.identity);
         }
 
+        if (Physics.Raycast(transform.position, lft, out hit, 1))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left), Color.yellow);
+            print("hit wall");
+            Debug.Log(hit.transform.gameObject.name);
+        }
+
+        else
+        {
+            Vector3 end = transform.position + lft;
+            Instantiate(waterBlock, end, Quaternion.identity);
+        }
+
+        if (Physics.Raycast(transform.position, bck, out hit, 1))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back), Color.yellow);
+            print("hit wall");
+            Debug.Log(hit.transform.gameObject.name);
+        }
+
+        else
+        {
+            Vector3 end = transform.position + bck;
+            Instantiate(waterBlock, end, Quaternion.identity);
+        }
+
     }
 }

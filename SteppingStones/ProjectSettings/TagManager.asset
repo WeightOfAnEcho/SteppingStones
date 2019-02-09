@@ -14,6 +14,7 @@ TagManager:
   - Gate1
   - Gate2
   - water
+  - Valve
   layers:
   - Default
   - TransparentFX
