@@ -4,11 +4,23 @@ using UnityEngine;
 
 public class BT_Rotator : MonoBehaviour
 {
+
+    private bool cooldown = false;
+    public Camera IsoCam; //Main camera reference for RayCasting
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0) && cooldown == false) // When the left mouse button is pressed
         {
-            StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
+            Invoke("ResetCooldown", 2f);
+            cooldown = true;
+
+            Ray ray = IsoCam.ScreenPointToRay(Input.mousePosition); // Fire a ray from the main camera to the click position
+            RaycastHit hit; //store the resulting hit
+
+            if (Physics.Raycast(ray, out hit, 500)) // if the hit coordiantes are on a valid collider within 500 units
+            {
+                StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
+            }
         }
     }
 
@@ -26,5 +38,10 @@ public class BT_Rotator : MonoBehaviour
             yield return null;
         }
         transform.rotation = to;
+    }
+
+     void ResetCooldown()
+    {
+        cooldown = false;
     }
 }
