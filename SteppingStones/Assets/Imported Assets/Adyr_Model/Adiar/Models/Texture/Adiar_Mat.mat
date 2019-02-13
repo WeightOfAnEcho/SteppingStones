@@ -9,7 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Adiar_Mat
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _EMISSIONOPPOSITEX_ON _EMISSIONOPPOSITEY_ON _EMISSIONOPPOSITEZ_ON
+    _OPPOSITEX_ON _OPPOSITEY_ON _OPPOSITEZ_ON _OVERALLGRADIENT_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,6 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -36,6 +41,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -71,34 +80,67 @@ Material:
         m_Texture: {fileID: 2800000, guid: 3efba7c112fa27d4baa50f68135d225f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShadowTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
+    - _Cull: 2
     - _Cutoff: 0.5
     - _DepthBias: 0.00012
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EdgeThickness: 0
+    - _EmissionOppositeX: 0.409
+    - _EmissionOppositeY: 0.4078431
+    - _EmissionOppositeZ: 0.4078431
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _OppositeX: 0.409
+    - _OppositeY: 0.4078431
+    - _OppositeZ: 0.4078431
+    - _OverallGradient: 0.1544118
+    - _OverallGradientContrast: 1
+    - _OverallGradientOffset: 0
     - _Parallax: 0.02
-    - _Shininess: 0.7
+    - _ShadowBoost: 0
+    - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _WindQuality: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
+    - _Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionOppositeXColor: {r: 0.409, g: 0.1100069, b: 0, a: 1}
+    - _EmissionOppositeYColor: {r: 0.4078431, g: 0.1098039, b: 0, a: 1}
+    - _EmissionOppositeZColor: {r: 0.4078431, g: 0.1098039, b: 0, a: 1}
+    - _EmissionXColor: {r: 0.8970588, g: 0.6710655, b: 0.1846886, a: 1}
+    - _EmissionYColor: {r: 0.8382353, g: 0.9665314, b: 1, a: 1}
+    - _EmissionZColor: {r: 0.08272059, g: 0.4984742, b: 0.6617647, a: 1}
+    - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
+    - _LightAdd: {r: 0.1544118, g: 0.09477688, b: 0.01930147, a: 1}
+    - _LightMultiplier: {r: 1, g: 1, b: 1, a: 1}
+    - _OppositeXColor: {r: 0.409, g: 0.1100069, b: 0, a: 1}
+    - _OppositeYColor: {r: 0.4078431, g: 0.1098039, b: 0, a: 1}
+    - _OppositeZColor: {r: 0.4078431, g: 0.1098039, b: 0, a: 1}
+    - _OverallGradientColor: {r: 0.7647059, g: 0.9026369, b: 1, a: 1}
     - _ReflectColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _ShadowColor: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadowTint: {r: 0.0351968, g: 0.1346796, b: 0.1544118, a: 1}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
+    - _XColor: {r: 0.8970588, g: 0.6710655, b: 0.1846886, a: 1}
+    - _YColor: {r: 0.8382353, g: 0.9665314, b: 1, a: 1}
+    - _ZColor: {r: 0.08272059, g: 0.4984742, b: 0.6617647, a: 1}

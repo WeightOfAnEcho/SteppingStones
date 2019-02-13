@@ -20,9 +20,13 @@ public class BT_Raycaster : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 500)) // if the hit coordiantes are on a valid collider within 500 units
             {
+                if (hit.transform.tag == "Valve")
+                {
+                    hit.transform.SendMessageUpwards("HitByWater");
+                    print(hit.collider.gameObject);
+                    hit.collider.SendMessageUpwards("BeginRotation", SendMessageOptions.RequireReceiver);
+                }
 
-                print(hit.collider.gameObject);
-                hit.collider.SendMessageUpwards("BeginRotation", SendMessageOptions.RequireReceiver);
                 
             }
         }

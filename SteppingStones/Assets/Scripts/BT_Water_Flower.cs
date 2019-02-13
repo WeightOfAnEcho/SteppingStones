@@ -23,6 +23,7 @@ public class BT_Water_Flower : MonoBehaviour
         Vector3 lft = transform.TransformDirection(Vector3.left);
         Vector3 rgt = transform.TransformDirection(Vector3.right);
         Vector3 bck = transform.TransformDirection(Vector3.back);
+        Vector3 all = transform.TransformDirection(Vector3.one);
 
         RaycastHit hit;
 
@@ -32,12 +33,17 @@ public class BT_Water_Flower : MonoBehaviour
             print("hit wall");
             Debug.Log(hit.transform.gameObject.name);
 
+            if (hit.transform.tag == "Totem")
+            {
+                hit.transform.SendMessageUpwards("HitByWater");
+            }
+
         }
 
         else
         {
             Vector3 end = transform.position + fwd;
-            Instantiate(waterBlock, end, Quaternion.identity);
+            Instantiate(waterBlock, end, transform.rotation);
         }
 
         if (Physics.Raycast(transform.position, rgt, out hit, 1))
@@ -45,12 +51,17 @@ public class BT_Water_Flower : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.yellow);
             print("hit wall");
             Debug.Log(hit.transform.gameObject.name);
+
+            if (hit.transform.tag == "Totem")
+            {
+                hit.transform.SendMessageUpwards("HitByWater");
+            }
         }
 
         else
         {
             Vector3 end = transform.position + rgt;
-            Instantiate(waterBlock, end, Quaternion.identity);
+            Instantiate(waterBlock, end, transform.rotation);
         }
 
         if (Physics.Raycast(transform.position, lft, out hit, 1))
@@ -58,12 +69,17 @@ public class BT_Water_Flower : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left), Color.yellow);
             print("hit wall");
             Debug.Log(hit.transform.gameObject.name);
+
+            if (hit.transform.tag == "Totem")
+            {
+                hit.transform.SendMessageUpwards("HitByWater");
+            }
         }
 
         else
         {
             Vector3 end = transform.position + lft;
-            Instantiate(waterBlock, end, Quaternion.identity);
+            Instantiate(waterBlock, end, transform.rotation);
         }
 
         if (Physics.Raycast(transform.position, bck, out hit, 1))
@@ -71,12 +87,17 @@ public class BT_Water_Flower : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back), Color.yellow);
             print("hit wall");
             Debug.Log(hit.transform.gameObject.name);
+
+            if (hit.transform.tag == "Totem")
+            {
+                hit.transform.SendMessageUpwards("HitByWater");
+            }
         }
 
         else
         {
             Vector3 end = transform.position + bck;
-            Instantiate(waterBlock, end, Quaternion.identity);
+            Instantiate(waterBlock, end, transform.rotation);
         }
 
     }

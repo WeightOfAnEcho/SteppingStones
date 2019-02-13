@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 85500152}
   - component: {fileID: 85500151}
   m_Layer: 0
-  m_Name: Procedural_Water
+  m_Name: BT_Procedural_Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: ColorSet17_Mat
   m_Shader: {fileID: 4800000, guid: 0f3fdbf2426b29d42994e2158b9700d5, type: 3}
   m_ShaderKeywords: _OPPOSITEY_ON _OVERALLGRADIENT_ON
@@ -101,10 +102,10 @@ Material:
     - _LightAdd: {r: 0.1544118, g: 0.09477688, b: 0.01930147, a: 1}
     - _LightMultiplier: {r: 1, g: 1, b: 1, a: 1}
     - _OppositeXColor: {r: 0.14901961, g: 0, b: 0.16862746, a: 1}
-    - _OppositeYColor: {r: 0.53676474, g: 0.73164296, b: 1, a: 1}
-    - _OppositeZColor: {r: 0.53676474, g: 0.73164296, b: 1, a: 1}
+    - _OppositeYColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OppositeZColor: {r: 0, g: 0, b: 0, a: 1}
     - _OverallGradientColor: {r: 0.24264705, g: 0, b: 0.21587218, a: 1}
     - _ShadowTint: {r: 0.0351968, g: 0.1346796, b: 0.1544118, a: 1}
-    - _XColor: {r: 0.14797792, g: 0, b: 0.16911763, a: 1}
-    - _YColor: {r: 1, g: 0.20588237, b: 0.20588237, a: 1}
+    - _XColor: {r: 0.03429042, g: 0.1792453, b: 0, a: 1}
+    - _YColor: {r: 0.6886792, g: 0.2730339, b: 0.10070309, a: 1}
     - _ZColor: {r: 0.14797792, g: 0, b: 0.16911763, a: 1}

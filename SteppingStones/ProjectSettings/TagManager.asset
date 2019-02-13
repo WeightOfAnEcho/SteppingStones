@@ -7,14 +7,10 @@ TagManager:
   - Fire
   - Staff
   - Rock
-  - Stone1
-  - Stone2
-  - Stone3
-  - Stone4
-  - Gate1
-  - Gate2
   - water
   - Valve
+  - Totem
+  - Stone1
   layers:
   - Default
   - TransparentFX
