@@ -13,7 +13,7 @@ NavMeshProjectSettings:
     cost: 2
   - name: TriggeredWalkable
     cost: 1
-  - name: Walkway
+  - name: NotWalkable
     cost: 100
   - name: 
     cost: 1

@@ -1,9 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BT_Rotator : MonoBehaviour
 {
+
+    public void Start()
+    {
+        Scene currentScene = SceneManager.GetActiveScene(); // Create a temporary reference to the current scene.
+
+        // Retrieve the name of this scene.
+        string sceneName = currentScene.name;
+
+        if (sceneName == "Level_3")
+        {
+            print("initial rotate");
+            BeginRotation();
+        }
+    }
 
     public void BeginRotation()
     {
