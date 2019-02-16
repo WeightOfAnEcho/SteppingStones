@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BT_Level03_Player : BT_Player_Base
 {
-    // Start is called before the first frame update
-    void Start()
+
+
+    protected override void Start()
     {
-        
+        base.Start(); // start base functionality heled in BT_Player_Base
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+    
+
 }

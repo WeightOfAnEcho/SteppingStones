@@ -13,9 +13,8 @@ public class BT_Rotator : MonoBehaviour
         // Retrieve the name of this scene.
         string sceneName = currentScene.name;
 
-        if (sceneName == "Level_3")
+        if (sceneName == "Level_3") // if this is X scene, do a single automatic rotation
         {
-            print("initial rotate");
             BeginRotation();
         }
     }

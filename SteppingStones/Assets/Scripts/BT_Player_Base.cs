@@ -8,29 +8,28 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
 
     //RAYCASTING/ CLICK TO MOVE REFERENCES ----------------------------------------------------------------------------------------
     public Camera IsoCam; //Main camera reference for RayCasting
-    private NavMeshAgent Agent; //Reference for the Agent (player)
-
-    //PLAYER ANIMATION ------------------------------------------------------------------------------------------------------------
-    Animator AdirAnim; // Reference for the Player animator attached
-
+    protected NavMeshAgent Agent; //Reference for the Agent (player)
     public GameObject ClickEffect; // reference for the effect when the ray cast lands a succesful hit on NavMesh
 
-    private bool cooldown = false;
+    //PLAYER ANIMATION ------------------------------------------------------------------------------------------------------------
+    protected Animator AdirAnim; // Reference for the Player animator attached
 
-    void Start()
+
+    protected bool cooldownBoolean;
+
+    protected virtual void Start()
     {
 
         AdirAnim = GetComponent<Animator>(); // Fetch Animator component attached
         Agent = GetComponent<NavMeshAgent>(); // Fetch the Agent Properties
+        cooldownBoolean = BT_Raycaster.cooldown;
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-        if (Input.GetMouseButtonDown(0) && cooldown == false) // When the left mouse button is pressed
+        if (Input.GetMouseButtonDown(0) && cooldownBoolean == false) // When the left mouse button is pressed
         {
-            Invoke("ResetCooldown", 2f);
-            cooldown = true;
 
             Ray ray = IsoCam.ScreenPointToRay(Input.mousePosition); // Fire a ray from the main camera to the click position
             RaycastHit hit; //store the resulting hit
@@ -48,7 +47,7 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
 
                     NavMeshPath path = new NavMeshPath(); // create a reference for a nav mesh path
                     Agent.CalculatePath(navmeshHit.position, path); //The agent calculates a path to the hit location on nav mesh
-                    Instantiate(ClickEffect, hit.point, Quaternion.LookRotation(hit.normal));//spawn the click effect at the hit location
+                    
 
                     if (path.status != NavMeshPathStatus.PathComplete) // if the agent calculates an impartial path
                     {
@@ -60,7 +59,7 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
                     {
                         print("has path");
                         Agent.SetDestination(navmeshHit.position); // set the hit location on the nav mesh to the target destination for the agent
-
+                        Instantiate(ClickEffect, hit.point, Quaternion.LookRotation(hit.normal));//spawn the click effect at the hit location
                     }
                 }
 
@@ -78,11 +77,6 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
         {
             AdirAnim.SetBool("Walking", false); //stop playing walking animation
         }
-    }
-
-    void ResetCooldown()
-    {
-        cooldown = false;
     }
 }
 

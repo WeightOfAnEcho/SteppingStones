@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class BT_Raycaster : MonoBehaviour
 {
-    private bool cooldown = false;
+    public static bool cooldown = false; // publicly accessible boolean for global cooldown of click
     public Camera IsoCam; //Main camera reference for RayCasting
+        
 
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && cooldown == false) // When the left mouse button is pressed
         {
-            Invoke("ResetCooldown", 0.5f);
+            Invoke("ResetCooldown", 1.5f); // being cooldown
             cooldown = true;
 
             Ray ray = IsoCam.ScreenPointToRay(Input.mousePosition); // Fire a ray from the main camera to the click position
@@ -22,9 +23,8 @@ public class BT_Raycaster : MonoBehaviour
             {
                 if (hit.transform.tag == "Valve")
                 {
-                    hit.transform.SendMessageUpwards("HitByWater");
-                    print(hit.collider.gameObject);
-                    hit.collider.SendMessageUpwards("BeginRotation", SendMessageOptions.RequireReceiver);
+                    hit.collider.SendMessageUpwards("BeginRotation", SendMessageOptions.DontRequireReceiver); // send message up hierarchy until you hit object with script attached
+                    //doesn't require receivier to avoid issue with null reference when you click the parent/object with script
                 }
 
                 

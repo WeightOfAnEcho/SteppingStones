@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BT_Totems : MonoBehaviour
 {
-    public Renderer rend;
+    private Renderer rend;
+    public GameObject doorOpen;
+    public GameObject finalDoor;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +27,7 @@ public class BT_Totems : MonoBehaviour
     public void HitByWater()
     {
         rend.enabled = true;
+        doorOpen.SetActive(false);
+        finalDoor.SendMessageUpwards("OpenFinalDoor", SendMessageOptions.RequireReceiver);
     }
 }

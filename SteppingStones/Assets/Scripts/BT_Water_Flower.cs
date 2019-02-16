@@ -16,6 +16,8 @@ public class BT_Water_Flower : MonoBehaviour
        Invoke("WaterSpawn", spawnSpeed); // Begin water spawning (flowing) but with X delay
     }
 
+
+
     // Update is called once per frame
     void WaterSpawn()
     {
@@ -23,15 +25,12 @@ public class BT_Water_Flower : MonoBehaviour
         Vector3 lft = transform.TransformDirection(Vector3.left);
         Vector3 rgt = transform.TransformDirection(Vector3.right);
         Vector3 bck = transform.TransformDirection(Vector3.back);
-        Vector3 all = transform.TransformDirection(Vector3.one);
+
 
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, fwd, out hit, 1))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.yellow);
-            print("hit wall");
-            Debug.Log(hit.transform.gameObject.name);
 
             if (hit.transform.tag == "Totem")
             {
@@ -48,9 +47,6 @@ public class BT_Water_Flower : MonoBehaviour
 
         if (Physics.Raycast(transform.position, rgt, out hit, 1))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right), Color.yellow);
-            print("hit wall");
-            Debug.Log(hit.transform.gameObject.name);
 
             if (hit.transform.tag == "Totem")
             {
@@ -66,9 +62,6 @@ public class BT_Water_Flower : MonoBehaviour
 
         if (Physics.Raycast(transform.position, lft, out hit, 1))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.left), Color.yellow);
-            print("hit wall");
-            Debug.Log(hit.transform.gameObject.name);
 
             if (hit.transform.tag == "Totem")
             {
@@ -84,9 +77,6 @@ public class BT_Water_Flower : MonoBehaviour
 
         if (Physics.Raycast(transform.position, bck, out hit, 1))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.back), Color.yellow);
-            print("hit wall");
-            Debug.Log(hit.transform.gameObject.name);
 
             if (hit.transform.tag == "Totem")
             {
@@ -100,5 +90,89 @@ public class BT_Water_Flower : MonoBehaviour
             Instantiate(waterBlock, end, transform.rotation);
         }
 
+    }
+
+    public void Regress() // function to be called by button
+    {
+        Invoke("WaterDeSpawn", spawnSpeed); // Begin water Despawning (regressing) but with X delay
+    }
+
+    void WaterDeSpawn()
+    {
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        Vector3 lft = transform.TransformDirection(Vector3.left);
+        Vector3 rgt = transform.TransformDirection(Vector3.right);
+        Vector3 bck = transform.TransformDirection(Vector3.back);
+        Vector3 all = transform.TransformDirection(Vector3.one);
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, fwd, out hit, 1))
+        {
+
+            if (hit.transform.tag == "water")
+            {
+                hit.transform.SendMessageUpwards("Regress");
+                DestroySelf();
+            }
+
+        }
+
+        else
+        {
+            Vector3 end = transform.position + fwd;
+            Instantiate(waterBlock, end, transform.rotation);
+        }
+
+        if (Physics.Raycast(transform.position, rgt, out hit, 1))
+        {
+
+            if (hit.transform.tag == "Totem")
+            {
+                hit.transform.SendMessageUpwards("HitByWater");
+            }
+        }
+
+        else
+        {
+            Vector3 end = transform.position + rgt;
+            Instantiate(waterBlock, end, transform.rotation);
+        }
+
+        if (Physics.Raycast(transform.position, lft, out hit, 1))
+        {
+
+            if (hit.transform.tag == "Totem")
+            {
+                hit.transform.SendMessageUpwards("HitByWater");
+            }
+        }
+
+        else
+        {
+            Vector3 end = transform.position + lft;
+            Instantiate(waterBlock, end, transform.rotation);
+        }
+
+        if (Physics.Raycast(transform.position, bck, out hit, 1))
+        {
+
+            if (hit.transform.tag == "Totem")
+            {
+                hit.transform.SendMessageUpwards("HitByWater");
+            }
+        }
+
+        else
+        {
+            Vector3 end = transform.position + bck;
+            Instantiate(waterBlock, end, transform.rotation);
+        }
+
+    }
+
+    void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 }
