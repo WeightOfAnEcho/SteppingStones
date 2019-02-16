@@ -13,7 +13,7 @@ public class BT_Raycaster : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && cooldown == false) // When the left mouse button is pressed
         {
-            Invoke("ResetCooldown", 1.5f); // being cooldown
+            Invoke("ResetCooldown", 1f); // being cooldown
             cooldown = true;
 
             Ray ray = IsoCam.ScreenPointToRay(Input.mousePosition); // Fire a ray from the main camera to the click position
