@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class BT_Button_Press : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public ParticleSystem system;
+    public GameObject[] waterBlocks;
+
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        system.Stop();
+
+        //water flow function start here
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionExit(Collision collision)
     {
+        system.Play();
+
+        //water regress function here
 
     }
 }
+

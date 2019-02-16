@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BT_Rotator : MonoBehaviour
 {
+    public GameObject checkerCube;
 
     public void Start()
     {
@@ -15,14 +16,67 @@ public class BT_Rotator : MonoBehaviour
 
         if (sceneName == "Level_3") // if this is X scene, do a single automatic rotation
         {
-            BeginRotation();
+            StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
         }
     }
 
     public void BeginRotation()
     {
 
-        StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        Vector3 lft = transform.TransformDirection(Vector3.left);
+        Vector3 rgt = transform.TransformDirection(Vector3.right);
+        Vector3 bck = transform.TransformDirection(Vector3.back);
+        Vector3 all = transform.TransformDirection(Vector3.one);
+
+        RaycastHit hit;
+
+        //if (Physics.Raycast(checkerCube.transform.position, fwd, out hit, 1))
+        //{
+
+        //    if (hit.transform.tag == "water")
+        //    {
+        //        print("hit water");
+        //    }
+
+        //}
+
+        //if (Physics.Raycast(checkerCube.transform.position, lft, out hit, 1))
+        //{
+
+        //    if (hit.transform.tag == "water")
+        //    {
+        //        print("hit water");
+        //    }
+
+        //}
+
+        //if (Physics.Raycast(checkerCube.transform.position, rgt, out hit, 1))
+        //{
+
+        //    if (hit.transform.tag == "water")
+        //    {
+        //        print("hit water");
+        //    }
+
+        //}
+
+        //if (Physics.Raycast(checkerCube.transform.position, bck, out hit, 1))
+        //{
+
+        //    if (hit.transform.tag == "water")
+        //    {
+        //        print("hit water");
+        //    }
+
+        //}
+
+        //else
+        //{
+            StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
+        //}
+
+
     }
 
 
@@ -40,6 +94,11 @@ public class BT_Rotator : MonoBehaviour
             yield return null;
         }
         transform.rotation = to;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print(collision.gameObject.name);
     }
 
 }

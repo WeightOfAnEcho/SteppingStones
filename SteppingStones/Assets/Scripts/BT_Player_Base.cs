@@ -34,7 +34,7 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
             Ray ray = IsoCam.ScreenPointToRay(Input.mousePosition); // Fire a ray from the main camera to the click position
             RaycastHit hit; //store the resulting hit
 
-            if (Physics.Raycast(ray, out hit, 500)) // if the hit coordiantes are on a valid collider within 500 units
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity)) // if the hit coordiantes are on a valid collider within 500 units
             {
 
 
@@ -49,7 +49,7 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
                     Agent.CalculatePath(navmeshHit.position, path); //The agent calculates a path to the hit location on nav mesh
                     
 
-                    if (path.status != NavMeshPathStatus.PathComplete) // if the agent calculates an impartial path
+                    if (path.status == NavMeshPathStatus.PathPartial || path.status == NavMeshPathStatus.PathInvalid) // if the agent calculates an impartial path
                     {
                         print("no path");
 

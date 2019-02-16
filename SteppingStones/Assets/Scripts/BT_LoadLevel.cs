@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class BT_LoadLevel : MonoBehaviour {
 
     public Animator LevelLoader;
-    private int levelToLoad;
     private AudioSource source;
     public AudioClip Click;
 
@@ -28,7 +27,7 @@ public class BT_LoadLevel : MonoBehaviour {
 
     public void LoadScene(int levelIndex)
     {
-        levelToLoad = levelIndex;
+        
         LevelLoader.SetTrigger("FadeOut");
 
         StartCoroutine("OnFadeComplete");
@@ -37,6 +36,9 @@ public class BT_LoadLevel : MonoBehaviour {
     IEnumerator OnFadeComplete()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(levelToLoad);
+        int c = SceneManager.GetActiveScene().buildIndex;
+        if (c < SceneManager.sceneCountInBuildSettings)
+        SceneManager.LoadScene(c + 1);
+        
     }
 }
