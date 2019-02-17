@@ -14,12 +14,10 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
     //PLAYER ANIMATION ------------------------------------------------------------------------------------------------------------
     protected Animator AdirAnim; // Reference for the Player animator attached
 
-
     protected bool cooldownBoolean;
 
     protected virtual void Start()
     {
-
         AdirAnim = GetComponent<Animator>(); // Fetch Animator component attached
         Agent = GetComponent<NavMeshAgent>(); // Fetch the Agent Properties
         cooldownBoolean = BT_Raycaster.cooldown;
@@ -36,7 +34,6 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity)) // if the hit coordiantes are on a valid collider within 500 units
             {
-
 
                 NavMeshHit navmeshHit; // provide reference for a raycast hit on the navmesh
                 int walkableMask = 1 << NavMesh.GetAreaFromName("Walkable"); // check if the nav mesh hit location was on a walkable layer/area
