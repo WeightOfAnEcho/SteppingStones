@@ -138,5 +138,5 @@ Shader "Animmal/PositionColor" {
         }
     }
     FallBack "Diffuse"
-    CustomEditor "ShaderForgeMaterialInspector"
+    ////////CustomEditor "ShaderForgeMaterialInspector"
 }

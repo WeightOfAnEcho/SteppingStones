@@ -5,8 +5,7 @@ using UnityEngine;
 public class BT_Raycaster : MonoBehaviour
 {
     public static bool cooldown = false; // publicly accessible boolean for global cooldown of click
-    public Camera IsoCam; //Main camera reference for RayCasting
-        
+    public Camera IsoCam; //Main camera reference for RayCasting  
 
 
     void Update()

@@ -9,22 +9,14 @@ public class BT_RockMover : MonoBehaviour {
 
     public GameObject Water1;
     public GameObject Water2;
-    private Animator RockAnim;
     private float myProgress;
 
     public Text Tutorialtext3;
     bool hadTutorial3 = false;
     bool noMoreTutorials = false;
 
-
-    bool stage1 = false;
-    bool stage2 = false;
-    bool return1 = false;
-    bool return0 = false;
-
     private void Start()
     {
-        RockAnim = gameObject.GetComponent<Animator>();
     }
 
     void Update()

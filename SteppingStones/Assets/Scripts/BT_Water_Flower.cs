@@ -103,17 +103,15 @@ public class BT_Water_Flower : MonoBehaviour
         Vector3 lft = transform.TransformDirection(Vector3.left);
         Vector3 rgt = transform.TransformDirection(Vector3.right);
         Vector3 bck = transform.TransformDirection(Vector3.back);
-        Vector3 all = transform.TransformDirection(Vector3.one);
 
         RaycastHit hit;
 
         if (Physics.Raycast(transform.position, fwd, out hit, 1))
         {
 
-            if (hit.transform.tag == "water")
+            if (hit.transform.tag == "Totem")
             {
-                hit.transform.SendMessageUpwards("Regress");
-                DestroySelf();
+                hit.transform.SendMessageUpwards("HitByWater");
             }
 
         }

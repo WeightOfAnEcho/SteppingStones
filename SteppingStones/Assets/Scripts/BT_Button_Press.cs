@@ -5,14 +5,15 @@ using UnityEngine;
 public class BT_Button_Press : MonoBehaviour
 {
 
+    //WATER SPAWNING AND DESPAWNING -------------------------------------------------------------------------------------------------
+    public GameObject[] waterBlocks; // array of waterblocks in scene (filled in function below)
+    public GameObject waterBlock; // Single waterblock for instatiating
+    public Transform spawnPoint; // spawn point reference to instatiate water - can be placed wherever
+    private bool isCreated = false; // boolean to avoid duplication
 
+    public bool isFlowing = false; // boolean to ensure we can't rotate valves while water is spawned (accessed by BT_Rotator script)
 
-    public GameObject[] waterBlocks;
-    public GameObject waterBlock;
-    public Transform spawnPoint;
-    private bool isCreated = false;
-
-    // BUTTON PRESSED TELEGRAPHING
+    // BUTTON PRESSED TELEGRAPHING -------------------------------------------------------------------------------------------------
     public Component[] rends; // Collects renderers in array for material changing
     public Material pressed; // pressed material to change to
     public Material notPressed; // not pressed material to change back to
@@ -24,7 +25,7 @@ public class BT_Button_Press : MonoBehaviour
         if (collision.gameObject.tag == "Player") //is that something the player?
         {
             system.Stop(); // stop the particle system - stopping makes it naturally fade rather than disappear
-
+            isFlowing = true;
             rends = GetComponentsInChildren<Renderer>(); // fetch the redners of children this is attached to
 
             foreach (Renderer rend in rends) // for each found rednerer
@@ -59,6 +60,7 @@ public class BT_Button_Press : MonoBehaviour
             }
         }
 
+        isFlowing = false;
         waterBlocks = GameObject.FindGameObjectsWithTag("water"); // find all objects in scene tagged water
 
         for (var i = 0; i < waterBlocks.Length; i++) // for each object in array

@@ -43,7 +43,7 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
 
                 if (NavMesh.SamplePosition(hit.point, out navmeshHit, 5.5f, walkableMask)) //if the ray position returns a walkable sample position                   
                 {
-                    print(hit.collider.gameObject.name + ", " + navmeshHit.mask);
+                    //print(hit.collider.gameObject.name + ", " + navmeshHit.mask); //uncomment if you require to know what the raycast is hitting for debugging
 
                     NavMeshPath path = new NavMeshPath(); // create a reference for a nav mesh path
                     Agent.CalculatePath(navmeshHit.position, path); //The agent calculates a path to the hit location on nav mesh
