@@ -5440,6 +5440,43 @@ PrefabInstance:
       objectReference: {fileID: 4300000, guid: 24e5ece03e7aa6d43a18af487981751a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b8c46f1302df34aa5b5206a5e302be, type: 3}
+--- !u!1 &557778539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4923038111060706961, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &557778542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557778539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &557778543
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557778539}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &581233632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5532,6 +5569,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581233632}
   m_Mesh: {fileID: 4300000, guid: 7904fb3d65798a448b8dda3a4f6f3d85, type: 3}
+--- !u!1 &586036335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 465525464211493306, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &586036338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586036335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &586036339
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586036335}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &594075536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6188,6 +6262,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac, type: 3}
+--- !u!1 &764228072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 465525463971896678, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &764228075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764228072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &764228076
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764228072}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &767726721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7883,6 +7994,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4d6a29c9156ee948a0a44b98b1f1da8, type: 3}
+--- !u!1 &1395939798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4923038112608451653, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1395939801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395939798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &1395939802
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395939798}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!1 &1411559885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4923038111765086828, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1411559888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411559885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &1411559889
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411559885}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1417286746
 GameObject:
   m_ObjectHideFlags: 0
@@ -8321,6 +8506,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd962f510dbceb5409e525c6c5d8dc7c, type: 3}
+--- !u!1 &1509082406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4923038111648659037, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1509082409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509082406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &1509082410
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509082406}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1509532129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8394,6 +8616,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac01335a0bfd5864c9405ac50c59c65c, type: 3}
+--- !u!1 &1585814560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 724063887797811476, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1585814563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585814560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &1585814564
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585814560}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1619465262
 GameObject:
   m_ObjectHideFlags: 0
@@ -8856,6 +9115,43 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.05, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &1720610024 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8753433602631406484, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1720610027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720610024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &1720610028
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720610024}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1757848871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8929,6 +9225,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db654e7fccc4241458049a7c4ea8cc07, type: 3}
+--- !u!1 &1760877019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7510381361710063039, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1760877022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760877019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &1760877023
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760877019}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1773182899
 GameObject:
   m_ObjectHideFlags: 0
@@ -9419,6 +9752,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1919234896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 724063889446064315, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1919234899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919234896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &1919234900
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919234896}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1953306093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9580,6 +9950,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: -15.000001, z: 0}
+--- !u!1 &1963019194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4923038112345238804, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1963019197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963019194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &1963019198
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963019194}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1963753475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9806,6 +10213,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034294603}
   m_Mesh: {fileID: 4300000, guid: 7904fb3d65798a448b8dda3a4f6f3d85, type: 3}
+--- !u!1 &2105255040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7738531844824224436, guid: 12b29ef5137a51e4591fbec1ea9e99ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 242302037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2105255043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105255040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba385dc3aee40a34890255a8ae211373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rends: []
+  mouseOverColor: {fileID: 2100000, guid: 4bd4d9c3e9da3fc4ab68aefa0e355f86, type: 2}
+  originalColor: {fileID: 2100000, guid: a51f46004f5cad44a8c7b87f90047739, type: 2}
+--- !u!54 &2105255044
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105255040}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &2105951195
 GameObject:
   m_ObjectHideFlags: 0

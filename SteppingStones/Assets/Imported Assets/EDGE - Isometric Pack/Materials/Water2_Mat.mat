@@ -4,10 +4,11 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Water2_Mat
-  m_Shader: {fileID: 4800000, guid: 94998218731af1b43927ca3fd91e1d4d, type: 3}
+  m_Shader: {fileID: 4800000, guid: bf43127c4883f6a4caf2768c74e2329c, type: 3}
   m_ShaderKeywords: _OPPOSITEX_ON _OPPOSITEY_ON _OPPOSITEZ_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
