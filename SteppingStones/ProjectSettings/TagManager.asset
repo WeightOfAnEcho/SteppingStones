@@ -11,6 +11,9 @@ TagManager:
   - Valve
   - Totem
   - Stone1
+  - Stone2
+  - Stone3
+  - Ice
   layers:
   - Default
   - TransparentFX
