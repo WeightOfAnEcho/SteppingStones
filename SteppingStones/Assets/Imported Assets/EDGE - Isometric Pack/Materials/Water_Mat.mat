@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Water_Mat
-  m_Shader: {fileID: 4800000, guid: 94998218731af1b43927ca3fd91e1d4d, type: 3}
+  m_Shader: {fileID: 4800000, guid: bf43127c4883f6a4caf2768c74e2329c, type: 3}
   m_ShaderKeywords: _OPPOSITEX_ON _OPPOSITEY_ON _OPPOSITEZ_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -124,12 +124,12 @@ Material:
     - _FoamMax: 0.567
     - _FoamMin: 0.705
     - _FoamPower: 8.3
-    - _FresnelAmount: 0.22
+    - _FresnelAmount: 0.254
     - _Gloss: 0.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Gradient: 0
+    - _Gradient: 0.138
     - _Intensity: 0.35
     - _Level: 0.513
     - _Metallic: 0
@@ -160,7 +160,7 @@ Material:
     - _UpNode: 0.644
     - _Value: 1
     - _WaveCount: 33.34
-    - _WaveHeight: 0.11
+    - _WaveHeight: 0.169
     - _WaveSpeed: 1.92
     - _WaveSpread: 4.04
     - _WaveWidth: 1.15

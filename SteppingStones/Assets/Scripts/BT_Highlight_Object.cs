@@ -6,29 +6,52 @@ using UnityEngine;
 public class BT_Highlight_Object : MonoBehaviour {
 
 
-    private Renderer rend;
-    private Color mouseOverColor = Color.green;
-    private Color originalColor = Color.white;
+    public Renderer[] rends;
+    public Material mouseOverColor;
+    public Material originalColor;
 
 
 
     void Start()
     {
 
-        rend = GetComponent<Renderer>();
+        
+
+
     }
 
     void OnMouseEnter()
     {
+        Debug.Log("Name: " + gameObject.name);
 
-        rend.material.color = mouseOverColor;
+        rends = GetComponentsInChildren<Renderer>(); // fetch the redners of children this is attached to
+
+        foreach (Renderer rend in rends) // for each found rednerer
+        {
+            if (rend.gameObject.transform.parent != null) // ensure we aren't including the parent renderer
+            {
+                print("changing color");
+                rend.material = mouseOverColor; // change the material to the pressed material
+            }
+        }
+
 
     }
 
     void OnMouseExit()
     {
+        Debug.Log("Name: " + gameObject.name);
 
-        rend.material.color = originalColor;
+        rends = GetComponentsInChildren<Renderer>(); // fetch the redners of children this is attached to
+
+        foreach (Renderer rend in rends) // for each found rednerer
+        {
+            if (rend.gameObject.transform.parent != null) // ensure we aren't including the parent renderer
+            {
+                rend.material = originalColor; // change the material to the pressed material
+            }
+        }
+
 
     }
 
