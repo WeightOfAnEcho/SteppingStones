@@ -22,7 +22,7 @@ public class BT_Highlight_Object : MonoBehaviour {
 
     void OnMouseEnter()
     {
-        Debug.Log("Name: " + gameObject.name);
+        //Debug.Log("Name: " + gameObject.name);
 
         rends = GetComponentsInChildren<Renderer>(); // fetch the redners of children this is attached to
 
@@ -30,7 +30,7 @@ public class BT_Highlight_Object : MonoBehaviour {
         {
             if (rend.gameObject.transform.parent != null) // ensure we aren't including the parent renderer
             {
-                print("changing color");
+                //print("changing color");
                 rend.material = mouseOverColor; // change the material to the pressed material
             }
         }
@@ -40,7 +40,7 @@ public class BT_Highlight_Object : MonoBehaviour {
 
     void OnMouseExit()
     {
-        Debug.Log("Name: " + gameObject.name);
+        //Debug.Log("Name: " + gameObject.name);
 
         rends = GetComponentsInChildren<Renderer>(); // fetch the redners of children this is attached to
 
