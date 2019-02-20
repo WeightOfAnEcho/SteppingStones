@@ -12,6 +12,7 @@ public class BT_Totems : MonoBehaviour
     public GameObject finalDoor;
     public GameObject doorDust;
 
+
     // Start is called before the first frame update
     void Start()
     {

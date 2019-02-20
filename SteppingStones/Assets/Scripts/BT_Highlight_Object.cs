@@ -10,6 +10,7 @@ public class BT_Highlight_Object : MonoBehaviour {
     public Material mouseOverColor;
     public Material originalColor;
 
+    public BT_Button_Press check; // a public variable for the button press script
 
 
     void Start()
@@ -28,7 +29,7 @@ public class BT_Highlight_Object : MonoBehaviour {
 
         foreach (Renderer rend in rends) // for each found rednerer
         {
-            if (rend.gameObject.transform.parent != null) // ensure we aren't including the parent renderer
+            if (rend.gameObject.transform.parent != null && check.isFlowing == false) // ensure we aren't including the parent renderer
             {
                 //print("changing color");
                 rend.material = mouseOverColor; // change the material to the pressed material
