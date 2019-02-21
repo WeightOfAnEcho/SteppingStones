@@ -45,7 +45,7 @@ Shader "Animmal/Fog_SHader_2017"
 
 		ENDCG
 	}
-	CustomEditor "ASEMaterialInspector"
+	//CustomEditor "ASEMaterialInspector"
 }
 /*ASEBEGIN
 Version=14501

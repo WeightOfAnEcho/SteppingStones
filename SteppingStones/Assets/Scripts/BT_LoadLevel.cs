@@ -8,6 +8,7 @@ public class BT_LoadLevel : MonoBehaviour {
     public Animator LevelLoader;
     private AudioSource source;
     public AudioClip Click;
+    public Scene thisScene;
 
     private void Awake()
     {
@@ -17,7 +18,16 @@ public class BT_LoadLevel : MonoBehaviour {
     public void SceneTransition()
     {
         PlaySound();
+
         LoadScene(1);
+
+    }
+
+    public void MechanicsScene()
+    {
+       PlaySound();
+
+       SceneManager.LoadScene(3);
     }
 
     public void PlaySound()

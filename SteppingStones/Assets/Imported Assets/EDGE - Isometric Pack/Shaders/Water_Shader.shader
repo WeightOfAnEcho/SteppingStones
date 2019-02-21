@@ -475,5 +475,5 @@ Shader "Animmal/Water_Shader" {
         }
     }
     FallBack "Diffuse"
-    CustomEditor "ShaderForgeMaterialInspector"
+    ///CustomEditor "ShaderForgeMaterialInspector"
 }

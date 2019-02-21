@@ -9,6 +9,8 @@ public class BT_Water_Flower : MonoBehaviour
     private bool spawned;
     public float spawnSpeed = 0.1f;
 
+    public GameObject iceBlock;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,12 @@ public class BT_Water_Flower : MonoBehaviour
                 hit.transform.SendMessageUpwards("HitByWater");
             }
 
+
+            if (hit.transform.tag == "Ice")
+            {
+                Freeze();
+            }
+
         }
 
         else
@@ -51,6 +59,12 @@ public class BT_Water_Flower : MonoBehaviour
             if (hit.transform.tag == "Totem")
             {
                 hit.transform.SendMessageUpwards("HitByWater");
+            }
+
+
+            if (hit.transform.tag == "Ice")
+            {
+                Freeze();
             }
         }
 
@@ -67,6 +81,12 @@ public class BT_Water_Flower : MonoBehaviour
             {
                 hit.transform.SendMessageUpwards("HitByWater");
             }
+
+
+            if (hit.transform.tag == "Ice")
+            {
+                Freeze();
+            }
         }
 
         else
@@ -81,6 +101,11 @@ public class BT_Water_Flower : MonoBehaviour
             if (hit.transform.tag == "Totem")
             {
                 hit.transform.SendMessageUpwards("HitByWater");
+            }
+
+            if (hit.transform.tag == "Ice")
+            {
+                Freeze();
             }
         }
 
@@ -173,4 +198,11 @@ public class BT_Water_Flower : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    void Freeze()
+    {
+        Instantiate(iceBlock, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
 }

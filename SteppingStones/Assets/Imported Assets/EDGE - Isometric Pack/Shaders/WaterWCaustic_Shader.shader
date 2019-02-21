@@ -504,5 +504,5 @@ Shader "Animmal/WaterWCaustic_Shader" {
         }
     }
     FallBack "Diffuse"
-    CustomEditor "ShaderForgeMaterialInspector"
+    ////CustomEditor "ShaderForgeMaterialInspector"
 }

@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Lava
   m_Shader: {fileID: 4800000, guid: 2239ed1da6a224c429895a94b1bd9a5c, type: 3}
   m_ShaderKeywords: 
@@ -71,11 +72,11 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Power: 0.018
+    - _Power: 0.11
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpeedX: 2
-    - _SpeedY: 2
+    - _SpeedX: 3
+    - _SpeedY: 3
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1

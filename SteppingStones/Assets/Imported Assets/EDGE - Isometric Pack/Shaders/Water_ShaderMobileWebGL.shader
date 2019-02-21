@@ -273,5 +273,5 @@ Shader "Animmal/Water_ShaderMobileWebGL" {
         }
     }
     FallBack "Diffuse"
-    CustomEditor "ShaderForgeMaterialInspector"
+    ///CustomEditor "ShaderForgeMaterialInspector"
 }

@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LEVELS/Level_3/Level_3.unity
     guid: b61bde8ec7421a9498c1495b927c2fe6
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/MechanicsShowcase/Mechanics.unity
+    guid: ac3fc883bad446b40a3eba750a288200
+  - enabled: 1
+    path: Assets/Scenes/LEVELS/MechanicsShowcase/Mechanics2.unity
+    guid: a755d4d03b4f11f4b998870003d80621
   m_configObjects: {}
