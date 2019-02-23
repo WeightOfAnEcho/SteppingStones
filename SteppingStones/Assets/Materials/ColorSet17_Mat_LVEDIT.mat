@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rock
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Name: ColorSet17_Mat_LVEDIT
+  m_Shader: {fileID: 4800000, guid: 0f3fdbf2426b29d42994e2158b9700d5, type: 3}
+  m_ShaderKeywords: _OPPOSITEY_ON _OVERALLGRADIENT_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: -0.81, y: -0.8}
+        m_Offset: {x: -2.84, y: 1.08}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -51,43 +55,57 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _PaletteTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _PatternTex:
+    - _ShadowTexture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Cutout: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _EmissionOppositeX: 0
+    - _EmissionOppositeY: 0
+    - _EmissionOppositeZ: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _PaletteColorCount: 4
-    - _PaletteHeight: 128
+    - _OppositeX: 0
+    - _OppositeY: 1
+    - _OppositeZ: 0
+    - _OverallGradient: 1
+    - _OverallGradientContrast: 12.05
+    - _OverallGradientOffset: 4.2
     - _Parallax: 0.02
-    - _PatternScale: 1
-    - _PatternSize: 8
+    - _ShadowBoost: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - __hasPatternTex: 0
     m_Colors:
-    - _Color: {r: 0.4339623, g: 0.33480066, b: 0.28862587, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - __paletteRef: {r: 0, g: 0, b: 0, a: 0}
-    - __patternRef: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionOppositeXColor: {r: 0.409, g: 0.1100069, b: 0, a: 1}
+    - _EmissionOppositeYColor: {r: 0.4078431, g: 0.1098039, b: 0, a: 1}
+    - _EmissionOppositeZColor: {r: 0.4078431, g: 0.1098039, b: 0, a: 1}
+    - _EmissionXColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionYColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionZColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LightAdd: {r: 0.1544118, g: 0.09477688, b: 0.01930147, a: 1}
+    - _LightMultiplier: {r: 1, g: 1, b: 1, a: 1}
+    - _OppositeXColor: {r: 0.14901961, g: 0, b: 0.16862746, a: 1}
+    - _OppositeYColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OppositeZColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OverallGradientColor: {r: 0.24264705, g: 0, b: 0.21587218, a: 1}
+    - _ShadowTint: {r: 0.06848523, g: 0.17555329, b: 0.1792453, a: 1}
+    - _XColor: {r: 0.04245279, g: 0.21698111, b: 0, a: 1}
+    - _YColor: {r: 0.6037736, g: 0.27150825, b: 0.10537558, a: 1}
+    - _ZColor: {r: 0.14797792, g: 0, b: 0.16911763, a: 1}
