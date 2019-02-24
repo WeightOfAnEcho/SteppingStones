@@ -198,3 +198,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterBlock: {fileID: 85500150}
   spawnSpeed: 0.1
+  iceBlock: {fileID: 0}

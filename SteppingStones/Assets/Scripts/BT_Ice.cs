@@ -16,5 +16,14 @@ public class BT_Ice : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter(Collision collision) // when water collides with ice
+    {
+
+        if (collision.gameObject.tag == "water") // ensure it's water colliding with the ice
+        {
+            collision.transform.BroadcastMessage("Freeze"); // tell the water to execute freeze function
+        }
+
+    }
 
 }

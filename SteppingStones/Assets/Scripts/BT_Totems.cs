@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BT_Totems : MonoBehaviour
 {
@@ -18,16 +19,29 @@ public class BT_Totems : MonoBehaviour
     {
         // Fetch the Renderer from the GameObject
         rend = GetComponent<Renderer>();
-        rend.enabled = false;
+        rend.enabled = false; // set it to false
+
     }
 
 
     public void HitByWater()
     {
         rend.enabled = true;
-        Instantiate(doorDust, doorOpen.transform.position, doorOpen.transform.rotation);
-        doorOpen.SetActive(false);
-        finalDoor.SendMessageUpwards("OpenFinalDoor", SendMessageOptions.RequireReceiver);
-        
-    }
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level_03"))
+        {
+            Instantiate(doorDust, doorOpen.transform.position, doorOpen.transform.rotation);
+            doorOpen.SetActive(false);
+            finalDoor.SendMessageUpwards("OpenFinalDoor", SendMessageOptions.RequireReceiver);
+        }
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Mechanics2"))
+        {
+
+        }
+
+
+
+
+        }
 }

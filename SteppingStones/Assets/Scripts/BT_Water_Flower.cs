@@ -18,7 +18,7 @@ public class BT_Water_Flower : MonoBehaviour
     void Start()
     {
 
-       Invoke("WaterSpawn", spawnSpeed); // Begin water spawning (flowing) but with X delay
+        Invoke("WaterSpawn", spawnSpeed); // Begin water spawning (flowing) but with X delay
     }
 
 
@@ -37,9 +37,9 @@ public class BT_Water_Flower : MonoBehaviour
 
         RaycastHit hit;
 
-        if(counter<waterLimit)
+        if (counter < waterLimit)
         {
-            Debug.Log(counter);
+            //Debug.Log(counter);
 
             if (Physics.Raycast(transform.position, fwd, out hit, 1))
             {
@@ -52,7 +52,7 @@ public class BT_Water_Flower : MonoBehaviour
 
                 if (hit.transform.tag == "Ice")
                 {
-                    Freeze();
+                    //Freeze();
                 }
 
             }
@@ -61,7 +61,7 @@ public class BT_Water_Flower : MonoBehaviour
             {
                 Vector3 end = transform.position + fwd;
                 Instantiate(waterBlock, end, transform.rotation);
-                counter++; 
+                counter++;
             }
 
             if (Physics.Raycast(transform.position, rgt, out hit, 1))
@@ -75,7 +75,7 @@ public class BT_Water_Flower : MonoBehaviour
 
                 if (hit.transform.tag == "Ice")
                 {
-                    Freeze();
+                    //Freeze();
                 }
             }
 
@@ -97,7 +97,7 @@ public class BT_Water_Flower : MonoBehaviour
 
                 if (hit.transform.tag == "Ice")
                 {
-                    Freeze();
+                    //Freeze();
                 }
             }
 
@@ -118,7 +118,7 @@ public class BT_Water_Flower : MonoBehaviour
 
                 if (hit.transform.tag == "Ice")
                 {
-                    Freeze();
+                    //Freeze();
                 }
             }
 
@@ -141,7 +141,7 @@ public class BT_Water_Flower : MonoBehaviour
 
                     if (hit.transform.tag == "Ice")
                     {
-                        Freeze();
+                        //Freeze();
                     }
                 }
 
@@ -156,12 +156,12 @@ public class BT_Water_Flower : MonoBehaviour
         }
     }
 
-        
+
 
     public void Regress() // function to be called by button
     {
         Invoke("WaterDeSpawn", spawnSpeed); // Begin water Despawning (regressing) but with X delay
-    }
+    } // not functioning
 
     void WaterDeSpawn()
     {
@@ -233,17 +233,22 @@ public class BT_Water_Flower : MonoBehaviour
             Instantiate(waterBlock, end, transform.rotation);
         }
 
+    } // not functioning
+
+
+    public void Freeze() // freeze function called by ice when water collides
+    {
+        StartCoroutine(FreezeCycle()); // beging freezing - coroutine to allow for non-immediate freezing + processing time
+
     }
 
-    void DestroySelf()
+    IEnumerator FreezeCycle()
     {
-        Destroy(gameObject);
-    }
+        yield return new WaitForSeconds(0.5f); // delay before 'freezing'
 
-    void Freeze()
-    {
-        Instantiate(iceBlock, transform.position, transform.rotation);
-        Destroy(gameObject);
+        Instantiate(iceBlock, transform.position, transform.rotation); // instatiate an icebock - this then collides with the adjacent water and restarts the freezing process
+
+        Destroy(transform.parent.gameObject); // destory the parent (and this) remember this script is attached to the raycaster cube, not the water block!
     }
 
 }

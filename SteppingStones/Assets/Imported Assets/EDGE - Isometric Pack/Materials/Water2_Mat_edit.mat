@@ -129,8 +129,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Gradient: 0.605
-    - _Intensity: 0.456
+    - _Gradient: 0.58
+    - _Intensity: 0.573
     - _Level: 0.513
     - _Metallic: 0
     - _Mode: 0
@@ -146,7 +146,7 @@ Material:
     - _OverallGradientOffset: -4.96
     - _OverallGradientOffset_copy: 0
     - _Parallax: 0.02
-    - _Refraction: 0.57
+    - _Refraction: -1
     - _Refraction_copy: 0.007
     - _ShadowBoost: 0
     - _SmoothnessTextureChannel: 0
@@ -160,7 +160,7 @@ Material:
     - _UpNode: 0.644
     - _Value: 1
     - _WaveCount: 14
-    - _WaveHeight: 0.338
+    - _WaveHeight: 0.032
     - _WaveSpeed: 1.92
     - _WaveSpread: 1.39
     - _WaveWidth: 1.15
