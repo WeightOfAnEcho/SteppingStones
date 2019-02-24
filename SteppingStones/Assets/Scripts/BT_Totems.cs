@@ -14,6 +14,10 @@ public class BT_Totems : MonoBehaviour
     public GameObject doorDust;
 
 
+    //GEYSERS TO ACTIVATE ---------------------------------------------------------------------------------------------------
+    public Animator Geyser;
+    public ParticleSystem particleGeyser;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +32,7 @@ public class BT_Totems : MonoBehaviour
     {
         rend.enabled = true;
 
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level_03"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level_3"))
         {
             Instantiate(doorDust, doorOpen.transform.position, doorOpen.transform.rotation);
             doorOpen.SetActive(false);
@@ -37,6 +41,8 @@ public class BT_Totems : MonoBehaviour
 
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Mechanics2"))
         {
+            Geyser.SetBool("GeyserMove", true);
+            particleGeyser.Play();
 
         }
 

@@ -4354,7 +4354,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Totem
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4824225466691071854, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac, type: 3}
 --- !u!4 &354321712 stripped
 Transform:
@@ -4383,6 +4384,8 @@ MonoBehaviour:
   doorOpen: {fileID: 363873081}
   finalDoor: {fileID: 7340225594339854464}
   doorDust: {fileID: 165672, guid: 146d2ff25be0f824fa285b16b2915ff3, type: 3}
+  Geyser: {fileID: 0}
+  particleGeyser: {fileID: 0}
 --- !u!1 &363873081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1930785508919374, guid: f6d281664decbc84cad8724d15f87951,
@@ -6262,7 +6265,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Totem
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4824225466691071854, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac, type: 3}
 --- !u!1 &764228072 stripped
 GameObject:
@@ -6508,6 +6512,8 @@ MonoBehaviour:
   doorOpen: {fileID: 1693105736}
   finalDoor: {fileID: 7340225594339854464}
   doorDust: {fileID: 165672, guid: 146d2ff25be0f824fa285b16b2915ff3, type: 3}
+  Geyser: {fileID: 0}
+  particleGeyser: {fileID: 0}
 --- !u!1 &839705865
 GameObject:
   m_ObjectHideFlags: 0
@@ -10682,6 +10688,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 48630286459004443, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 48630286459004442, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.44735184
+      objectReference: {fileID: 0}
+    - target: {fileID: 48630286459004442, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -252.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 48630286459004442, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.487485
+      objectReference: {fileID: 0}
+    - target: {fileID: 48630286848253069, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 65.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 48630286848253069, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 48630286848253069, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0876
+      objectReference: {fileID: 0}
+    - target: {fileID: 48630286848253069, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -94.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9df07e40fecd9ba4c92919a282eb26d4, type: 3}
