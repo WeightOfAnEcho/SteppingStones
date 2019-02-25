@@ -8,8 +8,14 @@ public class BT_Raycaster : MonoBehaviour
     public Camera IsoCam; //Main camera reference for RayCasting  
 
 
+    void Start()
+    {
+        cooldown = false;
+    }
+
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0) && cooldown == false) // When the left mouse button is pressed
         {
             Invoke("ResetCooldown", 1f); // being cooldown
