@@ -7,7 +7,8 @@ public class LV_Tree : MonoBehaviour
     public GameObject NavMeshBlock;
     Animator tree_anim;
     int hitCount = 0;
-    public int hitsUntilKnock = 3;
+    public int hitsUntilKnock = 2;
+    public GameObject dustPoof;
 
     private void Awake()
     {
@@ -17,14 +18,17 @@ public class LV_Tree : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("HIT");
+        Instantiate(dustPoof, other.transform.position, other.transform.rotation);
 
         if (hitCount < hitsUntilKnock)
         {
             hitCount++;
+
         }
         else
         {
             KnockTree();
+
         }
     }
 

@@ -9,7 +9,17 @@ public class BT_Mechanic_Manager : MonoBehaviour
 
  public void LoadNext()
     {
-        SceneManager.LoadScene("Mechanics2"); //load the next mechanics scene
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Mechanics2"))
+        {
+            SceneManager.LoadScene("Mechanics3");
+        }
+
+        else
+        {
+            SceneManager.LoadScene("Mechanics2"); //load the next mechanics scene
+        }
+
     }
 
     public void Repeat()
@@ -24,6 +34,15 @@ public class BT_Mechanic_Manager : MonoBehaviour
 
     public void LoadPrevious()
     {
-        SceneManager.LoadScene("Mechanics"); // load the first mechanics scene
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Mechanics3"))
+        {
+            SceneManager.LoadScene("Mechanics2");
+        }
+
+        else
+        {
+            SceneManager.LoadScene("Mechanics"); // load the first mechanics scene
+        }
+
     }
 }
