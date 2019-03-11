@@ -11,6 +11,8 @@ public class BT_Platform_Riser : MonoBehaviour
     public Vector3 target;
     public Vector3 destination;
 
+    private bool raisePlatform = false;
+
     public void Start()
     {
        
@@ -18,10 +20,16 @@ public class BT_Platform_Riser : MonoBehaviour
 
     public void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.GetMouseButtonDown(0) && raisePlatform == false)
         {
             print("button pressed");
             StartCoroutine(RaisePlatforms());
+            raisePlatform = true;
+        }
+
+        else
+        {
+            //nothing
         }
     }
 
@@ -39,7 +47,7 @@ public class BT_Platform_Riser : MonoBehaviour
             //CURRENT METHOD BELOW STILL TELEPORTS - LERP REQUIRES A CLEAR TARGET, I WAS TO AVOID HARD CODING TARGETS FOR EACH GO
             target = p.transform.position += Vector3.up * 2f;
 
-            //p.transform.position = Vector3.Lerp(p.transform.position, target, speed * Time.deltaTime);
+            p.transform.position = Vector3.Lerp(p.transform.position, target, speed * Time.deltaTime);
 
             yield return wait;
         }
