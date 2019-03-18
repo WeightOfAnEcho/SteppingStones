@@ -124,13 +124,13 @@ Material:
     - _FoamMax: 0.567
     - _FoamMin: 0.705
     - _FoamPower: 8.3
-    - _FresnelAmount: 0.178
+    - _FresnelAmount: 0
     - _Gloss: 0.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Gradient: 0.281
-    - _Intensity: 0.436
+    - _Intensity: 0.444
     - _Level: 0.513
     - _Metallic: 0
     - _Mode: 0
@@ -160,7 +160,7 @@ Material:
     - _UpNode: 0.644
     - _Value: 1
     - _WaveCount: 24
-    - _WaveHeight: 0.064
+    - _WaveHeight: 0.101
     - _WaveSpeed: 1.92
     - _WaveSpread: 2
     - _WaveWidth: 2

@@ -1698,7 +1698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsoCam: {fileID: 0}
-  ClickEffect: {fileID: 0}
+  ClickEffect: {fileID: 1610233659687128069, guid: 8a56e7b02e011db42ad4d3026d72aeff,
+    type: 3}
 --- !u!1 &1401546799957334
 GameObject:
   m_ObjectHideFlags: 0

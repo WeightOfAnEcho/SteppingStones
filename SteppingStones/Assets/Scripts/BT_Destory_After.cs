@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BT_Destory_After : MonoBehaviour {
 
+    public float waitTime;
+
 	// Use this for initialization
 	void Start () {
 
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, waitTime);
 
     }
 	
