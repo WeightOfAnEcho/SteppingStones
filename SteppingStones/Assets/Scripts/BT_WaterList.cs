@@ -6,29 +6,34 @@ using UnityEngine;
 public class BT_WaterList: MonoBehaviour
 {
     private static BT_WaterList lister;
-    private static List<GameObject> waterInScene;
+    /*private static*/public List<GameObject> waterInScene = new List<GameObject>();
 
     //Initialising Water
     public bool waterPresent = false;
     public Transform waterStart;
     public GameObject waterBlock;
 
-    public static List<GameObject> getList()
+    public /*static*/ List<GameObject> getList()
     {
-        if (waterInScene == null) { waterInScene = new List<GameObject>(); }
+        //if (waterInScene == null) { waterInScene = new List<GameObject>(); }
         return waterInScene;
     }
 
-    public static void Add(GameObject go)
+    public /*static*/ void Add(GameObject go)
     {
-        if (waterInScene == null) { waterInScene = new List<GameObject>(); }
+        //if (waterInScene == null) { waterInScene = new List<GameObject>(); }
         waterInScene.Add(go);
     }
 
     public void Start()
     {
-        Instantiate(waterBlock, waterStart.position, waterStart.rotation);
-        waterPresent = true;
+        //Instantiate(waterBlock, waterStart.position, waterStart.rotation);
+        //waterPresent = true;
+
+        if (waterInScene == null)
+        {
+            waterInScene = new List<GameObject>();
+        }
     }
 
     public void TriggerWater()
@@ -37,15 +42,20 @@ public class BT_WaterList: MonoBehaviour
         {
             var lastWater = waterInScene[waterInScene.Count - 1];
             lastWater.BroadcastMessage("Regress");
-            waterPresent = false;
+
+            if (waterInScene.Count == 0 || waterInScene == null)
+            {
+                waterPresent = false; 
+            }
         }
 
         if (waterPresent == false)
         {
-            Instantiate(waterBlock, waterStart.position, waterStart.rotation);
+            GameObject go = Instantiate(waterBlock, waterStart.position, waterStart.rotation);
+
+            waterInScene.Add(go);
             waterPresent = true;
         }
-
     }
 }
 
