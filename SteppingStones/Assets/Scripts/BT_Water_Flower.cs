@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BT_Water_Flower : MonoBehaviour
@@ -9,20 +10,29 @@ public class BT_Water_Flower : MonoBehaviour
     private bool spawned;
     public float spawnSpeed = 0.1f;
 
+    public GameObject[] enemy;
+    public float enemyCount;
+    public float range;
 
+    public GameObject list;
+    BT_WaterList listScript;
 
     public GameObject iceBlock;
+    GameObject WatertoAdd;
 
     // Start is called before the first frame update
     void Start()
     {
+        listScript = GameObject.Find("WaterList").GetComponent<BT_WaterList>();
 
         Invoke("WaterSpawn", spawnSpeed); // Begin water spawning (flowing) but with X delay
+
     }
 
 
 
-    // Update is called once per frame
+
+    // WATER SPAWNING PROCESS //
     void WaterSpawn()
     {
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -36,130 +46,6 @@ public class BT_Water_Flower : MonoBehaviour
         RaycastHit hit;
 
 
-            if (Physics.Raycast(transform.position, fwd, out hit, 1))
-            {
-
-                if (hit.transform.tag == "Totem")
-                {
-                    hit.transform.SendMessageUpwards("HitByWater");
-                }
-
-
-                if (hit.transform.tag == "Ice")
-                {
-                    //Freeze();
-                }
-
-            }
-
-            else
-            {
-                Vector3 end = transform.position + fwd;
-                Instantiate(waterBlock, end, transform.rotation);
-            }
-
-            if (Physics.Raycast(transform.position, rgt, out hit, 1))
-            {
-
-                if (hit.transform.tag == "Totem")
-                {
-                    hit.transform.SendMessageUpwards("HitByWater");
-                }
-
-
-                if (hit.transform.tag == "Ice")
-                {
-                    //Freeze();
-                }
-            }
-
-            else
-            {
-                Vector3 end = transform.position + rgt;
-                Instantiate(waterBlock, end, transform.rotation);
-            }
-
-            if (Physics.Raycast(transform.position, lft, out hit, 1))
-            {
-
-                if (hit.transform.tag == "Totem")
-                {
-                    hit.transform.SendMessageUpwards("HitByWater");
-                }
-
-
-                if (hit.transform.tag == "Ice")
-                {
-                    //Freeze();
-                }
-            }
-
-            else
-            {
-                Vector3 end = transform.position + lft;
-                Instantiate(waterBlock, end, transform.rotation);
-            }
-
-            if (Physics.Raycast(transform.position, bck, out hit, 1))
-            {
-
-                if (hit.transform.tag == "Totem")
-                {
-                    hit.transform.SendMessageUpwards("HitByWater");
-                }
-
-                if (hit.transform.tag == "Ice")
-                {
-                    //Freeze();
-                }
-            }
-
-            else
-            {
-                Vector3 end = transform.position + bck;
-                Instantiate(waterBlock, end, transform.rotation);
-            }
-
-
-            if (Physics.Raycast(transform.position, dwn, out hit, 1))
-            {
-
-                if (hit.transform.tag == "Totem")
-                {
-                    hit.transform.SendMessageUpwards("HitByWater");
-                }
-
-                if (hit.transform.tag == "Ice")
-                {
-                    //Freeze();
-                }
-            }
-
-            else
-            {
-                Vector3 end = transform.position + dwn;
-                Instantiate(waterBlock, end, transform.rotation);
-            }
-
-    }
-    
-
-
-
-    public void Regress() // function to be called by button
-    {
-        Invoke("WaterDeSpawn", spawnSpeed); // Begin water Despawning (regressing) but with X delay
-    } // not functioning
-
-    void WaterDeSpawn()
-    {
-        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-        Vector3 lft = transform.TransformDirection(Vector3.left);
-        Vector3 rgt = transform.TransformDirection(Vector3.right);
-        Vector3 bck = transform.TransformDirection(Vector3.back);
-
-        RaycastHit hit;
-
         if (Physics.Raycast(transform.position, fwd, out hit, 1))
         {
 
@@ -168,12 +54,20 @@ public class BT_Water_Flower : MonoBehaviour
                 hit.transform.SendMessageUpwards("HitByWater");
             }
 
+
+            if (hit.transform.tag == "Ice")
+            {
+                //Freeze();
+            }
+
         }
 
         else
         {
             Vector3 end = transform.position + fwd;
-            Instantiate(waterBlock, end, transform.rotation);
+            GameObject newWater = Instantiate(waterBlock, end, transform.rotation) as GameObject;
+            BT_WaterList.Add(newWater);
+            print("added water to list");
         }
 
         if (Physics.Raycast(transform.position, rgt, out hit, 1))
@@ -183,12 +77,20 @@ public class BT_Water_Flower : MonoBehaviour
             {
                 hit.transform.SendMessageUpwards("HitByWater");
             }
+
+
+            if (hit.transform.tag == "Ice")
+            {
+                //Freeze();
+            }
         }
 
         else
         {
             Vector3 end = transform.position + rgt;
-            Instantiate(waterBlock, end, transform.rotation);
+            GameObject newWater = Instantiate(waterBlock, end, transform.rotation) as GameObject;
+            BT_WaterList.Add(newWater);
+            print("added water to list");
         }
 
         if (Physics.Raycast(transform.position, lft, out hit, 1))
@@ -198,12 +100,20 @@ public class BT_Water_Flower : MonoBehaviour
             {
                 hit.transform.SendMessageUpwards("HitByWater");
             }
+
+
+            if (hit.transform.tag == "Ice")
+            {
+                //Freeze();
+            }
         }
 
         else
         {
             Vector3 end = transform.position + lft;
-            Instantiate(waterBlock, end, transform.rotation);
+            GameObject newWater = Instantiate(waterBlock, end, transform.rotation) as GameObject;
+            BT_WaterList.Add(newWater);
+            print("added water to list");
         }
 
         if (Physics.Raycast(transform.position, bck, out hit, 1))
@@ -213,16 +123,120 @@ public class BT_Water_Flower : MonoBehaviour
             {
                 hit.transform.SendMessageUpwards("HitByWater");
             }
+
+            if (hit.transform.tag == "Ice")
+            {
+                //Freeze();
+            }
         }
 
         else
         {
             Vector3 end = transform.position + bck;
-            Instantiate(waterBlock, end, transform.rotation);
+            GameObject newWater = Instantiate(waterBlock, end, transform.rotation) as GameObject;
+            BT_WaterList.Add(newWater);
+            print("added water to list");
         }
 
-    } // not functioning
 
+        if (Physics.Raycast(transform.position, dwn, out hit, 1))
+        {
+
+            if (hit.transform.tag == "Totem")
+            {
+                hit.transform.SendMessageUpwards("HitByWater");
+            }
+
+            if (hit.transform.tag == "Ice")
+            {
+                //Freeze();
+            }
+        }
+
+        else
+        {
+            Vector3 end = transform.position + dwn;
+            GameObject newWater = Instantiate(waterBlock, end, transform.rotation) as GameObject;
+            BT_WaterList.Add(newWater);
+            print("added water to list");
+        }
+
+    }
+
+
+
+
+    public void Regress() // function to be called by button
+    {
+        Invoke("WaterDeSpawn", spawnSpeed); // Begin water Despawning (regressing) but with X delay
+        print("Invoking");
+    } 
+
+    void WaterDeSpawn()
+    {
+        print("getting vectors");
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        Vector3 lft = transform.TransformDirection(Vector3.left);
+        Vector3 rgt = transform.TransformDirection(Vector3.right);
+        Vector3 bck = transform.TransformDirection(Vector3.back);
+        print("got vectors");
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, fwd, out hit, 1))
+        {
+            print("Hit fwd");
+            if (hit.transform.tag == "water")
+            {
+                hit.transform.BroadcastMessage("WaterDeSpawn");
+
+            }
+
+            Destroy(transform.parent.gameObject);
+        }
+
+
+        if (Physics.Raycast(transform.position, rgt, out hit, 1))
+        {
+            print("Hit rgt");
+            if (hit.transform.tag == "water")
+            {
+                hit.transform.BroadcastMessage("Regress");
+            }
+
+            Destroy(transform.parent.gameObject);
+        }
+
+        
+
+        if (Physics.Raycast(transform.position, lft, out hit, 1))
+        {
+            print("Hit lft");
+            if (hit.transform.tag == "water")
+            {
+                hit.transform.BroadcastMessage("Regress");
+            }
+
+            Destroy(transform.parent.gameObject);
+        }
+
+
+        if (Physics.Raycast(transform.position, bck, out hit, 1))
+        {
+            print("Hit bck");
+            if (hit.transform.tag == "water")
+            {
+                hit.transform.BroadcastMessage("Regress");
+ 
+            }
+
+            Destroy(transform.parent.gameObject);
+
+        }
+
+
+    } 
+
+    // FREEZING FUNCTIONALITY //
 
     public void Freeze() // freeze function called by ice when water collides
     {
@@ -237,6 +251,11 @@ public class BT_Water_Flower : MonoBehaviour
         Instantiate(iceBlock, transform.position, transform.rotation); // instatiate an icebock - this then collides with the adjacent water and restarts the freezing process
 
         Destroy(transform.parent.gameObject); // destory the parent (and this) remember this script is attached to the raycaster cube, not the water block!
+    }
+
+    public void Test()
+    {
+        print("ListFunctioning");
     }
 
 }
