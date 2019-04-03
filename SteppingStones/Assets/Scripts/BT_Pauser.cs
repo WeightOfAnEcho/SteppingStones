@@ -10,12 +10,23 @@ public class BT_Pauser : MonoBehaviour
 
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
-    public GameObject PauseButton;
+    public AudioSource audioSource;
+    public GameObject playerCharacter;
+
+    public Image muteImage;
+    public Sprite muteSprite;
+    public Sprite unmuteSprite;
+
+    public void Start()
+    {
+        //muteImage = GetComponent<Image>();
+    }
 
     public void Resume()
     {
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        playerCharacter.SetActive(true);
         GameIsPaused = false;
     }
 
@@ -23,6 +34,7 @@ public class BT_Pauser : MonoBehaviour
     {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        playerCharacter.SetActive(false);
         GameIsPaused = true;
     }
 
@@ -36,5 +48,21 @@ public class BT_Pauser : MonoBehaviour
     {
         Debug.Log("QuitGame");
         Application.Quit();
+    }
+
+    public void Muter()
+    {
+        if (audioSource.mute != true)
+        {
+            audioSource.mute = true;
+            muteImage.sprite = muteSprite;
+        }
+
+        else
+        {
+            audioSource.mute = false;
+            muteImage.sprite = unmuteSprite;
+        }
+       
     }
 }
