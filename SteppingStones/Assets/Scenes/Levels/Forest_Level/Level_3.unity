@@ -9379,36 +9379,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!1 &1773182899
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1773182903}
-  m_Layer: 0
-  m_Name: WaterSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1773182903
+--- !u!4 &1773182903 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2870827870842875833}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773182899}
-  m_LocalRotation: {x: -0, y: -0.13052596, z: -0, w: 0.99144495}
-  m_LocalPosition: {x: -3.225, y: 10.516, z: -31.959}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: -15.000001, z: 0}
 --- !u!1001 &1812917652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10694,6 +10670,75 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 1164327359}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2870827870842875833
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2870827869105418250, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterSpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.516
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -31.959
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.13052596
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99144495
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -15.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870827869105418254, guid: d2822afd5073c924fbbbdac76f5e89d5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2822afd5073c924fbbbdac76f5e89d5, type: 3}
 --- !u!1001 &2979652514005666291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10706,6 +10751,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: BT_PauseMenuUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2979652515240827356, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1242842220}
+    - target: {fileID: 2979652515240827356, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: playerCharacter
+      value: 
+      objectReference: {fileID: 958352297}
+    - target: {fileID: 2979652515240827356, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: muteImage
+      value: 
+      objectReference: {fileID: 1021769587}
+    - target: {fileID: 2979652515240827356, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: muteSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59f36ac96d6d7ef4dbdc89aef1cb8d56,
+        type: 3}
+    - target: {fileID: 2979652515240827356, guid: 9df07e40fecd9ba4c92919a282eb26d4,
+        type: 3}
+      propertyPath: unmuteSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ddd4d527be57b564a8447afe46c53275,
+        type: 3}
     - target: {fileID: 2979652515240827357, guid: 9df07e40fecd9ba4c92919a282eb26d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10811,33 +10883,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2979652515240827356, guid: 9df07e40fecd9ba4c92919a282eb26d4,
-        type: 3}
-      propertyPath: audioSource
-      value: 
-      objectReference: {fileID: 1242842220}
-    - target: {fileID: 2979652515240827356, guid: 9df07e40fecd9ba4c92919a282eb26d4,
-        type: 3}
-      propertyPath: playerCharacter
-      value: 
-      objectReference: {fileID: 958352297}
-    - target: {fileID: 2979652515240827356, guid: 9df07e40fecd9ba4c92919a282eb26d4,
-        type: 3}
-      propertyPath: muteImage
-      value: 
-      objectReference: {fileID: 1021769587}
-    - target: {fileID: 2979652515240827356, guid: 9df07e40fecd9ba4c92919a282eb26d4,
-        type: 3}
-      propertyPath: muteSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 59f36ac96d6d7ef4dbdc89aef1cb8d56,
-        type: 3}
-    - target: {fileID: 2979652515240827356, guid: 9df07e40fecd9ba4c92919a282eb26d4,
-        type: 3}
-      propertyPath: unmuteSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ddd4d527be57b564a8447afe46c53275,
-        type: 3}
     - target: {fileID: 2979652514434514291, guid: 9df07e40fecd9ba4c92919a282eb26d4,
         type: 3}
       propertyPath: m_IsActive

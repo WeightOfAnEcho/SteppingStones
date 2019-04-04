@@ -22,10 +22,10 @@ public class BT_Rotator : MonoBehaviour
 
     public void BeginRotation()
     {
-        if (check.isFlowing == false) // check if the water is flowing (boolean from the button press script variable)
-        {
+        //if (check.isFlowing == false) // check if the water is flowing (boolean from the button press script variable)
+        //{
             StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
-        }
+        //}
 
     }
 

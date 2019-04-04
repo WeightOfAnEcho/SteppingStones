@@ -27,6 +27,7 @@ public class BT_Water_Flower : MonoBehaviour
         Invoke("WaterSpawn", spawnSpeed); // Begin water spawning (flowing) but with X delay
     }
 
+
     // WATER SPAWNING PROCESS //
     void WaterSpawn()
     {
@@ -54,7 +55,7 @@ public class BT_Water_Flower : MonoBehaviour
             Vector3 end = transform.position + fwd;
             GameObject newWater = Instantiate(waterBlock, end, transform.rotation) as GameObject;
             listScript.Add(newWater);
-            print("added water to list");
+
         }
 
         if (Physics.Raycast(transform.position, rgt, out hit, 1))
@@ -72,7 +73,7 @@ public class BT_Water_Flower : MonoBehaviour
             Vector3 end = transform.position + rgt;
             GameObject newWater = Instantiate(waterBlock, end, transform.rotation) as GameObject;
             listScript.Add(newWater);
-            print("added water to list");
+
         }
 
         if (Physics.Raycast(transform.position, lft, out hit, 1))
@@ -89,7 +90,7 @@ public class BT_Water_Flower : MonoBehaviour
             Vector3 end = transform.position + lft;
             GameObject newWater = Instantiate(waterBlock, end, transform.rotation) as GameObject;
             listScript.Add(newWater);
-            print("added water to list");
+
         }
 
         if (Physics.Raycast(transform.position, bck, out hit, 1))
@@ -107,7 +108,7 @@ public class BT_Water_Flower : MonoBehaviour
             Vector3 end = transform.position + bck;
             GameObject newWater = Instantiate(waterBlock, end, transform.rotation) as GameObject;
             listScript.Add(newWater);
-            print("added water to list");
+
         }
 
         if (Physics.Raycast(transform.position, dwn, out hit, 1))
@@ -124,8 +125,9 @@ public class BT_Water_Flower : MonoBehaviour
             Vector3 end = transform.position + dwn;
             GameObject newWater = Instantiate(waterBlock, end, transform.rotation) as GameObject;
             listScript.Add(newWater);
-            print("added water to list");
+
         }
+
     }
 
     public void Regress() // function to be called by button
