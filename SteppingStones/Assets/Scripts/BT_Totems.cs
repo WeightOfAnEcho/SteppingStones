@@ -39,7 +39,7 @@ public class BT_Totems : MonoBehaviour
             finalDoor.SendMessageUpwards("OpenFinalDoor", SendMessageOptions.RequireReceiver);
         }
 
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Mechanics2"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("AW_Level_04"))
         {
             Geyser.SetBool("GeyserMove", true);
             particleGeyser.Play();

@@ -13,6 +13,11 @@ public class BT_WaterList: MonoBehaviour
     public Transform waterStart;
     public GameObject waterBlock;
 
+
+    //buttons
+    public GameObject FlowButton;
+    public GameObject UnFlowButton;
+
     public /*static*/ List<GameObject> getList()
     {
         //if (waterInScene == null) { waterInScene = new List<GameObject>(); }
@@ -38,24 +43,35 @@ public class BT_WaterList: MonoBehaviour
 
     public void TriggerWater()
     {
-        if(waterPresent == true)
-        {
-            var lastWater = waterInScene[waterInScene.Count - 1];
-            lastWater.BroadcastMessage("Regress");
+        //if (waterPresent == true)
+        //{
+        //    var lastWater = waterInScene[waterInScene.Count - 1];
+        //    lastWater.BroadcastMessage("Regress");
 
-            if (waterInScene.Count == 0 || waterInScene == null)
-            {
-                waterPresent = false; 
-            }
-        }
+        //    RemoveAllWater();
 
-        if (waterPresent == false)
-        {
+
+        //}
+
             GameObject go = Instantiate(waterBlock, waterStart.position, waterStart.rotation);
-
             waterInScene.Add(go);
-            waterPresent = true;
+        FlowButton.SetActive(false);
+        UnFlowButton.SetActive(true);
+    }
+
+    public void RemoveAllWater()
+    {
+
+        for (int i = 0; i < waterInScene.Count; i++)
+        {
+
+            GameObject.Destroy(waterInScene[i]);
         }
+
+
+
+        FlowButton.SetActive(true);
+        UnFlowButton.SetActive(false);
     }
 }
 

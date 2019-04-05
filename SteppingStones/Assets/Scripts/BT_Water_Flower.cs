@@ -45,6 +45,7 @@ public class BT_Water_Flower : MonoBehaviour
 
             if (hit.transform.tag == "Totem")
             {
+                print("hit totem");
                 hit.transform.SendMessageUpwards("HitByWater");
             }
 
@@ -63,6 +64,7 @@ public class BT_Water_Flower : MonoBehaviour
 
             if (hit.transform.tag == "Totem")
             {
+                print("hit totem");
                 hit.transform.SendMessageUpwards("HitByWater");
             }
 
@@ -81,6 +83,7 @@ public class BT_Water_Flower : MonoBehaviour
 
             if (hit.transform.tag == "Totem")
             {
+                print("hit totem");
                 hit.transform.SendMessageUpwards("HitByWater");
             }
         }
@@ -98,6 +101,7 @@ public class BT_Water_Flower : MonoBehaviour
 
             if (hit.transform.tag == "Totem")
             {
+                print("hit totem");
                 hit.transform.SendMessageUpwards("HitByWater");
             }
 
@@ -116,6 +120,7 @@ public class BT_Water_Flower : MonoBehaviour
             if (hit.transform.tag == "Totem")
             {
                 hit.transform.SendMessageUpwards("HitByWater");
+                print("hit totem");
             }
 
         }
@@ -221,5 +226,12 @@ public class BT_Water_Flower : MonoBehaviour
         Instantiate(iceBlock, transform.position, transform.rotation); // instatiate an icebock - this then collides with the adjacent water and restarts the freezing process
 
         Destroy(transform.parent.gameObject); // destory the parent (and this) remember this script is attached to the raycaster cube, not the water block!
+    }
+
+    private void OnDestroy()
+    {
+        print(gameObject.name + "destroyed");
+
+        listScript.waterInScene.Remove(transform.parent.gameObject);
     }
 }
