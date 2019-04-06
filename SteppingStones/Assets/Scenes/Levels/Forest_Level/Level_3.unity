@@ -10189,9 +10189,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6209743698580280126, guid: 9934c9da5e5d7784682b189ec8b31f44,
         type: 3}
+      propertyPath: waterStart.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209743698580280126, guid: 9934c9da5e5d7784682b189ec8b31f44,
+        type: 3}
       propertyPath: waterStart
       value: 
-      objectReference: {fileID: 1773182903}
+      objectReference: {fileID: 0}
     - target: {fileID: 6209743698580280126, guid: 9934c9da5e5d7784682b189ec8b31f44,
         type: 3}
       propertyPath: FlowButton
@@ -10202,6 +10207,11 @@ PrefabInstance:
       propertyPath: UnFlowButton
       value: 
       objectReference: {fileID: 1789623448}
+    - target: {fileID: 6209743698580280126, guid: 9934c9da5e5d7784682b189ec8b31f44,
+        type: 3}
+      propertyPath: waterStart.Array.data[0]
+      value: 
+      objectReference: {fileID: 1773182903}
     - target: {fileID: 6209743698580280127, guid: 9934c9da5e5d7784682b189ec8b31f44,
         type: 3}
       propertyPath: m_LocalPosition.x
