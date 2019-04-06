@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BT_WaterList: MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class BT_WaterList: MonoBehaviour
     //buttons
     public GameObject FlowButton;
     public GameObject UnFlowButton;
+
+    //totems
+    public BT_Totems[] totems;
 
     public /*static*/ List<GameObject> getList()
     {
@@ -72,6 +76,16 @@ public class BT_WaterList: MonoBehaviour
 
         FlowButton.SetActive(true);
         UnFlowButton.SetActive(false);
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("AW_Level_04"))
+        {
+            for (int i = 0; i < totems.Length; i++)
+            {
+
+                totems[i].WaterRemoved();
+            }
+            
+        }
     }
 }
 

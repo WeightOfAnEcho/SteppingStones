@@ -17,6 +17,7 @@ public class BT_Totems : MonoBehaviour
     //GEYSERS TO ACTIVATE ---------------------------------------------------------------------------------------------------
     public Animator Geyser;
     public ParticleSystem particleGeyser;
+    public bool activated = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,7 @@ public class BT_Totems : MonoBehaviour
         {
             Geyser.SetBool("GeyserMove", true);
             particleGeyser.Play();
+            activated = true;
 
         }
 
@@ -50,4 +52,11 @@ public class BT_Totems : MonoBehaviour
 
 
         }
+
+    public void WaterRemoved()
+    {
+        Geyser.SetBool("GeyserMove", false);
+        particleGeyser.Stop();
+        activated = false;
+    }
 }
