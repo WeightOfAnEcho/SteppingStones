@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BT_Rotator : MonoBehaviour
 {
-    public BT_Button_Press check; // a public variable for the button press script
+    public BT_WaterList check; // a public variable for the button press script
 
     public void Start()
     {
@@ -22,10 +22,10 @@ public class BT_Rotator : MonoBehaviour
 
     public void BeginRotation()
     {
-        //if (check.isFlowing == false) // check if the water is flowing (boolean from the button press script variable)
-        //{
+        if (check.waterPresent == false) // check if the water is flowing (boolean from the button press script variable)
+        {
             StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
-        //}
+        }
 
     }
 

@@ -15,12 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Forest_Level/Level_3.unity
     guid: b61bde8ec7421a9498c1495b927c2fe6
   - enabled: 1
-    path: Assets/Scenes/Levels/MechanicsShowcase/Mechanics.unity
-    guid: ac3fc883bad446b40a3eba750a288200
+    path: Assets/Scenes/Levels/BaseMountain_Level/Level_04_Quote.unity
+    guid: 15f7fa401cb7c9b489b719ec701c4da5
   - enabled: 1
-    path: Assets/Scenes/Levels/MechanicsShowcase/Mechanics2.unity
-    guid: a755d4d03b4f11f4b998870003d80621
-  - enabled: 1
-    path: Assets/Scenes/Levels/MechanicsShowcase/Mechanics3.unity
-    guid: 41a86769829471f41b2ddb5d0a760e2c
+    path: Assets/Scenes/Levels/BaseMountain_Level/AW_Level_04.unity
+    guid: 2e1b2473e3ec18e4f8d2f92a3fafe2cd
   m_configObjects: {}

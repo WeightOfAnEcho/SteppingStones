@@ -20,9 +20,25 @@ public class BT_Level04_Player : BT_Player_Base
     {
         if(other.gameObject.tag == "Geyser01")
         {
-            print("Teleport01");
+
             Instantiate(dustPuff, transform.position, transform.rotation);
             Agent.Warp(Targets[0].transform.position);
+            Instantiate(dustPuff, transform.position, transform.rotation);
+        }
+
+        if (other.gameObject.tag == "Geyser02")
+        {
+
+            Instantiate(dustPuff, transform.position, transform.rotation);
+            Agent.Warp(Targets[1].transform.position);
+            Instantiate(dustPuff, transform.position, transform.rotation);
+        }
+
+        if (other.gameObject.tag == "Geyser03")
+        {
+
+            Instantiate(dustPuff, transform.position, transform.rotation);
+            Agent.Warp(Targets[2].transform.position);
             Instantiate(dustPuff, transform.position, transform.rotation);
         }
     }

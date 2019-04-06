@@ -47,20 +47,12 @@ public class BT_WaterList: MonoBehaviour
 
     public void TriggerWater()
     {
-        //if (waterPresent == true)
-        //{
-        //    var lastWater = waterInScene[waterInScene.Count - 1];
-        //    lastWater.BroadcastMessage("Regress");
-
-        //    RemoveAllWater();
-
-
-        //}
 
             GameObject go = Instantiate(waterBlock, waterStart.position, waterStart.rotation);
             waterInScene.Add(go);
         FlowButton.SetActive(false);
         UnFlowButton.SetActive(true);
+        waterPresent = true;
     }
 
     public void RemoveAllWater()
@@ -76,6 +68,7 @@ public class BT_WaterList: MonoBehaviour
 
         FlowButton.SetActive(true);
         UnFlowButton.SetActive(false);
+        waterPresent = false;
 
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("AW_Level_04"))
         {
@@ -84,6 +77,7 @@ public class BT_WaterList: MonoBehaviour
 
                 totems[i].WaterRemoved();
             }
+
             
         }
     }

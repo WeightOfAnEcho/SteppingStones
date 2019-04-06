@@ -17,8 +17,14 @@ public class BT_Soul : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(0); // Load Main Menu (will be altered to next in build index when additional levels are implemented
-            // this will also allow this script to be used on all Lost SOuls in the game.
+            Scene currentScene = SceneManager.GetActiveScene(); // Create a temporary reference to the current scene.
+            string sceneName = currentScene.name;
+
+            if (sceneName == "AW_Level_04")
+            {
+                SceneManager.LoadScene(0); //temporary code to loop back to menu
+            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

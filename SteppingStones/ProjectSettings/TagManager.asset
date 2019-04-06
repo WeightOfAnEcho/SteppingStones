@@ -14,6 +14,10 @@ TagManager:
   - Stone1
   - Geyser01
   - Nuller
+  - Stone2
+  - Stone3
+  - Geyser02
+  - Geyser03
   layers:
   - Default
   - TransparentFX

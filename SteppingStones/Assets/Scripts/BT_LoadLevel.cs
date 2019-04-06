@@ -12,51 +12,47 @@ public class BT_LoadLevel : MonoBehaviour {
     public Scene thisScene;
     public GameObject selectLevel;
 
+    public int levelIndex;
+
     private void Awake()
     {
         source = GetComponent<AudioSource>();
     }
 
-    public void SceneTransition()
-    {
-        PlaySound();
+    //public void SceneTransition()
+    //{
+    //    PlaySound();
+    //    LevelSelect();
+    //    LoadScene(1);
 
-        LoadScene(1);
-
-    }
-
-    public void MechanicsScene()
-    {
-       PlaySound();
-
-       SceneManager.LoadScene(3);
-    }
+    //}
 
     public void PlaySound()
     {
+        print("click");
         source.PlayOneShot(Click);
     }
 
-    public void LoadScene(int levelIndex)
+    public void LoadScene()
     {
-        
+        PlaySound();
+        StartCoroutine("OnFadeComplete");
         LevelLoader.SetTrigger("FadeOut");
 
-        StartCoroutine("OnFadeComplete");
+        
+        
     }
 
     IEnumerator OnFadeComplete()
     {
         yield return new WaitForSeconds(1);
-        int c = SceneManager.GetActiveScene().buildIndex;
-        if (c < SceneManager.sceneCountInBuildSettings)
-        SceneManager.LoadScene(c + 1);
-        
+        SceneManager.LoadScene(levelIndex);
     }
 
 
     public void LevelSelect()
     {
+        PlaySound();
         LevelLoader.SetTrigger("FadeOut");
         StartCoroutine("WaitFor", 1); // Start coroutine for delay - requires int value to be passed
         LevelLoader.SetTrigger("FadeIn");

@@ -10,7 +10,7 @@ public class BT_Highlight_Object : MonoBehaviour {
     public Material mouseOverColor;
     public Material originalColor;
 
-    public BT_Button_Press check; // a public variable for the button press script
+    public BT_WaterList check; // a public variable for the button press script
 
 
     void Start()
@@ -23,13 +23,13 @@ public class BT_Highlight_Object : MonoBehaviour {
 
     void OnMouseEnter()
     {
-        //Debug.Log("Name: " + gameObject.name);
+        Debug.Log("Name: " + gameObject.name);
 
         rends = GetComponentsInChildren<Renderer>(); // fetch the redners of children this is attached to
 
         foreach (Renderer rend in rends) // for each found rednerer
         {
-            if (rend.gameObject.transform.parent != null && check.isFlowing == false) // ensure we aren't including the parent renderer
+            if (rend.gameObject.transform.parent != null && check.waterPresent == false) // ensure we aren't including the parent renderer
             {
                 //print("changing color");
                 rend.material = mouseOverColor; // change the material to the pressed material
