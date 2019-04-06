@@ -17,14 +17,24 @@ public class BT_Soul : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            print(collision.gameObject.name);
+
             Scene currentScene = SceneManager.GetActiveScene(); // Create a temporary reference to the current scene.
             string sceneName = currentScene.name;
 
+            if (sceneName == "Level_3")
+            {
+                PlayerPrefs.SetInt("Level02Complete", 1);
+                PlayerPrefs.Save();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
             if (sceneName == "AW_Level_04")
             {
                 SceneManager.LoadScene(0); //temporary code to loop back to menu
+                PlayerPrefs.SetInt("Level03", 1);
+                PlayerPrefs.Save();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
