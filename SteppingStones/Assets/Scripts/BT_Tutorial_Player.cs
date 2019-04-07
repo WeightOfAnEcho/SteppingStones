@@ -11,9 +11,9 @@ public class BT_Tutorial_Player : BT_Player_Base
    public bool hadTutorialClick;
     
     //This exists incase any edits to player base is required -------------------------------------------------------------------------------------------------
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start(); // start base functionality heled in BT_Player_Base
+        base.Awake(); // start base functionality heled in BT_Player_Base
         hadTutorialClick = false;
         TutorialClick();
     }

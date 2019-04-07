@@ -11,10 +11,11 @@ public class BT_Level04_Player : BT_Player_Base
     public GameObject dustPuff;
 
     //This exists incase any edits to player base is required -------------------------------------------------------------------------------------------------
-    protected override void Start()
+    void Start()
     {
-        base.Start(); // start base functionality heled in BT_Player_Base
+        base.Awake(); // start base functionality heled in BT_Player_Base
     }
+
 
     private void OnTriggerEnter(Collider other)
     {

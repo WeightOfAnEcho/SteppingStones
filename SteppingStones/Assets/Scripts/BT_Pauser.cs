@@ -26,7 +26,6 @@ public class BT_Pauser : MonoBehaviour
     {
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        playerCharacter.SetActive(true);
         GameIsPaused = false;
     }
 
@@ -34,7 +33,6 @@ public class BT_Pauser : MonoBehaviour
     {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        playerCharacter.SetActive(false);
         GameIsPaused = true;
     }
 

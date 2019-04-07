@@ -16,16 +16,26 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
 
     protected bool cooldownBoolean;
 
-    protected virtual void Start()
+    public bool initialised = false;
+
+    protected virtual void Awake()
     {
         AdirAnim = GetComponent<Animator>(); // Fetch Animator component attached
         Agent = GetComponent<NavMeshAgent>(); // Fetch the Agent Properties
         cooldownBoolean = BT_Raycaster.cooldown;
+
+        //initialised = true;
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
+
+        if (initialised == false)
+        {
+            Awake();
+        }
+
         if (Input.GetMouseButtonDown(0) && cooldownBoolean == false) // When the left mouse button is pressed
         {
 
