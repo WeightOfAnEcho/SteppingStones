@@ -19,13 +19,13 @@ public class BT_Totems : MonoBehaviour
     public ParticleSystem particleGeyser;
     public bool activated = false;
 
-<<<<<<< HEAD
+
     public BT_Tutorial_Player tutorialPlayer;
-=======
+
     //GameObjects TO ACTIVATE ---------------------------------------------------------------------------------------------------
     public GameObject GO_one;
     public GameObject GO_NavMeshObstacle;
->>>>>>> 4d3e55e51b6fff11235c033798b10c658a43ef61
+
 
     // Start is called before the first frame update
     void Start()

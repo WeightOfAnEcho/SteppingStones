@@ -24,12 +24,12 @@ public class BT_Soul : MonoBehaviour
 
             if (sceneName == "Level_3")
             {
-                
+
                 PlayerPrefs.SetInt("Level02Complete", 1); //unlock BoM level
                 PlayerPrefs.Save();
                 print("setPref 02");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                
+
             }
 
             if (sceneName == "AW_Level_04")
@@ -39,7 +39,6 @@ public class BT_Soul : MonoBehaviour
                 print("setPref 03");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
-<<<<<<< HEAD
 
             if (sceneName == "Level_0")
             {
@@ -47,14 +46,15 @@ public class BT_Soul : MonoBehaviour
                 PlayerPrefs.Save();
                 print("setPref 02");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-=======
-            if (sceneName == "01_LV")
-            {
-                //PlayerPrefs.SetInt("Level02Complete", 1); // Unlock x Level
-                //PlayerPrefs.Save();
-                //print("setPref 03");
-               // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
->>>>>>> 4d3e55e51b6fff11235c033798b10c658a43ef61
+
+                if (sceneName == "01_LV")
+                {
+                    PlayerPrefs.SetInt("Level02Complete", 1); // Unlock x Level
+                    PlayerPrefs.Save();
+                    print("setPref 03");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+                }
             }
         }
     }
