@@ -19,6 +19,10 @@ public class BT_Totems : MonoBehaviour
     public ParticleSystem particleGeyser;
     public bool activated = false;
 
+    //GameObjects TO ACTIVATE ---------------------------------------------------------------------------------------------------
+    public GameObject GO_one;
+    public GameObject GO_NavMeshObstacle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,10 +52,16 @@ public class BT_Totems : MonoBehaviour
 
         }
 
-
-
-
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("01_LV"))
+        {
+            GO_one.SetActive(true);
+            GO_NavMeshObstacle.SetActive(false);
         }
+
+
+
+
+    }
 
     public void WaterRemoved()
     {

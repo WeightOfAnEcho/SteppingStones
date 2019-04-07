@@ -37,6 +37,13 @@ public class BT_Soul : MonoBehaviour
                 print("setPref 03");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
+            if (sceneName == "01_LV")
+            {
+                //PlayerPrefs.SetInt("Level02Complete", 1); // Unlock x Level
+                //PlayerPrefs.Save();
+                //print("setPref 03");
+               // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 }
