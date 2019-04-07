@@ -24,6 +24,7 @@ public class BT_Totems : MonoBehaviour
 
     //GameObjects TO ACTIVATE ---------------------------------------------------------------------------------------------------
     public GameObject GO_one;
+    public GameObject GO_two;
     public GameObject GO_NavMeshObstacle;
 
 
@@ -62,8 +63,15 @@ public class BT_Totems : MonoBehaviour
             GO_NavMeshObstacle.SetActive(false);
         }
 
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("05_LV"))
+        {
+            GO_one.SetActive(false);
+            GO_two.SetActive(true);
+            GO_NavMeshObstacle.SetActive(false);
+        }
 
-        if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level_0"))
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level_0"))
         {
             tutorialPlayer.hadTutorialTotem = true;
             StartCoroutine(tutorialPlayer.FadeTextToZeroAlpha(1f, tutorialPlayer.tutorialTotem));
