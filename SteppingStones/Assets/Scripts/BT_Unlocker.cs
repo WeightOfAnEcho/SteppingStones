@@ -23,39 +23,39 @@ public class BT_Unlocker : MonoBehaviour
 
     void Awake()
     {
-        if (!i)
-        {
-            i = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-            Destroy(gameObject);
+        RefreshPrefs();
     }
 
-    //private void Update() //CHEAT CODES - MUST BE PRESSED ON MAIN MENU
-    //{
-    //    if(Input.GetKeyDown(KeyCode.W)) // Unlock all Levels
-    //    {
-    //        PlayerPrefs.SetInt("Level01Complete", 1); // unlock the forest level
-    //        PlayerPrefs.SetInt("Level02Complete", 1); //unlock BoM level
-    //        PlayerPrefs.SetInt("Level03Complete", 1); // Unlock Summit Level
-    //        PlayerPrefs.Save();
-    //        print("Unlocking all levels");
-  
-    //    }
-
-    //    if(Input.GetKeyDown(KeyCode.Q))
-    //    {
-    //        PlayerPrefs.DeleteAll();
-    //        print("clearing Prefs");
-
-
-    //    }
-    //}
-
-
-    void Start()
+    private void Update() //CHEAT CODES - MUST BE PRESSED ON MAIN MENU
     {
+        if (Input.GetKeyDown(KeyCode.W)) // Unlock all Levels
+        {
+            PlayerPrefs.SetInt("Level01Complete", 1); // unlock the forest level
+            PlayerPrefs.SetInt("Level02Complete", 1); //unlock BoM level
+            PlayerPrefs.SetInt("Level03Complete", 1); // Unlock Summit Level
+            PlayerPrefs.Save();
+            RefreshPrefs();
+            print("Unlocking all levels");
+
+           
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            PlayerPrefs.DeleteAll();
+            RefreshPrefs();
+            print("clearing Prefs");
+        }
+
+
+    }
+
+
+    void RefreshPrefs()
+    {
+
+        // IF HAS KEYS
+
         if (PlayerPrefs.HasKey("Level01Complete"))
         {
             levelButtons[0].SetActive(true);
@@ -70,8 +70,28 @@ public class BT_Unlocker : MonoBehaviour
 
         if (PlayerPrefs.HasKey("Level03Complete"))
         {
-            levelButtons[3].SetActive(true);
-            lockedImages[3].SetActive(false);
+            levelButtons[2].SetActive(true);
+            lockedImages[2].SetActive(false);
+        }
+
+        //If DOESN'T
+
+        if (!PlayerPrefs.HasKey("Level01Complete"))
+        {
+            levelButtons[0].SetActive(false);
+            lockedImages[0].SetActive(true);
+        }
+
+        if (!PlayerPrefs.HasKey("Level02Complete"))
+        {
+            levelButtons[1].SetActive(false);
+            lockedImages[1].SetActive(true);
+        }
+
+        if (!PlayerPrefs.HasKey("Level03Complete"))
+        {
+            levelButtons[2].SetActive(false);
+            lockedImages[2].SetActive(true);
         }
 
     }

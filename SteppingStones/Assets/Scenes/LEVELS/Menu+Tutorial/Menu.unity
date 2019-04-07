@@ -1125,7 +1125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &498799935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,6 +1142,7 @@ MonoBehaviour:
   levelButtons:
   - {fileID: 1777718951}
   - {fileID: 901362657}
+  - {fileID: 1964480816}
   lockedImages:
   - {fileID: 221446800}
   - {fileID: 618405735}

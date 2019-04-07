@@ -28,12 +28,13 @@ public class BT_Soul : MonoBehaviour
                 PlayerPrefs.SetInt("Level02Complete", 1); //unlock BoM level
                 PlayerPrefs.Save();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                print("setPref 01 and 02");
             }
             if (sceneName == "AW_Level_04")
             {
-                SceneManager.LoadScene(0); //temporary code to loop back to menu
                 PlayerPrefs.SetInt("Level03Complete", 1); // Unlock Summit Level
                 PlayerPrefs.Save();
+                print("setPref 03");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
