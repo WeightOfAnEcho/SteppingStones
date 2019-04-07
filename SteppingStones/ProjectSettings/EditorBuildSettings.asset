@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Menu+Tutorial/Menu.unity
     guid: d6cd27cab0e2bf74f9b92030a4f40810
   - enabled: 1
+    path: Assets/Scenes/Levels/Menu+Tutorial/Level_0.unity
+    guid: a40fcffb439ae954491135ed7a50322b
+  - enabled: 1
     path: Assets/Scenes/Levels/Forest_Level/Level03_Quote.unity
     guid: a12e80f62fa103e45b039b90b057e723
   - enabled: 1

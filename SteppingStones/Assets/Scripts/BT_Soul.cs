@@ -24,17 +24,27 @@ public class BT_Soul : MonoBehaviour
 
             if (sceneName == "Level_3")
             {
-                PlayerPrefs.SetInt("Level01Complete", 1); // unlock the forest level
+                
                 PlayerPrefs.SetInt("Level02Complete", 1); //unlock BoM level
                 PlayerPrefs.Save();
+                print("setPref 02");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                print("setPref 01 and 02");
+                
             }
+
             if (sceneName == "AW_Level_04")
             {
                 PlayerPrefs.SetInt("Level03Complete", 1); // Unlock Summit Level
                 PlayerPrefs.Save();
                 print("setPref 03");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
+            if (sceneName == "Level_0")
+            {
+                PlayerPrefs.SetInt("Level01Complete", 1); // unlock the forest level
+                PlayerPrefs.Save();
+                print("setPref 02");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }

@@ -8,8 +8,25 @@ public class BT_Tutorial_Player : BT_Player_Base
 {
 
     public Text tutorialClick;
-   public bool hadTutorialClick;
-    
+    public Text tutorialFlow;
+    public Text tutorialTotem;
+    public Text tutorialSoul;
+
+    public ParticleSystem tutorialClickParticle;
+    public ParticleSystem tutorialFlowParticle;
+    public ParticleSystem tutorialTotemParticle;
+    public ParticleSystem tutorialSoulParticle;
+
+
+    public bool hadTutorialClick;
+    public bool hadTutorialFlow;
+    public bool hadTutorialTotem;
+    public bool hadTutorialSoul;
+    private bool fireOnce;
+
+    public GameObject flowButton;
+    public BT_WaterList check;
+
     //This exists incase any edits to player base is required -------------------------------------------------------------------------------------------------
     protected override void Awake()
     {
@@ -24,7 +41,35 @@ public class BT_Tutorial_Player : BT_Player_Base
 
         if(hadTutorialClick == false)
         {
-            StartCoroutine(FadeTextToFullAlpha(2f, tutorialClick));
+            StartCoroutine(FadeTextToFullAlpha(1f, tutorialClick));
+        }
+    }
+
+    void TutorialFlow()
+    {
+        if (hadTutorialClick == true && hadTutorialFlow == false)
+        {
+            StartCoroutine(FadeTextToFullAlpha(1f, tutorialFlow));
+            tutorialFlowParticle.Play();
+            flowButton.SetActive(true);
+        }
+    }
+
+    void TutorialTotem()
+    {
+        if (hadTutorialFlow == true && hadTutorialTotem == false)
+        {
+            StartCoroutine(FadeTextToFullAlpha(1f, tutorialTotem));
+            tutorialTotemParticle.Play();
+        }
+    }
+
+    void TutorialSoul()
+    {
+        if (hadTutorialTotem == true && hadTutorialSoul == false)
+        {
+            StartCoroutine(FadeTextToFullAlpha(1f, tutorialSoul));
+            tutorialSoulParticle.Play();
         }
     }
 
@@ -66,12 +111,15 @@ public class BT_Tutorial_Player : BT_Player_Base
                         if (hadTutorialClick == false)
                         {
                             hadTutorialClick = true;
-                            StartCoroutine(FadeTextToZeroAlpha(2f, tutorialClick));
+                            StartCoroutine(FadeTextToZeroAlpha(1f, tutorialClick));
+                            tutorialClickParticle.Stop();
+                            
                         }
                     }
                 }
 
             }
+
         }
 
         // ANIMATION CONTROLLING BASED ON DISTANCE FROM TARGET DESTINATION -----------------------------------------------------------------------------
@@ -84,6 +132,17 @@ public class BT_Tutorial_Player : BT_Player_Base
         else
         {
             AdirAnim.SetBool("Walking", false); //stop playing walking animation
+        }
+
+        //Tutorial checks
+
+        if (check.waterPresent == true && fireOnce == false)
+        {
+            fireOnce = true;
+            hadTutorialFlow = true;
+            StartCoroutine(FadeTextToZeroAlpha(1f, tutorialFlow));
+            tutorialFlowParticle.Stop();
+
         }
     }
 
@@ -98,6 +157,7 @@ public class BT_Tutorial_Player : BT_Player_Base
             i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a + (Time.deltaTime / t));
             yield return null;
         }
+
     }
 
     public IEnumerator FadeTextToZeroAlpha(float t, Text i)
@@ -107,6 +167,21 @@ public class BT_Tutorial_Player : BT_Player_Base
         {
             i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
             yield return null;
+        }
+
+        if(hadTutorialClick == true && hadTutorialFlow == false)
+        {
+            TutorialFlow();
+        }
+
+        if(hadTutorialFlow == true && hadTutorialTotem == false)
+        {
+            TutorialTotem();
+        }
+
+        if (hadTutorialTotem == true && hadTutorialSoul == false)
+        {
+            TutorialSoul();
         }
     }
 }

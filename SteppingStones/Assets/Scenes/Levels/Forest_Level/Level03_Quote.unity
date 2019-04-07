@@ -881,7 +881,7 @@ MonoBehaviour:
   thisScene:
     m_Handle: 0
   selectLevel: {fileID: 0}
-  levelIndex: 2
+  levelIndex: 3
 --- !u!114 &1464408371
 MonoBehaviour:
   m_ObjectHideFlags: 0

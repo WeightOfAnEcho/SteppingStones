@@ -19,6 +19,8 @@ public class BT_Totems : MonoBehaviour
     public ParticleSystem particleGeyser;
     public bool activated = false;
 
+    public BT_Tutorial_Player tutorialPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +51,14 @@ public class BT_Totems : MonoBehaviour
         }
 
 
-
+        if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level_0"))
+        {
+            tutorialPlayer.hadTutorialTotem = true;
+            StartCoroutine(tutorialPlayer.FadeTextToZeroAlpha(1f, tutorialPlayer.tutorialTotem));
+            tutorialPlayer.tutorialTotemParticle.Stop();
+            Instantiate(doorDust, doorOpen.transform.position, doorOpen.transform.rotation);
+            doorOpen.SetActive(false);
+        }
 
         }
 
