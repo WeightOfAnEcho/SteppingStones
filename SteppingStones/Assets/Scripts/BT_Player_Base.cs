@@ -31,10 +31,10 @@ public class BT_Player_Base: MonoBehaviour //this contains base functionality fo
     protected virtual void Update()
     {
 
-        if (initialised == false)
-        {
-            Awake();
-        }
+        //if (initialised == false)
+        //{
+        //    Awake();
+        //}
 
         if (Input.GetMouseButtonDown(0) && cooldownBoolean == false) // When the left mouse button is pressed
         {
