@@ -63,13 +63,20 @@ public class BT_Totems : MonoBehaviour
             GO_NavMeshObstacle.SetActive(false);
         }
 
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("05_LV"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("05_LV_V4"))
         {
             GO_one.SetActive(false);
             GO_two.SetActive(true);
             GO_NavMeshObstacle.SetActive(false);
+            doorOpen.SetActive(false);
         }
 
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("AW_Summit_#1"))
+        {
+            Instantiate(doorDust, doorOpen.transform.position, doorOpen.transform.rotation);
+            doorOpen.SetActive(false);
+            finalDoor.SendMessageUpwards("OpenFinalDoor", SendMessageOptions.RequireReceiver);
+        }
 
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level_0"))
         {

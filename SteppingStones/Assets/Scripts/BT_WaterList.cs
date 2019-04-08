@@ -47,8 +47,16 @@ public class BT_WaterList: MonoBehaviour
 
     public void TriggerWater()
     {
+        //for (int i = 0; i < waterStart.Length; i++)
+        //{
+            InstatiateWater();
+        //}
+    }
 
-            GameObject go = Instantiate(waterBlock, waterStart[0].position, waterStart[0].rotation);
+    public void InstatiateWater()
+    {
+        GameObject go = Instantiate(waterBlock, waterStart[0].position, waterStart[0].rotation);
+
         Scene currentScene = SceneManager.GetActiveScene(); // Create a temporary reference to the current scene.
 
         // Retrieve the name of this scene.
@@ -59,8 +67,6 @@ public class BT_WaterList: MonoBehaviour
             Instantiate(waterBlock, waterStart[1].position, waterStart[1].rotation);
         }
         waterInScene.Add(go);
-
-
 
         FlowButton.SetActive(false);
         UnFlowButton.SetActive(true);
