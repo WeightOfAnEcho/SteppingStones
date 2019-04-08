@@ -22,7 +22,22 @@ public class BT_Soul : MonoBehaviour
             Scene currentScene = SceneManager.GetActiveScene(); // Create a temporary reference to the current scene.
             string sceneName = currentScene.name;
 
-            if (sceneName == "Level_3")
+            if (sceneName == "Level_0") // if tutorial
+            {
+                PlayerPrefs.SetInt("Level00Complete", 1); // unlock the forest level
+                PlayerPrefs.Save();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+            }
+
+            if (sceneName == "01_LV") // if beach
+            {
+                PlayerPrefs.SetInt("Level01Complete", 1); // Unlock x Level
+                PlayerPrefs.Save();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
+            if (sceneName == "Level_3") // if forest
             {
 
                 PlayerPrefs.SetInt("Level02Complete", 1); //unlock BoM level
@@ -32,30 +47,26 @@ public class BT_Soul : MonoBehaviour
 
             }
 
-            if (sceneName == "AW_Level_04")
+            if (sceneName == "AW_Level_04") // if base of mountain
             {
                 PlayerPrefs.SetInt("Level03Complete", 1); // Unlock Summit Level
                 PlayerPrefs.Save();
-                print("setPref 03");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
 
-            if (sceneName == "Level_0")
+            if (sceneName == "05_LV_V4")
             {
-                PlayerPrefs.SetInt("Level01Complete", 1); // unlock the forest level
+                PlayerPrefs.SetInt("Level04Complete", 1); // Unlock Summit Level
                 PlayerPrefs.Save();
-                print("setPref 02");
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-                if (sceneName == "01_LV")
-                {
-                    PlayerPrefs.SetInt("Level02Complete", 1); // Unlock x Level
-                    PlayerPrefs.Save();
-                    print("setPref 03");
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-                }
             }
+
+            if (sceneName == "AW_Summit_#1")
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
+
         }
     }
 }

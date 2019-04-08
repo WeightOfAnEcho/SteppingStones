@@ -16,9 +16,11 @@ public class BT_Unlocker : MonoBehaviour
     // Level 02 - FOREST
     // Level 03 - BoM
 
-    //Lock/level [0] = Forest
-    //Lock/level [1] = BoM
-    //Lock/level [2] = Summit2
+    //Lock/level [0] = beach
+    //Lock/level [1] = forest
+    //Lock/level [2] = BoM
+    //lock/level [3] = mountain
+    //lock/level [4] = summit
 
 
     void Awake()
@@ -30,9 +32,11 @@ public class BT_Unlocker : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W)) // Unlock all Levels
         {
-            PlayerPrefs.SetInt("Level01Complete", 1); // unlock the forest level
-            PlayerPrefs.SetInt("Level02Complete", 1); //unlock BoM level
-            PlayerPrefs.SetInt("Level03Complete", 1); // Unlock Summit Level
+            PlayerPrefs.SetInt("Level00Complete", 1); // unlock the forest level
+            PlayerPrefs.SetInt("Level01Complete", 1); //unlock forest
+            PlayerPrefs.SetInt("Level02Complete", 1); // Unlock bom
+            PlayerPrefs.SetInt("Level03Complete", 1); //unlock Mountain
+            PlayerPrefs.SetInt("Level04Complete", 1); // unlock summit
             PlayerPrefs.Save();
             RefreshPrefs();
             print("Unlocking all levels");
@@ -56,42 +60,66 @@ public class BT_Unlocker : MonoBehaviour
 
         // IF HAS KEYS
 
-        if (PlayerPrefs.HasKey("Level01Complete"))
+        if (PlayerPrefs.HasKey("Level00Complete")) // if tutorial complete
         {
             levelButtons[0].SetActive(true);
             lockedImages[0].SetActive(false);
         }
 
-        if (PlayerPrefs.HasKey("Level02Complete"))
+        if (PlayerPrefs.HasKey("Level01Complete")) // if beach complete
         {
             levelButtons[1].SetActive(true);
             lockedImages[1].SetActive(false);
         }
 
-        if (PlayerPrefs.HasKey("Level03Complete"))
+        if (PlayerPrefs.HasKey("Level02Complete")) // if forest complete
         {
             levelButtons[2].SetActive(true);
             lockedImages[2].SetActive(false);
         }
 
+        if (PlayerPrefs.HasKey("Level03Complete")) // if BoM complete
+        {
+            levelButtons[3].SetActive(true);
+            lockedImages[3].SetActive(false);
+        }
+
+        if (PlayerPrefs.HasKey("Level04Complete")) // if mountain complete
+        {
+            levelButtons[4].SetActive(true);
+            lockedImages[4].SetActive(false);
+        }
+
         //If DOESN'T
 
-        if (!PlayerPrefs.HasKey("Level01Complete"))
+        if (!PlayerPrefs.HasKey("Level00Complete"))
         {
             levelButtons[0].SetActive(false);
             lockedImages[0].SetActive(true);
         }
 
-        if (!PlayerPrefs.HasKey("Level02Complete"))
+        if (!PlayerPrefs.HasKey("Level01Complete"))
         {
             levelButtons[1].SetActive(false);
             lockedImages[1].SetActive(true);
         }
 
-        if (!PlayerPrefs.HasKey("Level03Complete"))
+        if (!PlayerPrefs.HasKey("Level02Complete"))
         {
             levelButtons[2].SetActive(false);
             lockedImages[2].SetActive(true);
+        }
+
+        if (!PlayerPrefs.HasKey("Level03Complete")) // if BoM complete
+        {
+            levelButtons[3].SetActive(false);
+            lockedImages[3].SetActive(true);
+        }
+
+        if (!PlayerPrefs.HasKey("Level04Complete")) // if mountain complete
+        {
+            levelButtons[4].SetActive(false);
+            lockedImages[4].SetActive(true);
         }
 
     }

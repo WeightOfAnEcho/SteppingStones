@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Menu+Tutorial/Level_0.unity
     guid: a40fcffb439ae954491135ed7a50322b
   - enabled: 1
+    path: Assets/Scenes/Levels/Beach_Level/Level01_Quote.unity
+    guid: 5b9550ebe60fd0e428d2d92400e4677f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Beach_Level/01_LV.unity
+    guid: e19150eb6c8ad5b49b47473fac062630
+  - enabled: 1
     path: Assets/Scenes/Levels/Forest_Level/Level03_Quote.unity
     guid: a12e80f62fa103e45b039b90b057e723
   - enabled: 1
@@ -24,8 +30,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/BaseMountain_Level/AW_Level_04.unity
     guid: 2e1b2473e3ec18e4f8d2f92a3fafe2cd
   - enabled: 1
+    path: Assets/Scenes/Levels/Mountain_Level/05_LV_V4_QUOTE.unity
+    guid: 45de643d35ccc1e429054bb64ae0e22d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Mountain_Level/05_LV_V4.unity
+    guid: 8fdd6e0ef6ca51d43bc513fd83695f91
+  - enabled: 1
     path: Assets/Scenes/Levels/Summit_Levels/Summit_#2_Quote.unity
     guid: f05be0ca7f7dabf4d81a344eaac23d17
+  - enabled: 1
+    path: Assets/Scenes/Levels/Summit_Levels/AW_Summit_#1.unity
+    guid: 826d92a89c8112948a82c1e865f164d8
   - enabled: 1
     path: Assets/Scenes/Levels/Summit_Levels/AW_Summit_#2.unity
     guid: 7b6bc55451b8d0241b85beb58b41f8d7

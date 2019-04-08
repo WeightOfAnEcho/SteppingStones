@@ -14,7 +14,7 @@ public class BT_Rotator : MonoBehaviour
         // Retrieve the name of this scene.
         string sceneName = currentScene.name;
 
-        if (sceneName == "Level_3") // if this is X scene, do a single automatic rotation
+        if (sceneName == "Level_3" || sceneName == "05_LV_V4") // if this is X scene, do a single automatic rotation
         {
             StartCoroutine(Rotate(Vector3.up, 90, 1.0f)); // start the rotation coroutine
         }
