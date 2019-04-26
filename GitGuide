@@ -1,0 +1,20 @@
+Step 01: Download Github Desktop Client: https://desktop.github.com/
+Step 02: Login to Github Desktop with your Github Account
+Step 03: In the top left, click the repository button (below 'file')
+Step 04: Click 'Add' then 'Clone Repository'
+Step 05: You'll have 3 options: GitHub, Enterprise or URL - Click URL
+Step 06: Paste in this URL https://github.com/WeightOfAnEcho/SteppingStones.git
+Step 07: Choose where you want to save this (important as you'll need it to open in Unity Later)
+Step 08: Press clone - it'll pull and save the respository
+Step 09: press 'Fetch Origin' in github Desktop (two across from the Repository button from earlier) this is just to double check you've got everything from the Master
+Step 10: Don't close Github Desktop - Open unity, Press 'New' and navigate to wherever you saved the repository
+Step 11: Open the correct sub folder as your project (I beleive this is the SECOND folder titles Stepping Stones)
+Step 12: project should open no issues, there may be some null references due to differing project settings
+Step 13: ANYTHING is an edit and you'll see them all get listed in Github Desktop - if there are edits, you should push
+Step 14: Pull from origin, summarise your edits clearly with a title.
+Step 16: close Unity and close Visual Studio (if you opened it)
+Step 15: Commit, then push. This should avoid conflicts etc.
+
+ALWAYS PULL before pushing
+ALWAYS close Unity before pushing/committing
+ALWAYS communicate where you plan to work and push - because we aren't using branches or push/pull requests this can get messy easily.
