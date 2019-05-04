@@ -17,7 +17,7 @@ public class BT_Soul : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            print(collision.gameObject.name);
+            //print(collision.gameObject.name);
 
             Scene currentScene = SceneManager.GetActiveScene(); // Create a temporary reference to the current scene.
             string sceneName = currentScene.name;

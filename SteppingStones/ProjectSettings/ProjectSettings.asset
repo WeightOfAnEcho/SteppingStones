@@ -46,8 +46,8 @@ PlayerSettings:
     duration: 4
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
-  defaultScreenWidth: 576
-  defaultScreenHeight: 1024
+  defaultScreenWidth: 1080
+  defaultScreenHeight: 1980
   defaultScreenWidthWeb: 650
   defaultScreenHeightWeb: 1060
   m_StereoRenderingPath: 0
@@ -57,7 +57,7 @@ PlayerSettings:
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosAppInBackgroundBehavior: 0
-  displayResolutionDialog: 1
+  displayResolutionDialog: 0
   iosAllowHTTPDownload: 1
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
@@ -83,7 +83,7 @@ PlayerSettings:
   usePlayerLog: 1
   bakeCollisionMeshes: 0
   forceSingleInstance: 0
-  resizableWindow: 1
+  resizableWindow: 0
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
   gpuSkinning: 1
@@ -96,7 +96,7 @@ PlayerSettings:
   visibleInBackground: 1
   allowFullscreenSwitch: 0
   graphicsJobMode: 0
-  fullscreenMode: 3
+  fullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0

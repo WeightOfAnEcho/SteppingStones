@@ -78,7 +78,7 @@ public class BT_LoadLevel : MonoBehaviour {
 
         else
         {
-            print("LEVEL SLECTOR GAMEOBJECT REQUIRED");
+            print("LEVEL SELECTOR GAMEOBJECT REQUIRED");
         }
     }
 

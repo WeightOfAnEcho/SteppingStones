@@ -18,6 +18,7 @@ TagManager:
   - Stone3
   - Geyser02
   - Geyser03
+  - Lang
   layers:
   - Default
   - TransparentFX

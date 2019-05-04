@@ -17,6 +17,9 @@ public class BT_Pauser : MonoBehaviour
     public Sprite muteSprite;
     public Sprite unmuteSprite;
 
+    //for tutorial
+    public BT_Tutorial_Player tutorialPlayer;
+
     public void Start()
     {
         //muteImage = GetComponent<Image>();
@@ -32,6 +35,14 @@ public class BT_Pauser : MonoBehaviour
     public void Pause()
     {
         PauseMenuUI.SetActive(true);
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level_0"))
+        {
+            tutorialPlayer.hadTutorialPause = true;
+            StartCoroutine(tutorialPlayer.FadeTextToZeroAlpha(1f, tutorialPlayer.tutorialPause));
+            tutorialPlayer.tutorialPauseParticle.Stop();
+        }
+
         Time.timeScale = 0f;
         GameIsPaused = true;
     }

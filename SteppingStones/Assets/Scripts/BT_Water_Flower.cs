@@ -45,7 +45,7 @@ public class BT_Water_Flower : MonoBehaviour
 
             if (hit.transform.tag == "Totem")
             {
-                print("hit totem");
+                //print("hit totem");
                 hit.transform.SendMessageUpwards("HitByWater");
             }
 
@@ -64,7 +64,8 @@ public class BT_Water_Flower : MonoBehaviour
 
             if (hit.transform.tag == "Totem")
             {
-                print("hit totem");
+                //print("hit totem");
+                
                 hit.transform.SendMessageUpwards("HitByWater");
             }
 
@@ -83,7 +84,8 @@ public class BT_Water_Flower : MonoBehaviour
 
             if (hit.transform.tag == "Totem")
             {
-                print("hit totem");
+                //print("hit totem");
+                
                 hit.transform.SendMessageUpwards("HitByWater");
             }
         }
@@ -101,7 +103,8 @@ public class BT_Water_Flower : MonoBehaviour
 
             if (hit.transform.tag == "Totem")
             {
-                print("hit totem");
+                //print("hit totem");
+                
                 hit.transform.SendMessageUpwards("HitByWater");
             }
 
@@ -119,8 +122,9 @@ public class BT_Water_Flower : MonoBehaviour
         {
             if (hit.transform.tag == "Totem")
             {
+                
                 hit.transform.SendMessageUpwards("HitByWater");
-                print("hit totem");
+                //print("hit totem");
             }
 
         }
@@ -138,7 +142,7 @@ public class BT_Water_Flower : MonoBehaviour
     public void Regress() // function to be called by button
     {
         Invoke("WaterDeSpawn", spawnSpeed); // Begin water Despawning (regressing) but with X delay
-        print("Invoking");
+        //print("Invoking");
     } 
 
     void WaterDeSpawn()
@@ -230,7 +234,7 @@ public class BT_Water_Flower : MonoBehaviour
 
     private void OnDestroy()
     {
-        print(gameObject.name + "destroyed");
+        //print(gameObject.name + "destroyed");
 
         listScript.waterInScene.Remove(transform.parent.gameObject);
     }

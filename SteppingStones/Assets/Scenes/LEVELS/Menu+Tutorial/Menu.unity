@@ -304,75 +304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c73a983e981f5c40a8edc381b3b4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &30289338
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 30289340}
-  - component: {fileID: 30289339}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &30289339
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30289338}
-  m_Enabled: 0
-  serializedVersion: 8
-  m_Type: 1
-  m_Color: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &30289340
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30289338}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &151997727
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -66, y: -59}
+  m_AnchoredPosition: {x: -82.5, y: -59}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &295479735
@@ -846,7 +777,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: BETA Ver 1.0
+  m_Text: Launch Ver 0.1
 --- !u!222 &295479736
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1261,7 +1192,7 @@ RectTransform:
   - {fileID: 1045783158}
   - {fileID: 1544332712}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1323,7 +1254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &498799937
 MonoBehaviour:
@@ -1378,7 +1309,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &608922768
 GameObject:
@@ -1916,7 +1847,7 @@ MonoBehaviour:
   thisScene:
     m_Handle: 0
   selectLevel: {fileID: 0}
-  levelIndex: 6
+  levelIndex: 4
 --- !u!114 &901362660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2885,7 +2816,7 @@ MonoBehaviour:
   thisScene:
     m_Handle: 0
   selectLevel: {fileID: 0}
-  levelIndex: 8
+  levelIndex: 4
 --- !u!82 &1167068823
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3812,7 +3743,6 @@ GameObject:
   - component: {fileID: 1746380303}
   - component: {fileID: 1746380302}
   - component: {fileID: 1746380301}
-  - component: {fileID: 1746380300}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -3820,19 +3750,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1746380300
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746380299}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1746380301
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3886,11 +3803,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746380299}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0.34, z: 0}
-  m_LocalScale: {x: 41.086338, y: 4.8324, z: 30.57374}
+  m_LocalPosition: {x: 0.7, y: 0.34, z: 4.23}
+  m_LocalScale: {x: 28.645395, y: 4.8324, z: 17.686909}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &1770760571
 GameObject:
@@ -3956,7 +3873,7 @@ Transform:
   m_LocalScale: {x: 0.0021493551, y: 0.0021493547, z: 0.0021493547}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1777718951
 GameObject:
@@ -3997,7 +3914,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 302.1, y: -71}
+  m_AnchoredPosition: {x: 302.09998, y: -71}
   m_SizeDelta: {x: 137.91, y: 33.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777718953
@@ -4107,7 +4024,7 @@ MonoBehaviour:
   thisScene:
     m_Handle: 0
   selectLevel: {fileID: 0}
-  levelIndex: 4
+  levelIndex: 3
 --- !u!82 &1777718957
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4433,7 +4350,7 @@ MonoBehaviour:
   thisScene:
     m_Handle: 0
   selectLevel: {fileID: 0}
-  levelIndex: 10
+  levelIndex: 6
 --- !u!114 &1964480820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5062,7 +4979,7 @@ PrefabInstance:
     - target: {fileID: 3495881775414750440, guid: 1cd071bb360cc8946a6b380592048bc9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3495881775414750440, guid: 1cd071bb360cc8946a6b380592048bc9,
         type: 3}

@@ -8,23 +8,30 @@ public class BT_Tutorial_Player : BT_Player_Base
 {
 
     public Text tutorialClick;
+    public Text tutorialLang;
+    public Text tutorialPause;
     public Text tutorialFlow;
     public Text tutorialTotem;
     public Text tutorialSoul;
 
     public ParticleSystem tutorialClickParticle;
+    public ParticleSystem tutorialLangParticle;
+    public ParticleSystem tutorialPauseParticle;
     public ParticleSystem tutorialFlowParticle;
     public ParticleSystem tutorialTotemParticle;
     public ParticleSystem tutorialSoulParticle;
 
 
     public bool hadTutorialClick;
+    public bool hadTutorialLang;
+    public bool hadTutorialPause;
     public bool hadTutorialFlow;
     public bool hadTutorialTotem;
     public bool hadTutorialSoul;
     private bool fireOnce;
 
     public GameObject flowButton;
+    public GameObject pauseButton;
     public BT_WaterList check;
 
     //This exists incase any edits to player base is required -------------------------------------------------------------------------------------------------
@@ -45,9 +52,29 @@ public class BT_Tutorial_Player : BT_Player_Base
         }
     }
 
+    void TutorialLanguage()
+    {
+        if (hadTutorialClick == true && hadTutorialLang == false)
+        {
+            StartCoroutine(FadeTextToFullAlpha(1f, tutorialLang));
+            tutorialLangParticle.Play();
+            
+        }
+    }
+
+    void TutorialPause()
+    {
+        if (hadTutorialLang == true && hadTutorialPause == false)
+        {
+            StartCoroutine(FadeTextToFullAlpha(1f, tutorialPause));
+            tutorialPauseParticle.Play();
+            pauseButton.SetActive(true);
+        }
+    }
+
     void TutorialFlow()
     {
-        if (hadTutorialClick == true && hadTutorialFlow == false)
+        if (hadTutorialPause== true && hadTutorialFlow == false)
         {
             StartCoroutine(FadeTextToFullAlpha(1f, tutorialFlow));
             tutorialFlowParticle.Play();
@@ -104,7 +131,7 @@ public class BT_Tutorial_Player : BT_Player_Base
 
                     else if (path.status == NavMeshPathStatus.PathComplete) // if the agent calculates a full path to destination point
                     {
-                        print("has path");
+                        //print("has path");
                         Agent.SetDestination(navmeshHit.position); // set the hit location on the nav mesh to the target destination for the agent
                         Instantiate(ClickEffect, hit.point, Quaternion.LookRotation(hit.normal));//spawn the click effect at the hit location
 
@@ -169,12 +196,22 @@ public class BT_Tutorial_Player : BT_Player_Base
             yield return null;
         }
 
-        if(hadTutorialClick == true && hadTutorialFlow == false)
+        if(hadTutorialClick == true && hadTutorialLang == false)
+        {
+            TutorialLanguage();
+        }
+
+        if (hadTutorialLang == true && hadTutorialPause == false)
+        {
+            TutorialPause();
+        }
+
+        if (hadTutorialPause == true && hadTutorialFlow == false)
         {
             TutorialFlow();
         }
 
-        if(hadTutorialFlow == true && hadTutorialTotem == false)
+        if (hadTutorialFlow == true && hadTutorialTotem == false)
         {
             TutorialTotem();
         }

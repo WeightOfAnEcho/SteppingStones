@@ -26,7 +26,7 @@ public class BT_Raycaster : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 500)) // if the hit coordiantes are on a valid collider within 500 units
             {
-                print(hit.collider.name);
+                //print(hit.collider.name);
 
                 if (hit.transform.tag == "Valve")
                 {
