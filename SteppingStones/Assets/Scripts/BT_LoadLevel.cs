@@ -14,18 +14,19 @@ public class BT_LoadLevel : MonoBehaviour {
 
     public int levelIndex;
 
+    public MusicFader fadeOut;
+
     private void Awake()
     {
         source = GetComponent<AudioSource>();
     }
 
-    //public void SceneTransition()
-    //{
-    //    PlaySound();
-    //    LevelSelect();
-    //    LoadScene(1);
+    public void QuitGame()
+    {
+       PlaySound();
+       Application.Quit();
 
-    //}
+    }
 
     public void PlaySound()
     {
@@ -38,9 +39,7 @@ public class BT_LoadLevel : MonoBehaviour {
         PlaySound();
         StartCoroutine("OnFadeComplete");
         LevelLoader.SetTrigger("FadeOut");
-
-        
-        
+        fadeOut.EndLevel();
     }
 
     IEnumerator OnFadeComplete()
@@ -48,6 +47,7 @@ public class BT_LoadLevel : MonoBehaviour {
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(levelIndex);
     }
+
 
 
     public void LevelSelect()

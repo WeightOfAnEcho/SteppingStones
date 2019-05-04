@@ -4404,16 +4404,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3363000539237225652, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3363000539237225652, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
-        type: 3}
-      propertyPath: m_TagString
-      value: Totem
-      objectReference: {fileID: 0}
     - target: {fileID: 3360563681792672168, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4428,6 +4418,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363000539237225652, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363000539237225652, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
+        type: 3}
+      propertyPath: m_TagString
+      value: Totem
       objectReference: {fileID: 0}
     - target: {fileID: 2895653675593539708, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
         type: 3}
@@ -5235,6 +5235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 85
+  fadeOut: {fileID: 1242842222}
 --- !u!135 &459880149
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6606,16 +6607,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3363000539237225652, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3363000539237225652, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
-        type: 3}
-      propertyPath: m_TagString
-      value: Totem
-      objectReference: {fileID: 0}
     - target: {fileID: 3360563681792672168, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6630,6 +6621,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363000539237225652, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363000539237225652, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
+        type: 3}
+      propertyPath: m_TagString
+      value: Totem
       objectReference: {fileID: 0}
     - target: {fileID: 2895653675593539708, guid: 5ad5a54fd1bd03d439fdaf1ad2643aac,
         type: 3}
@@ -8270,6 +8271,7 @@ GameObject:
   - component: {fileID: 1242842218}
   - component: {fileID: 1242842219}
   - component: {fileID: 1242842220}
+  - component: {fileID: 1242842222}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8391,7 +8393,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e2f1e6076bebab4479580f32aaf07557, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8495,6 +8497,19 @@ MonoBehaviour:
   letterBoxCameraColor: {r: 0, g: 0, b: 0, a: 1}
   cameras: []
   letterBoxCamera: {fileID: 0}
+--- !u!114 &1242842222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242842213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026cdb6321602b143b7bb947369987bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1242842220}
 --- !u!1001 &1274218869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12759,7 +12774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.88235295}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

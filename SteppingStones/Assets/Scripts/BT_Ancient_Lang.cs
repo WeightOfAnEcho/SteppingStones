@@ -34,6 +34,8 @@ public class BT_Ancient_Lang : MonoBehaviour
                     tutorialPlayer.hadTutorialLang = true;
                     StartCoroutine(tutorialPlayer.FadeTextToZeroAlpha(1f, tutorialPlayer.tutorialLang));
                     tutorialPlayer.tutorialLangParticle.Stop();
+                    StartCoroutine(WaitFor (1));
+                    
                 }
             }
         }
@@ -49,5 +51,11 @@ public class BT_Ancient_Lang : MonoBehaviour
     {
         glow.Stop();
         rend.material = originalColor;
+    }
+
+    IEnumerator WaitFor(int seconds) // delay coroutine for number of seconds delay
+    {
+        yield return new WaitForSeconds(seconds);
+        gameObject.SetActive(false);
     }
 }
