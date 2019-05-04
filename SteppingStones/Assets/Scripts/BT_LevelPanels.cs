@@ -10,6 +10,8 @@ public class BT_LevelPanels : MonoBehaviour
     private AudioSource source;
     public AudioClip Click;
 
+    public CanvasGroup raycastBlock;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -22,13 +24,16 @@ public class BT_LevelPanels : MonoBehaviour
         source.PlayOneShot(Click);
     }
 
+    public void RemoveBlock()
+    {
+        raycastBlock.blocksRaycasts = false;
+    }
+
     public void LoadScene()
     {
         PlaySound();
+        RemoveBlock();
         panelLoader.SetTrigger("FadeOutPanel");
-
-
-
     }
 
     // Update is called once per frame
