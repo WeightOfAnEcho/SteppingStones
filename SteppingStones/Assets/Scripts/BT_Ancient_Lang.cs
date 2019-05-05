@@ -53,7 +53,11 @@ public class BT_Ancient_Lang : MonoBehaviour
                     // whatever tag you are looking for on your game object
                     if (hit.collider.tag == "Lang")
                     {
-                        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level_0"))
+
+                        Scene currentScene = SceneManager.GetActiveScene(); // Create a temporary reference to the current scene.
+                        string sceneName = currentScene.name;
+
+                        if (sceneName == "Level_0") // if tutorial
                         {
                             tutorialPlayer.hadTutorialLang = true;
                             StartCoroutine(tutorialPlayer.FadeTextToZeroAlpha(1f, tutorialPlayer.tutorialLang));
@@ -63,6 +67,40 @@ public class BT_Ancient_Lang : MonoBehaviour
                             UpdatePrefs(); // call function to update prefs
                         }
 
+                        if (sceneName == "01_LV") // if beach
+                        {
+                            StartCoroutine(WaitFor(1));
+                            PlayerPrefs.SetInt("EngBatch02", 1); // set the correct batch to be translated
+                            UpdatePrefs(); // call function to update prefs
+                        }
+
+                        if (sceneName == "Level_3") // if beach
+                        {
+                            StartCoroutine(WaitFor(1));
+                            PlayerPrefs.SetInt("EngBatch03", 1); // set the correct batch to be translated
+                            UpdatePrefs(); // call function to update prefs
+                        }
+
+                        if (sceneName == "AW_Level_04") // if beach
+                        {
+                            StartCoroutine(WaitFor(1));
+                            PlayerPrefs.SetInt("EngBatch05", 1); // set the correct batch to be translated
+                            UpdatePrefs(); // call function to update prefs
+                        }
+
+                        if (sceneName == "05_LV_V4") // if beach
+                        {
+                            StartCoroutine(WaitFor(1));
+                            PlayerPrefs.SetInt("EngBatch05", 1); // set the correct batch to be translated
+                            UpdatePrefs(); // call function to update prefs
+                        }
+
+                        if (sceneName == "AW_Summit_#1") // if beach
+                        {
+                            StartCoroutine(WaitFor(1));
+                            PlayerPrefs.SetInt("EngBatch06", 1); // set the correct batch to be translated
+                            UpdatePrefs(); // call function to update prefs
+                        }
                     }
                 }
             }

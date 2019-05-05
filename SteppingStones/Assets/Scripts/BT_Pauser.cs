@@ -11,7 +11,7 @@ public class BT_Pauser : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject PauseMenuUI;
     public AudioSource audioSource;
-    public GameObject playerCharacter;
+    //public GameObject playerCharacter;
 
     public Image muteImage;
     public Sprite muteSprite;

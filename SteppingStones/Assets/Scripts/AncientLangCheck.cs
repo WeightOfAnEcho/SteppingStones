@@ -23,11 +23,11 @@ public class AncientLangCheck : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W)) // Unlock all Levels
         {
             PlayerPrefs.SetInt("EngBatch01", 1); 
-            //PlayerPrefs.SetInt("EngBatch02", 1); 
-            //PlayerPrefs.SetInt("EngBatch03", 1); 
-            //PlayerPrefs.SetInt("EngBatch04", 1); 
-            //PlayerPrefs.SetInt("EngBatch05", 1);
-            //PlayerPrefs.SetInt("EngBatch06", 1);
+            PlayerPrefs.SetInt("EngBatch02", 1); 
+            PlayerPrefs.SetInt("EngBatch03", 1); 
+            PlayerPrefs.SetInt("EngBatch04", 1); 
+            PlayerPrefs.SetInt("EngBatch05", 1);
+            PlayerPrefs.SetInt("EngBatch06", 1);
 
             PlayerPrefs.Save();
             RefreshPrefs();
@@ -55,6 +55,36 @@ public class AncientLangCheck : MonoBehaviour
             EnglishBatches[0].SetActive(true);
         }
 
+        if (PlayerPrefs.HasKey("EngBatch02")) // if tutorial complete
+        {
+            AncientBatches[1].SetActive(false);
+            EnglishBatches[1].SetActive(true);
+        }
+
+        if (PlayerPrefs.HasKey("EngBatch03")) // if tutorial complete
+        {
+            AncientBatches[2].SetActive(false);
+            EnglishBatches[2].SetActive(true);
+        }
+
+        if (PlayerPrefs.HasKey("EngBatch04")) // if tutorial complete
+        {
+            AncientBatches[3].SetActive(false);
+            EnglishBatches[3].SetActive(true);
+        }
+
+        if (PlayerPrefs.HasKey("EngBatch05")) // if tutorial complete
+        {
+            AncientBatches[4].SetActive(false);
+            EnglishBatches[4].SetActive(true);
+        }
+
+        if (PlayerPrefs.HasKey("EngBatch06")) // if tutorial complete
+        {
+            AncientBatches[5].SetActive(false);
+            EnglishBatches[5].SetActive(true);
+        }
+
 
         //If DOESN'T
 
@@ -62,6 +92,36 @@ public class AncientLangCheck : MonoBehaviour
         {
             EnglishBatches[0].SetActive(false);
             AncientBatches[0].SetActive(true);
+        }
+
+        if (!PlayerPrefs.HasKey("EngBatch02"))
+        {
+            EnglishBatches[1].SetActive(false);
+            AncientBatches[1].SetActive(true);
+        }
+
+        if (!PlayerPrefs.HasKey("EngBatch03"))
+        {
+            EnglishBatches[2].SetActive(false);
+            AncientBatches[2].SetActive(true);
+        }
+
+        if (!PlayerPrefs.HasKey("EngBatch04"))
+        {
+            EnglishBatches[3].SetActive(false);
+            AncientBatches[3].SetActive(true);
+        }
+
+        if (!PlayerPrefs.HasKey("EngBatch05"))
+        {
+            EnglishBatches[4].SetActive(false);
+            AncientBatches[4].SetActive(true);
+        }
+
+        if (!PlayerPrefs.HasKey("EngBatch06"))
+        {
+            EnglishBatches[5].SetActive(false);
+            AncientBatches[5].SetActive(true);
         }
 
 
