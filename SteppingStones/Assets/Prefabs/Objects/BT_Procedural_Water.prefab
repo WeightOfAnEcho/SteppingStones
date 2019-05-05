@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7ab571db4779503458f1b83bcb5611af, type: 2}
+  - {fileID: 2100000, guid: 738d423cb106f35449e43c3b91e57217, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -198,4 +198,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterBlock: {fileID: 85500150}
   spawnSpeed: 0.1
+  enemy: []
+  enemyCount: 0
+  range: 0
+  list: {fileID: 0}
   iceBlock: {fileID: 0}

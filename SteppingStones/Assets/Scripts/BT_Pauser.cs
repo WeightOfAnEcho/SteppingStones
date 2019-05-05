@@ -22,7 +22,7 @@ public class BT_Pauser : MonoBehaviour
 
     public void Start()
     {
-        //muteImage = GetComponent<Image>();
+        
     }
 
     public void Resume()

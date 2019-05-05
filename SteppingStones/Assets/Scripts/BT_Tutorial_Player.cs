@@ -56,7 +56,8 @@ public class BT_Tutorial_Player : BT_Player_Base
     {
         if (hadTutorialClick == true && hadTutorialLang == false)
         {
-            StartCoroutine(FadeTextToFullAlpha(1f, tutorialLang));
+
+            StartCoroutine(FadeTextToFullAlpha(4f, tutorialLang));
             tutorialLangParticle.Play();
             
         }
@@ -66,6 +67,7 @@ public class BT_Tutorial_Player : BT_Player_Base
     {
         if (hadTutorialLang == true && hadTutorialPause == false)
         {
+            
             StartCoroutine(FadeTextToFullAlpha(1f, tutorialPause));
             tutorialPauseParticle.Play();
             pauseButton.SetActive(true);
