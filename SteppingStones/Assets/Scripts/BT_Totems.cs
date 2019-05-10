@@ -63,9 +63,9 @@ public class BT_Totems : MonoBehaviour
             GO_NavMeshObstacle.SetActive(false);
         }
 
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("05_LV_V4"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("LV_Level_05"))
         {
-            GO_one.SetActive(false);
+            //GO_one.SetActive(false);
             GO_two.SetActive(true);
             GO_NavMeshObstacle.SetActive(false);
             doorOpen.SetActive(false);
