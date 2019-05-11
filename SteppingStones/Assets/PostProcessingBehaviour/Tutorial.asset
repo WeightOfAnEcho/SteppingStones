@@ -26,15 +26,15 @@ MonoBehaviour:
         motionVectorsResolution: 24
         motionVectorsAmplitude: 64
   fog:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       excludeSkybox: 1
   antialiasing:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       method: 0
       fxaaSettings:
-        preset: 2
+        preset: 4
       taaSettings:
         jitterSpread: 0.75
         sharpen: 0.3
@@ -43,7 +43,7 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 0
     m_Settings:
-      intensity: 0.23
+      intensity: 4
       radius: 0.3
       sampleCount: 10
       downsampling: 1
@@ -72,11 +72,11 @@ MonoBehaviour:
   depthOfField:
     m_Enabled: 0
     m_Settings:
-      focusDistance: -13.1
-      aperture: 32
-      focalLength: 1
+      focusDistance: 4
+      aperture: 0.1
+      focalLength: 63
       useCameraFov: 0
-      kernelSize: 1
+      kernelSize: 0
   motionBlur:
     m_Enabled: 0
     m_Settings:
@@ -101,10 +101,10 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.84
-        threshold: 1.71
+        intensity: 0.4
+        threshold: 1.69
         softKnee: 0.088
-        radius: 4.32
+        radius: 4.36
         antiFlicker: 1
       lensDirt:
         texture: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.0411
+        neutralBlackIn: 0.052
         neutralWhiteIn: 11.44
         neutralBlackOut: 0.0298
         neutralWhiteOut: 10
@@ -122,13 +122,13 @@ MonoBehaviour:
         neutralWhiteClip: 6.36
       basic:
         postExposure: 0
-        temperature: 0
-        tint: 0
-        hueShift: 0
+        temperature: 11
+        tint: 4
+        hueShift: -2
         saturation: 1
         contrast: 1
       channelMixer:
-        red: {x: 1, y: 0, z: 0}
+        red: {x: 1, y: 0.03, z: 0.03}
         green: {x: 0, y: 1, z: 0}
         blue: {x: 0, y: 0, z: 1}
         currentEditingChannel: 0
@@ -318,12 +318,12 @@ MonoBehaviour:
       size: 1
       luminanceContribution: 0.8
   vignette:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 1}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.45
+      intensity: 0.278
       smoothness: 0.2
       roundness: 1
       mask: {fileID: 0}

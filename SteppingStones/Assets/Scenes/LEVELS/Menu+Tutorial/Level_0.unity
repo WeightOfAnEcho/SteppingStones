@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: In-Game-UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1789623448, guid: f0c328be1a6cb834e9916b358f2ae95a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7330186614283472263, guid: f0c328be1a6cb834e9916b358f2ae95a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -530,10 +534,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 865
-      objectReference: {fileID: 0}
-    - target: {fileID: 1789623448, guid: f0c328be1a6cb834e9916b358f2ae95a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7330186616197120608, guid: f0c328be1a6cb834e9916b358f2ae95a,
         type: 3}
@@ -2071,6 +2071,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lost_Soul_04 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 593267568, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f, type: 3}
+      propertyPath: fadeOut
+      value: 
+      objectReference: {fileID: 353235802}
+    - target: {fileID: 593267569, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f, type: 3}
+      propertyPath: m_Center.y
+      value: 1.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307963101981701363, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: b8303410aefe006458985b2949541681, type: 3}
+    - target: {fileID: 5300554120933840081, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 33e82a67e5a792c4bb94dd5bf1c2fc90, type: 2}
     - target: {fileID: 5319752986448321095, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2141,24 +2159,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5307963101981701363, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 4300000, guid: b8303410aefe006458985b2949541681, type: 3}
-    - target: {fileID: 5300554120933840081, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 33e82a67e5a792c4bb94dd5bf1c2fc90, type: 2}
-    - target: {fileID: 593267569, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f, type: 3}
-      propertyPath: m_Center.y
-      value: 1.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 593267568, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f, type: 3}
-      propertyPath: fadeOut
-      value: 
-      objectReference: {fileID: 353235802}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f, type: 3}
 --- !u!1 &128404489
@@ -6061,7 +6061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 523bd7c3bcf88354990a205bf8b0f3ed, type: 2}
+  profile: {fileID: 11400000, guid: 3b1ff2b3f0c60c74d883420daebae861, type: 2}
 --- !u!114 &353235800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29672,16 +29672,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1423986195}
-    - target: {fileID: 7662368327260318953, guid: 95683560e55c54042b15ce8e2367e41f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7662368327383539869, guid: 95683560e55c54042b15ce8e2367e41f,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1423986195}
     - target: {fileID: 7662368327763377679, guid: 95683560e55c54042b15ce8e2367e41f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -29692,14 +29682,24 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1423986195}
-    - target: {fileID: 3983425469006829934, guid: 95683560e55c54042b15ce8e2367e41f,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7662368327260318959, guid: 95683560e55c54042b15ce8e2367e41f,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662368327260318953, guid: 95683560e55c54042b15ce8e2367e41f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7662368327383539869, guid: 95683560e55c54042b15ce8e2367e41f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1423986195}
+    - target: {fileID: 3983425469006829934, guid: 95683560e55c54042b15ce8e2367e41f,
+        type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
