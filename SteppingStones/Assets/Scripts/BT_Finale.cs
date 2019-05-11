@@ -12,6 +12,8 @@ public class BT_Finale : MonoBehaviour
     public GameObject dustPoof;
     public BT_DynamicCamera dynamicCamera;
 
+    public BT_Pauser badEndingBool;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +57,29 @@ public class BT_Finale : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Instantiate(dustPoof, transform.position, transform.rotation);
+
+        if (badEndingBool.badEnding == true)
+        {
+            StartCoroutine("WaitForEnding");
+            //do bad ending
+
+        }
+
+        else
+        {
+            StartCoroutine("WaitForEnding");
+
+            // do good ending
+        }
+
+
+
+    }
+
+    IEnumerator WaitForEnding() // delay coroutine for number of seconds delay
+    {
+        yield return new WaitForSeconds(10);
+
         dynamicCamera.camera_move_enabled = true;
         gameObject.SetActive(false);
     }

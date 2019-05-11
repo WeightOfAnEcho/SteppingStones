@@ -17,12 +17,27 @@ public class BT_Pauser : MonoBehaviour
     public Sprite muteSprite;
     public Sprite unmuteSprite;
 
+
+    public GameObject freeButton;
+    public GameObject ascendButton;
+
+    public bool badEnding;
+    
+
     //for tutorial
     public BT_Tutorial_Player tutorialPlayer;
 
     public void Start()
     {
-        
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("AW_Summit_#2"))
+        {
+            if (PlayerPrefs.HasKey("EngBatch01") && PlayerPrefs.HasKey("EngBatch02") & PlayerPrefs.HasKey("EngBatch03") && PlayerPrefs.HasKey("EngBatch04")
+            && PlayerPrefs.HasKey("EngBatch05") && PlayerPrefs.HasKey("EngBatch06")) // if you have the full english text unlocked (positive ending)
+            {
+                freeButton.SetActive(true);
+                ascendButton.SetActive(false);
+            }
+        }
     }
 
     public void Resume()
@@ -73,5 +88,18 @@ public class BT_Pauser : MonoBehaviour
             muteImage.sprite = unmuteSprite;
         }
        
+    }
+
+    public void BadEnding()
+    {
+        badEnding = true;
+        Resume();
+
+    }
+
+    public void GoodEnding()
+    {
+        badEnding = false;
+        Resume();
     }
 }

@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/BaseMountain_Level/AW_Level_04.unity
     guid: 2e1b2473e3ec18e4f8d2f92a3fafe2cd
   - enabled: 1
-    path: Assets/Scenes/Levels/Mountain_Level/05_LV_V4.unity
-    guid: 8fdd6e0ef6ca51d43bc513fd83695f91
+    path: Assets/Scenes/Levels/Mountain_Level/LV_Level_05.unity
+    guid: 7e8586f7a66314542b9685899419df6c
   - enabled: 1
     path: Assets/Scenes/Levels/Summit_Levels/AW_Summit_#1.unity
     guid: 826d92a89c8112948a82c1e865f164d8

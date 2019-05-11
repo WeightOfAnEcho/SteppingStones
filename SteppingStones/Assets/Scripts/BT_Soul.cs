@@ -57,7 +57,7 @@ public class BT_Soul : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
 
-            if (sceneName == "05_LV_V4")
+            if (sceneName == "LV_Level_05")
             {
                 fadeOut.EndLevel();
                 PlayerPrefs.SetInt("Level04Complete", 1); // Unlock Summit Level

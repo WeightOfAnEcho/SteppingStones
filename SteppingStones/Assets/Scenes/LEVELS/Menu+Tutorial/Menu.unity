@@ -1885,7 +1885,7 @@ MonoBehaviour:
     m_Handle: 0
   selectLevel: {fileID: 0}
   levelIndex: 4
-  fadeOut: {fileID: 0}
+  fadeOut: {fileID: 25939393}
 --- !u!114 &901362660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2307,7 +2307,7 @@ MonoBehaviour:
     m_Handle: 0
   selectLevel: {fileID: 0}
   levelIndex: 2
-  fadeOut: {fileID: 0}
+  fadeOut: {fileID: 25939393}
 --- !u!114 &1008758640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2856,8 +2856,8 @@ MonoBehaviour:
   thisScene:
     m_Handle: 0
   selectLevel: {fileID: 0}
-  levelIndex: 4
-  fadeOut: {fileID: 0}
+  levelIndex: 5
+  fadeOut: {fileID: 25939393}
 --- !u!82 &1167068823
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3183,7 +3183,7 @@ MonoBehaviour:
     m_Handle: 0
   selectLevel: {fileID: 0}
   levelIndex: 1
-  fadeOut: {fileID: 0}
+  fadeOut: {fileID: 25939393}
 --- !u!114 &1235808063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4313,7 +4313,7 @@ MonoBehaviour:
     m_Handle: 0
   selectLevel: {fileID: 0}
   levelIndex: 3
-  fadeOut: {fileID: 0}
+  fadeOut: {fileID: 25939393}
 --- !u!82 &1777718957
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4640,7 +4640,7 @@ MonoBehaviour:
     m_Handle: 0
   selectLevel: {fileID: 0}
   levelIndex: 6
-  fadeOut: {fileID: 0}
+  fadeOut: {fileID: 25939393}
 --- !u!114 &1964480820
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class BT_Ancient_Lang : MonoBehaviour
     public Material originalColor;
     public ParticleSystem glow;
 
+    public BT_Pauser pauseGame;
+
     public BT_Tutorial_Player tutorialPlayer;
     public AncientLangCheck ALC;
 
@@ -39,7 +41,7 @@ public class BT_Ancient_Lang : MonoBehaviour
     {
         
 
-        if (Vector3.Distance(transform.position, player.position) < 10)
+        if (Vector3.Distance(transform.position, player.position) < range)
         {
             Glow();
 
@@ -72,6 +74,7 @@ public class BT_Ancient_Lang : MonoBehaviour
                             StartCoroutine(WaitFor(1));
                             PlayerPrefs.SetInt("EngBatch02", 1); // set the correct batch to be translated
                             UpdatePrefs(); // call function to update prefs
+                            pauseGame.Pause();
                         }
 
                         if (sceneName == "Level_3") // if beach
@@ -79,6 +82,7 @@ public class BT_Ancient_Lang : MonoBehaviour
                             StartCoroutine(WaitFor(1));
                             PlayerPrefs.SetInt("EngBatch03", 1); // set the correct batch to be translated
                             UpdatePrefs(); // call function to update prefs
+                            pauseGame.Pause();
                         }
 
                         if (sceneName == "AW_Level_04") // if beach
@@ -86,13 +90,15 @@ public class BT_Ancient_Lang : MonoBehaviour
                             StartCoroutine(WaitFor(1));
                             PlayerPrefs.SetInt("EngBatch05", 1); // set the correct batch to be translated
                             UpdatePrefs(); // call function to update prefs
+                            pauseGame.Pause();
                         }
 
-                        if (sceneName == "05_LV_V4") // if beach
+                        if (sceneName == "LV_Level_05") // if beach
                         {
                             StartCoroutine(WaitFor(1));
                             PlayerPrefs.SetInt("EngBatch05", 1); // set the correct batch to be translated
                             UpdatePrefs(); // call function to update prefs
+                            pauseGame.Pause();
                         }
 
                         if (sceneName == "AW_Summit_#1") // if beach
@@ -100,6 +106,7 @@ public class BT_Ancient_Lang : MonoBehaviour
                             StartCoroutine(WaitFor(1));
                             PlayerPrefs.SetInt("EngBatch06", 1); // set the correct batch to be translated
                             UpdatePrefs(); // call function to update prefs
+                            pauseGame.Pause();
                         }
                     }
                 }

@@ -2141,10 +2141,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 593267568, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f, type: 3}
-      propertyPath: fadeOut
-      value: 
-      objectReference: {fileID: 353235802}
     - target: {fileID: 5307963101981701363, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f,
         type: 3}
       propertyPath: m_Mesh
@@ -2159,6 +2155,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.31
       objectReference: {fileID: 0}
+    - target: {fileID: 593267568, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f, type: 3}
+      propertyPath: fadeOut
+      value: 
+      objectReference: {fileID: 353235802}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5f72b85de7ff843bd443f1ffd8bc9f, type: 3}
 --- !u!1 &128404489
@@ -6061,7 +6061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 3b1ff2b3f0c60c74d883420daebae861, type: 2}
+  profile: {fileID: 11400000, guid: 523bd7c3bcf88354990a205bf8b0f3ed, type: 2}
 --- !u!114 &353235800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18601,6 +18601,9 @@ MonoBehaviour:
   muteImage: {fileID: 572261884}
   muteSprite: {fileID: 21300000, guid: 59f36ac96d6d7ef4dbdc89aef1cb8d56, type: 3}
   unmuteSprite: {fileID: 21300000, guid: ddd4d527be57b564a8447afe46c53275, type: 3}
+  freeButton: {fileID: 0}
+  ascendButton: {fileID: 0}
+  badEnding: 0
   tutorialPlayer: {fileID: 1638972074}
 --- !u!114 &1423986196
 MonoBehaviour:
@@ -29664,16 +29667,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3983425469006829934, guid: 95683560e55c54042b15ce8e2367e41f,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7662368329053202004, guid: 95683560e55c54042b15ce8e2367e41f,
+    - target: {fileID: 7662368327177147553, guid: 95683560e55c54042b15ce8e2367e41f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1423986195}
+    - target: {fileID: 7662368327260318953, guid: 95683560e55c54042b15ce8e2367e41f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7662368327383539869, guid: 95683560e55c54042b15ce8e2367e41f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -29684,14 +29687,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1423986195}
-    - target: {fileID: 7662368327177147553, guid: 95683560e55c54042b15ce8e2367e41f,
+    - target: {fileID: 7662368329053202004, guid: 95683560e55c54042b15ce8e2367e41f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1423986195}
-    - target: {fileID: 7662368327260318953, guid: 95683560e55c54042b15ce8e2367e41f,
+    - target: {fileID: 3983425469006829934, guid: 95683560e55c54042b15ce8e2367e41f,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7662368327260318959, guid: 95683560e55c54042b15ce8e2367e41f,
@@ -29813,6 +29816,7 @@ MonoBehaviour:
   mouseOverColor: {fileID: 2100000, guid: 04158fbd6d53e144b8f94311085aa016, type: 2}
   originalColor: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   glow: {fileID: 1674385546}
+  pauseGame: {fileID: 1423986195}
   tutorialPlayer: {fileID: 1638972074}
   ALC: {fileID: 68687645}
   range: 10
