@@ -69,8 +69,8 @@ public class BT_Totems : MonoBehaviour
             //GO_one.SetActive(false);
             //GO_two.SetActive(true);
             waterList.StartCoroutine("FreezeWater");
-            GO_NavMeshObstacle.SetActive(false);
-            doorOpen.SetActive(false);
+            //GO_NavMeshObstacle.SetActive(false);
+            //doorOpen.SetActive(false);
         }
 
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("AW_Summit_#1"))
@@ -96,5 +96,12 @@ public class BT_Totems : MonoBehaviour
         Geyser.SetBool("GeyserMove", false);
         particleGeyser.Stop();
         activated = false;
+    }
+
+    public void Mountainbits()
+    {
+        GO_NavMeshObstacle.SetActive(false);
+        Instantiate(doorDust, doorOpen.transform.position, doorOpen.transform.rotation);
+        doorOpen.SetActive(false);
     }
 }

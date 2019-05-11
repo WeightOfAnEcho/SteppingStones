@@ -23,9 +23,8 @@ public class BT_WaterList: MonoBehaviour
     public BT_Totems[] totems;
 
     //freezing
-    private Renderer rend;
-    public Material iceMat;
     public GameObject iceBlock;
+    public float seconds;
 
     public /*static*/ List<GameObject> getList()
     {
@@ -108,7 +107,7 @@ public class BT_WaterList: MonoBehaviour
 
     public IEnumerator FreezeWater()
     {
-        WaitForSeconds delay = new WaitForSeconds(2f);
+        WaitForSeconds delay = new WaitForSeconds(seconds);
 
         foreach (GameObject water in waterInScene)
         {
@@ -121,7 +120,10 @@ public class BT_WaterList: MonoBehaviour
         {
 
             GameObject.Destroy(waterInScene[i]);
+
         }
+
+        totems[0].Mountainbits();
     }
 }
 
