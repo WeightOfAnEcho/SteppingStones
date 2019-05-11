@@ -202,4 +202,5 @@ MonoBehaviour:
   enemyCount: 0
   range: 0
   list: {fileID: 0}
-  iceBlock: {fileID: 0}
+  iceBlock: {fileID: 6525236596119038606, guid: 9816ddd3263d58e429c9f60dfafb1840,
+    type: 3}
