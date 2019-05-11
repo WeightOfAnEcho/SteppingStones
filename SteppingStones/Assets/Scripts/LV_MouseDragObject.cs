@@ -13,9 +13,16 @@ public class LV_MouseDragObject : MonoBehaviour
     float planeY; //defining where ground is
     public GameObject GO_spline;
 
+    public BT_WaterList check; // a public variable for the button press script
+
+
     private void OnMouseDrag()
     {
-        mouseDragMoveObject();
+        if (check.waterPresent == false)
+        {
+            mouseDragMoveObject();
+        }
+
     }
 
     void mouseDragMoveObject()

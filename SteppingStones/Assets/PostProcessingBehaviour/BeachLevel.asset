@@ -101,9 +101,9 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.6
-        threshold: 1.26
-        softKnee: 0.233
+        intensity: 0.55
+        threshold: 1.27
+        softKnee: 0.821
         radius: 1
         antiFlicker: 0
       lensDirt:
@@ -122,15 +122,15 @@ MonoBehaviour:
         neutralWhiteClip: 10
       basic:
         postExposure: 0
-        temperature: 23
+        temperature: 26
         tint: -20
         hueShift: -6
-        saturation: 1.05
+        saturation: 1.06
         contrast: 1.05
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
-        blue: {x: 0, y: 0, z: 1}
+        blue: {x: 0, y: 0, z: 1.03}
         currentEditingChannel: 2
       colorWheels:
         mode: 1
