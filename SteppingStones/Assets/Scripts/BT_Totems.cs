@@ -21,6 +21,7 @@ public class BT_Totems : MonoBehaviour
 
 
     public BT_Tutorial_Player tutorialPlayer;
+    public BT_WaterList waterList;
 
     //GameObjects TO ACTIVATE ---------------------------------------------------------------------------------------------------
     public GameObject GO_one;
@@ -66,7 +67,8 @@ public class BT_Totems : MonoBehaviour
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("LV_Level_05"))
         {
             //GO_one.SetActive(false);
-            GO_two.SetActive(true);
+            //GO_two.SetActive(true);
+            waterList.StartCoroutine("FreezeWater");
             GO_NavMeshObstacle.SetActive(false);
             doorOpen.SetActive(false);
         }

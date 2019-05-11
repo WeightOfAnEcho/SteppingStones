@@ -22,6 +22,11 @@ public class BT_WaterList: MonoBehaviour
     //totems
     public BT_Totems[] totems;
 
+    //freezing
+    private Renderer rend;
+    public Material iceMat;
+    public GameObject iceBlock;
+
     public /*static*/ List<GameObject> getList()
     {
         //if (waterInScene == null) { waterInScene = new List<GameObject>(); }
@@ -98,6 +103,24 @@ public class BT_WaterList: MonoBehaviour
             }
 
             
+        }
+    }
+
+    public IEnumerator FreezeWater()
+    {
+        WaitForSeconds delay = new WaitForSeconds(2f);
+
+        foreach (GameObject water in waterInScene)
+        {
+            Instantiate(iceBlock, water.transform.position, water.transform.rotation);
+
+            yield return delay;
+        }
+
+        for (int i = 0; i < waterInScene.Count; i++)
+        {
+
+            GameObject.Destroy(waterInScene[i]);
         }
     }
 }
