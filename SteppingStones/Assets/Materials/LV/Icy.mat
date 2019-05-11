@@ -10,7 +10,7 @@ Material:
   m_Name: Icy
   m_Shader: {fileID: 4800000, guid: 0f3fdbf2426b29d42994e2158b9700d5, type: 3}
   m_ShaderKeywords: _EMISSIONOPPOSITEX_ON _EMISSIONOPPOSITEY_ON _EMISSIONOPPOSITEZ_ON
-    _OPPOSITEX_ON _OPPOSITEY_ON _OPPOSITEZ_ON _OVERALLGRADIENT_ON
+    _OVERALLGRADIENT_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -78,9 +78,9 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OppositeX: 1
-    - _OppositeY: 1
-    - _OppositeZ: 1
+    - _OppositeX: 0
+    - _OppositeY: 0
+    - _OppositeZ: 0
     - _OverallGradient: 1
     - _OverallGradientContrast: 10.02
     - _OverallGradientOffset: -1.62
@@ -109,6 +109,6 @@ Material:
     - _OverallGradientColor: {r: 0.37255248, g: 0.47241876, b: 0.49056602, a: 1}
     - _OverallGradientColor_copy: {r: 0.7647059, g: 0.9026369, b: 1, a: 1}
     - _ShadowTint: {r: 0.0351968, g: 0.1346796, b: 0.1544118, a: 1}
-    - _XColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+    - _XColor: {r: 0.022249907, g: 0.46242446, b: 0.9433962, a: 1}
     - _YColor: {r: 0.40000004, g: 0.8941177, b: 0.8470589, a: 1}
     - _ZColor: {r: 0.2863563, g: 0.21293165, b: 0.5188679, a: 1}
