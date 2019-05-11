@@ -10,9 +10,12 @@ public class BT_Finale : MonoBehaviour
     public BT_ScreenShaker shake;
     public bool towerAnimated = false;
     public GameObject dustPoof;
-    public BT_DynamicCamera dynamicCamera;
 
+    public GameObject FinalSoul;
     public BT_Pauser badEndingBool;
+
+    public GameObject[] Souls;
+    public GameObject[] Pilgrims;
 
     // Start is called before the first frame update
     void Start()
@@ -56,33 +59,48 @@ public class BT_Finale : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Instantiate(dustPoof, transform.position, transform.rotation);
+        
 
         if (badEndingBool.badEnding == true)
         {
-            StartCoroutine("WaitForEnding");
+            FinalSoul.SetActive(true);
+            Instantiate(dustPoof, transform.position, transform.rotation);
+            gameObject.SetActive(false);
+
             //do bad ending
 
         }
 
         else
         {
-            StartCoroutine("WaitForEnding");
+            foreach (GameObject soul in Souls)
+            {
+                Instantiate(dustPoof, soul.transform.position, soul.transform.rotation);
+                soul.SetActive(false);
+
+            }
+
+            foreach (GameObject pilgrim in Pilgrims)
+            {
+                pilgrim.SetActive(true);
+                Instantiate(dustPoof, pilgrim.transform.position, pilgrim.transform.rotation);
+
+            }
+
+            //Instantiate(dustPoof, transform.position, transform.rotation);
+            //gameObject.transform.position = new Vector3(-11, 33, 12);
+            //Instantiate(dustPoof, transform.position, transform.rotation);
 
             // do good ending
         }
 
+        
 
+        
 
     }
 
-    IEnumerator WaitForEnding() // delay coroutine for number of seconds delay
-    {
-        yield return new WaitForSeconds(10);
-
-        dynamicCamera.camera_move_enabled = true;
-        gameObject.SetActive(false);
-    }
+    
 
 
 

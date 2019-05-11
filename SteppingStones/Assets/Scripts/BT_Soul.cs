@@ -11,6 +11,8 @@ public class BT_Soul : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.up, speed * Time.deltaTime); // spins the lost soul - helpful telegraphing
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
