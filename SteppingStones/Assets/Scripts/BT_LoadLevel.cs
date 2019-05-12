@@ -13,6 +13,7 @@ public class BT_LoadLevel : MonoBehaviour {
     public GameObject selectLevel;
 
     public int levelIndex;
+    public GameObject attPanel;
 
     public MusicFader fadeOut;
 
@@ -30,7 +31,7 @@ public class BT_LoadLevel : MonoBehaviour {
 
     public void PlaySound()
     {
-        print("click");
+        //print("click");
         source.PlayOneShot(Click);
     }
 
@@ -86,5 +87,20 @@ public class BT_LoadLevel : MonoBehaviour {
     {
         yield return new WaitForSeconds(seconds);
         ActivePanel();
+    }
+
+    public void Attributions()
+    {
+        PlaySound();
+
+        if (attPanel.activeInHierarchy == true)
+        {
+            attPanel.SetActive(false);
+        }
+
+        else
+        {
+            attPanel.SetActive(true);
+        }
     }
 }

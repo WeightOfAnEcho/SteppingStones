@@ -88,7 +88,7 @@ public class BT_Ancient_Lang : MonoBehaviour
                         if (sceneName == "AW_Level_04") // if beach
                         {
                             StartCoroutine(WaitFor(1));
-                            PlayerPrefs.SetInt("EngBatch05", 1); // set the correct batch to be translated
+                            PlayerPrefs.SetInt("EngBatch04", 1); // set the correct batch to be translated
                             UpdatePrefs(); // call function to update prefs
                             pauseGame.Pause();
                         }

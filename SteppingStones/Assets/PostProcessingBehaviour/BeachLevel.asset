@@ -41,11 +41,11 @@ MonoBehaviour:
         stationaryBlending: 0.95
         motionBlending: 0.85
   ambientOcclusion:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
-      intensity: 2.59
+      intensity: 0.49
       radius: 3.64
-      sampleCount: 10
+      sampleCount: 3
       downsampling: 1
       forceForwardCompatibility: 0
       ambientOnly: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
         texture: {fileID: 0}
         intensity: 3
   colorGrading:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       tonemapping:
         tonemapper: 0

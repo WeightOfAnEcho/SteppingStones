@@ -66,9 +66,10 @@ public class BT_WaterList: MonoBehaviour
         // Retrieve the name of this scene.
         string sceneName = currentScene.name;
 
-        if (sceneName == "AW_Summit_#2")
+        if (sceneName == "AW_Summit_#2" /*|| sceneName == "AW_Summit_#1"*/)
         {
             Instantiate(waterBlock, waterStart[1].position, waterStart[1].rotation);
+            
         }
 
         waterInScene.Add(go);

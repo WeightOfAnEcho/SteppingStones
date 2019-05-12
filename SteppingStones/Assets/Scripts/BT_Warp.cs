@@ -8,6 +8,7 @@ public class BT_Warp : BT_Player_Base
     public GameObject Target;
     public GameObject dustPuff;
     public BT_DynamicCamera dynamicCamera;
+    public BT_Pauser final;
 
 
     //This exists incase any edits to player base is required -------------------------------------------------------------------------------------------------
@@ -18,13 +19,15 @@ public class BT_Warp : BT_Player_Base
 
     private void OnTriggerEnter(Collider other)
     {
+        if (final.badEnding == false)
+        {
 
             Instantiate(dustPuff, transform.position, transform.rotation);
             Agent.Warp(Target.transform.position);
             Instantiate(dustPuff, transform.position, transform.rotation);
             transform.LookAt(dynamicCamera.transform);
             StartCoroutine("WaitForEnding");
-
+        }
     }
 
     void Ender()

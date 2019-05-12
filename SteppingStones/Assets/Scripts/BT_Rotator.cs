@@ -6,15 +6,18 @@ using UnityEngine.SceneManagement;
 public class BT_Rotator : MonoBehaviour
 {
     public BT_WaterList check; // a public variable for the button press script
+    public AudioClip stone;
+    AudioSource audioSource;
 
     public void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Scene currentScene = SceneManager.GetActiveScene(); // Create a temporary reference to the current scene.
 
         // Retrieve the name of this scene.
         string sceneName = currentScene.name;
 
-        if (sceneName == "Level_3" || sceneName == "05_LV_V4") // if this is X scene, do a single automatic rotation
+        if (sceneName == "Level_3" || sceneName == "01_LV") // if this is X scene, do a single automatic rotation
         {
             StartCoroutine(Rotate(Vector3.up, 90, 1.0f)); // start the rotation coroutine
         }
@@ -24,6 +27,7 @@ public class BT_Rotator : MonoBehaviour
     {
         if (check.waterPresent == false) // check if the water is flowing (boolean from the button press script variable)
         {
+            //audioSource.PlayOneShot(stone, 0.3F);
             StartCoroutine(Rotate(Vector3.up, 90, 1.0f));
         }
 

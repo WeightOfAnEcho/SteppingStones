@@ -29,6 +29,18 @@ public class BT_Pauser : MonoBehaviour
 
     public void Start()
     {
+
+        if (AudioListener.volume == 0f)
+        {
+            
+            muteImage.sprite = muteSprite;
+        }
+
+        else if (AudioListener.volume == 1f)
+        {
+            muteImage.sprite = unmuteSprite;
+        }
+
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("AW_Summit_#2"))
         {
             if (PlayerPrefs.HasKey("EngBatch01") && PlayerPrefs.HasKey("EngBatch02") & PlayerPrefs.HasKey("EngBatch03") && PlayerPrefs.HasKey("EngBatch04")
@@ -76,15 +88,15 @@ public class BT_Pauser : MonoBehaviour
 
     public void Muter()
     {
-        if (audioSource.mute != true)
+        if (AudioListener.volume == 1f)
         {
-            audioSource.mute = true;
+            AudioListener.volume = 0f;
             muteImage.sprite = muteSprite;
         }
 
         else
         {
-            audioSource.mute = false;
+            AudioListener.volume = 1f;
             muteImage.sprite = unmuteSprite;
         }
        
