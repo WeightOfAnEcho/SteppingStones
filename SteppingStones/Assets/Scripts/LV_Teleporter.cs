@@ -9,7 +9,7 @@ public class LV_Teleporter : MonoBehaviour
     //private Transform IN; //where player enters teleporter
     public Vector3 OUT; //position player is telported to
     private NavMeshAgent navAgent;
-
+    public GameObject dustPoof;
     
 
     // Start is called before the first frame update
@@ -23,8 +23,9 @@ public class LV_Teleporter : MonoBehaviour
     {
         if(collision.gameObject == GO_Player)
         {
-            Debug.Log("skrrrt");
+            //Debug.Log("skrrrt");
             navAgent.Warp(OUT);
+            Instantiate(dustPoof, GO_Player.transform.position, GO_Player.transform.rotation);
         }
     }
 
